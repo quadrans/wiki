@@ -1,0 +1,1028 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidity Cheatsheet and Best practices &#8212; Quadrans Wiki  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/quadrans_style.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Accessing Blockchain via CURL" href="web3.html" />
+    <link rel="prev" title="Programming" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo-quadrans-black.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../nodes/index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../projects/index.html">Projects</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/quadrans-wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="active">
+                  <a href="">Solidity Cheatsheet and Best practices</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="web3.html">Accessing Blockchain via CURL</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="test-echo.html">Test Contract: Echo</a>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#motivation" class="nav-link">Motivation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#version-pragma" class="nav-link">Version pragma</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#import-files" class="nav-link">Import files</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#types" class="nav-link">Types</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#boolean" class="nav-link">Boolean</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#operators" class="nav-link">Operators:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#integer" class="nav-link">Integer</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id1" class="nav-link">Operators:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#address" class="nav-link">Address</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id2" class="nav-link">Operators</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#methods" class="nav-link">Methods:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#array" class="nav-link">Array</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fixed-byte-arrays" class="nav-link">Fixed byte arrays</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id3" class="nav-link">Operators:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#members" class="nav-link">Members</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#dynamic-byte-arrays" class="nav-link">Dynamic byte arrays</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#enum" class="nav-link">Enum</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#struct" class="nav-link">Struct</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#mapping" class="nav-link">Mapping</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#control-structures" class="nav-link">Control Structures</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#functions" class="nav-link">Functions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#access-modifiers" class="nav-link">Access modifiers</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#parameters" class="nav-link">Parameters</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#input-parameters" class="nav-link">Input parameters</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#constructor" class="nav-link">Constructor</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#function-calls" class="nav-link">Function Calls</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#internal-function-calls" class="nav-link">Internal Function Calls</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#external-function-calls" class="nav-link">External Function Calls</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#named-calls" class="nav-link">Named Calls</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#unnamed-function-parameters" class="nav-link">Unnamed function parameters</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#function-type" class="nav-link">Function type</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#function-modifier" class="nav-link">Function Modifier</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#view-or-constant-functions" class="nav-link">View or Constant Functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pure-functions" class="nav-link">Pure Functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#payable-functions" class="nav-link">Payable Functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#fallback-function" class="nav-link">Fallback Function</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#contracts" class="nav-link">Contracts</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#contract-inheritance" class="nav-link">Contract Inheritance</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#multiple-inheritance" class="nav-link">Multiple inheritance</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#abstract-contracts" class="nav-link">Abstract Contracts</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#interface" class="nav-link">Interface</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#events" class="nav-link">Events</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#library" class="nav-link">Library</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#using-for" class="nav-link">Using - For</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#error-handling" class="nav-link">Error Handling</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#global-variables" class="nav-link">Global variables</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#block-variables" class="nav-link">Block variables</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#transaction-variables" class="nav-link">Transaction variables</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#mathematical-and-cryptographic-functions" class="nav-link">Mathematical and Cryptographic Functions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#contract-related" class="nav-link">Contract Related</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/quadrans-wiki/edit/master/docs/programming/solidity_101.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="solidity-cheatsheet-and-best-practices">
+<h1>Solidity Cheatsheet and Best practices<a class="headerlink" href="#solidity-cheatsheet-and-best-practices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>This document is a cheatsheet for Solidity that you can use to write Smart Contracts for Quadrans based blockchain.</p>
+<p>This guide is not intended to teach you Solidity from the ground up, but to help developers with basic knowledge who may struggle to get familiar with Smart Contracts and Blockchain because of the Solidity concepts used.</p>
+<p><strong>Note</strong>: If you have basic knowledge in JavaScript, it’s easier to learn Solidity.</p>
+</div>
+<div class="section" id="version-pragma">
+<h2>Version pragma<a class="headerlink" href="#version-pragma" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.5.2</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>will compile with a compiler version &gt;= 0.5.2 and &lt; 0.6.0.</p>
+</div>
+<div class="section" id="import-files">
+<h2>Import files<a class="headerlink" href="#import-files" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">symbolName</span> <span class="nx">from</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span> <span class="nx">or</span> <span class="kr">import</span> <span class="s2">&quot;filename&quot;</span> <span class="nx">as</span> <span class="nx">symbolName</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">symbol1</span> <span class="nx">as</span> <span class="nx">alias</span><span class="p">,</span> <span class="nx">symbol2</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="types">
+<h2>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="boolean">
+<h3>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">¶</a></h3>
+<p>bool: true or false</p>
+<div class="section" id="operators">
+<h4>Operators:<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h4>
+<p>Logical: ! (logical negation), &amp;&amp; (AND), || (OR)</p>
+<p>Comparisons: == (equality), != (inequality)</p>
+</div>
+</div>
+<div class="section" id="integer">
+<h3>Integer<a class="headerlink" href="#integer" title="Permalink to this headline">¶</a></h3>
+<p>Unsigned: uint8 | uint16 | uint32 | uint64 | uint128 | uint256(uint)</p>
+<p>Signed: int8 | int16 | int32 | int64 | int128 | int256(uint)</p>
+<div class="section" id="id1">
+<h4>Operators:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Comparisons: &lt;=, &lt;, ==, !=, &gt;= and &gt;</p>
+<p>Bit operators: &amp;, |, ^ (bitwise exclusive or) and ~ (bitwise
+negation)</p>
+<p>Arithmetic operators: +, -, unary -, unary +, *, /, %, %%** (exponentiation), &lt;&lt; (left shift) and &gt;&gt; (right shift)%%</p>
+</div>
+</div>
+<div class="section" id="address">
+<h3>Address<a class="headerlink" href="#address" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>address: Holds an Quadrans address (20 byte value).</p></li>
+<li><p>address payable: Same as address, but includes additional methods transfer and send.</p></li>
+</ul>
+<div class="section" id="id2">
+<h4>Operators<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Comparisons: &lt;=, &lt;, ==, !=, &gt;= and &gt;</p>
+</div>
+<div class="section" id="methods">
+<h4>Methods:<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>balance</td>
+<td>address.balance (uint256): balance of the Address in Wei</td>
+</tr>
+<tr>
+<td>transfer</td>
+<td>address.transfer(uint256 amount): send given amount of Wei to Address, throws on failure</td>
+</tr>
+<tr>
+<td>send</td>
+<td>address.send(uint256 amount) returns (bool): send given amount of Wei to Address, returns false on failure</td>
+</tr>
+<tr>
+<td>call</td>
+<td>address.call(...) returns (bool): issue low-level CALL, returns false on failure</td>
+</tr>
+<tr>
+<td>callcode</td>
+<td>address.callcode(...) returns (bool): issue low-level CALLCODE, returns false on failure</td>
+</tr>
+<tr>
+<td>delegatecall</td>
+<td>address.delegatecall(...) returns (bool): issue low-level DELEGATECALL, returns false on failure</td>
+</tr>
+</tbody>
+</table><p>Delegatecall uses the code of the target address, taking all other aspects (storage, balance, …) from the calling contract. The purpose of delegatecall is to use library code which is stored in another contract. The user has to ensure that the layout of storage in both contracts is suitable for delegatecall to be used.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
+<span class="kr">int</span> <span class="nx">value</span><span class="p">;</span>
+<span class="nx">address</span> <span class="kr">public</span> <span class="nx">sender</span><span class="p">;</span>
+<span class="nx">address</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">address</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// address of contract B</span>
+<span class="kd">function</span> <span class="nx">makeDelegateCall</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+        <span class="nx">a</span><span class="p">.</span><span class="nx">delegatecall</span><span class="p">(</span>
+            <span class="nx">abi</span><span class="p">.</span><span class="nx">encodePacked</span><span class="p">(</span><span class="nx">bytes4</span><span class="p">(</span><span class="nx">keccak256</span><span class="p">(</span><span class="s2">&quot;setValue(uint)&quot;</span><span class="p">)),</span> <span class="nx">_value</span><span class="p">)</span>
+        <span class="p">);</span> <span class="c1">// Value of A is modified</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">B</span> <span class="p">{</span>
+<span class="nx">uint</span> <span class="nx">value</span><span class="p">;</span>
+<span class="nx">address</span> <span class="kr">public</span> <span class="nx">sender</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">setValue</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">=</span> <span class="nx">_value</span><span class="p">;</span>
+        <span class="nx">sender</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">;</span> <span class="c1">// msg.sender is preserved in delegatecall. It was not available in callcode.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gas()</span></code> option is available for call, callcode and delegatecall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value()</span></code> option is not supported for delegatecall.</p></li>
+</ul>
+<p>Prior to homestead, only a limited variant called callcode was available that did not provide access to the original <code class="docutils literal notranslate"><span class="pre">msg.sender</span></code> and <code class="docutils literal notranslate"><span class="pre">msg.value</span></code> values.</p>
+</div>
+</div>
+<div class="section" id="array">
+<h3>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h3>
+<p>Arrays can be dynamic or have a fixed size.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uint[]</span> <span class="pre">dynamicSizeArray;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uint[7]</span> <span class="pre">fixedSizeArray;</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="fixed-byte-arrays">
+<h3>Fixed byte arrays<a class="headerlink" href="#fixed-byte-arrays" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">bytes1</span><span class="p">(</span><span class="kr">byte</span><span class="p">),</span> <span class="nx">bytes2</span><span class="p">,</span> <span class="nx">bytes3</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">bytes32</span><span class="p">.</span>
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h4>Operators:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Comparisons: &lt;=, &lt;, ==, !=, &gt;=, &gt; (evaluate to bool)</p>
+<p>Bit operators: &amp;, |, ^ (bitwise exclusive or), ~ (bitwise negation), &lt;&lt; (left shift), &gt;&gt; (right shift)</p>
+<p>Index access: If x is of type bytesI, then x[k] for 0 &lt;= k &lt; I
+returns the k th byte (read-only).</p>
+</div>
+<div class="section" id="members">
+<h4>Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h4>
+<p>.length : read-only</p>
+</div>
+</div>
+<div class="section" id="dynamic-byte-arrays">
+<h3>Dynamic byte arrays<a class="headerlink" href="#dynamic-byte-arrays" title="Permalink to this headline">¶</a></h3>
+<p>bytes: Dynamically-sized byte array. It is similar to byte[], but it
+is packed tightly in calldata. Not a value-type!</p>
+<p>string: Dynamically-sized UTF-8-encoded string. It is equal to bytes but
+does not allow length or index access. Not a value-type!</p>
+</div>
+<div class="section" id="enum">
+<h3>Enum<a class="headerlink" href="#enum" title="Permalink to this headline">¶</a></h3>
+<p>Enum works just like in every other language.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">enum</span> <span class="nx">ActionChoices</span> <span class="p">{</span>
+    <span class="nx">GoLeft</span><span class="p">,</span> 
+    <span class="nx">GoRight</span><span class="p">,</span> 
+    <span class="nx">GoStraight</span><span class="p">,</span> 
+    <span class="nx">SitStill</span> 
+<span class="p">}</span>
+
+<span class="nx">ActionChoices</span> <span class="nx">choice</span> <span class="o">=</span> <span class="nx">ActionChoices</span><span class="p">.</span><span class="nx">GoStraight</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="struct">
+<h3>Struct<a class="headerlink" href="#struct" title="Permalink to this headline">¶</a></h3>
+<p>New types can be declared using struct.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">struct</span> <span class="nx">Funder</span> <span class="p">{</span>
+    <span class="nx">address</span> <span class="nx">addr</span><span class="p">;</span>
+    <span class="nx">uint</span> <span class="nx">amount</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Funder funders;</p>
+</div>
+<div class="section" id="mapping">
+<h3>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h3>
+<p>Declared as</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">mapping</span><span class="p">(</span><span class="nx">_KeyType</span> <span class="p">=&gt;</span> <span class="nx">_ValueType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Mappings can be seen as hash tables which are virtually initialized such that every possible key exists and is mapped to a value.</p>
+<p>key can be almost any type except for a mapping, a dynamically sized array, a contract, an enum, or a struct. value can actually be any type, including mappings.</p>
+</div>
+</div>
+<div class="section" id="control-structures">
+<h2>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this headline">¶</a></h2>
+<p>Most of the control structures from JavaScript are available in Solidity
+except for switch and goto.</p>
+<ul class="simple">
+<li><p>if else</p></li>
+<li><p>while</p></li>
+<li><p>do</p></li>
+<li><p>for</p></li>
+<li><p>break</p></li>
+<li><p>continue</p></li>
+<li><p>return</p></li>
+<li><p>? :</p></li>
+</ul>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Structure</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">parameter</span> <span class="nx">types</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span><span class="nx">internal</span><span class="o">|</span><span class="nx">external</span><span class="o">|</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="p">}</span> <span class="p">[</span><span class="nx">pure</span><span class="o">|</span><span class="nx">constant</span><span class="o">|</span><span class="nx">view</span><span class="o">|</span><span class="nx">payable</span><span class="p">]</span> <span class="p">[</span><span class="nx">returns</span> <span class="p">(</span><span class="o">&lt;</span><span class="k">return</span> <span class="nx">types</span><span class="o">&gt;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<div class="section" id="access-modifiers">
+<h3>Access modifiers<a class="headerlink" href="#access-modifiers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>public - Accessible from this contract, inherited contracts and externally</p></li>
+<li><p>private - Accessible only from this contract</p></li>
+<li><p>internal - Accessible only from this contract and contracts inheriting from it</p></li>
+<li><p>external - Cannot be accessed internally, only externally. Recommended to reduce gas. Access internally with this.f.</p></li>
+</ul>
+</div>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="input-parameters">
+<h4>Input parameters<a class="headerlink" href="#input-parameters" title="Permalink to this headline">¶</a></h4>
+<p>Parameters are declared just like variables and are memory variables.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="p">{}</span>
+<span class="nx">Output</span> <span class="nx">parameters</span>
+<span class="nx">Output</span> <span class="nx">parameters</span> <span class="nx">are</span> <span class="nx">declared</span> <span class="nx">after</span> <span class="nx">the</span> <span class="nx">returns</span> <span class="nx">keyword</span>
+
+<span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">_sum</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">_sum</span> <span class="o">=</span> <span class="nx">_a</span> <span class="o">+</span> <span class="nx">_b</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Output can also be specified using return statement. In that case, we
+can omit parameter name returns (uint).</p>
+<p>Multiple return types are possible with <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">(v0,</span> <span class="pre">v1,</span> <span class="pre">...,</span> <span class="pre">vn)</span></code>.</p>
+</div>
+</div>
+<div class="section" id="constructor">
+<h3>Constructor<a class="headerlink" href="#constructor" title="Permalink to this headline">¶</a></h3>
+<p>Function that is executed during contract deployment. Defined using the
+constructor keyword.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">C</span> <span class="p">{</span>
+
+    <span class="nx">address</span> <span class="nx">owner</span><span class="p">;</span>
+    <span class="nx">uint</span> <span class="nx">status</span><span class="p">;</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_status</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">owner</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">;</span>
+        <span class="nx">status</span> <span class="o">=</span> <span class="nx">_status</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="function-calls">
+<h2>Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="internal-function-calls">
+<h3>Internal Function Calls<a class="headerlink" href="#internal-function-calls" title="Permalink to this headline">¶</a></h3>
+<p>Functions of the current contract can be called directly (internally - via jumps) and also recursively</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">C</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">funA</span><span class="p">()</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">function</span> <span class="nx">FunB</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">ret</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">funA</span><span class="p">()</span> <span class="o">+</span> <span class="nx">_a</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="external-function-calls">
+<h3>External Function Calls<a class="headerlink" href="#external-function-calls" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">this.g(8);</span></code> and <code class="docutils literal notranslate"><span class="pre">c.g(2);</span></code> (where c is a contract instance) are also valid function calls, but, the function will be called “externally”, via a message call.</p>
+<p><code class="docutils literal notranslate"><span class="pre">.gas()</span></code> and <code class="docutils literal notranslate"><span class="pre">.value()</span></code> can also be used with external function calls.</p>
+</div>
+<div class="section" id="named-calls">
+<h3>Named Calls<a class="headerlink" href="#named-calls" title="Permalink to this headline">¶</a></h3>
+<p>Function call arguments can also be given by name in any order as below.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="kd">function</span> <span class="nx">g</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">f</span><span class="p">({</span><span class="nx">b</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">2</span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unnamed-function-parameters">
+<h3>Unnamed function parameters<a class="headerlink" href="#unnamed-function-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Parameters will be present on the stack, but are not accessible.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">uint</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-type">
+<h3>Function type<a class="headerlink" href="#function-type" title="Permalink to this headline">¶</a></h3>
+<p>Pass function as a parameter to another function. Similar to callbacks and delegates</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4.18</span><span class="p">;</span>
+
+<span class="nx">contract</span> <span class="nx">Oracle</span> <span class="p">{</span>
+    <span class="nx">struct</span> <span class="nx">Request</span> <span class="p">{</span>
+    <span class="nx">bytes</span> <span class="nx">data</span><span class="p">;</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">bytes</span> <span class="nx">memory</span><span class="p">)</span> <span class="nx">external</span> <span class="nx">callback</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">Request</span><span class="p">[]</span> <span class="nx">requests</span><span class="p">;</span>
+    <span class="nx">event</span> <span class="nx">NewRequest</span><span class="p">(</span><span class="nx">uint</span><span class="p">);</span>
+    <span class="kd">function</span> <span class="nx">query</span><span class="p">(</span><span class="nx">bytes</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bytes</span> <span class="nx">memory</span><span class="p">)</span> <span class="nx">external</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">requests</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">Request</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">));</span>
+    <span class="nx">NewRequest</span><span class="p">(</span><span class="nx">requests</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">reply</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">requestID</span><span class="p">,</span> <span class="nx">bytes</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Here goes the check that the reply comes from a trusted source</span>
+    <span class="nx">requests</span><span class="p">[</span><span class="nx">requestID</span><span class="p">].</span><span class="nx">callback</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">OracleUser</span> <span class="p">{</span>
+    <span class="nx">Oracle</span> <span class="nx">constant</span> <span class="nx">oracle</span> <span class="o">=</span> <span class="nx">Oracle</span><span class="p">(</span><span class="mh">0x1234567</span><span class="p">);</span> <span class="c1">// known contract</span>
+    <span class="kd">function</span> <span class="nx">buySomething</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">oracle</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">oracleResponse</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">oracleResponse</span><span class="p">(</span><span class="nx">bytes</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">require</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">==</span> <span class="nx">address</span><span class="p">(</span><span class="nx">oracle</span><span class="p">));</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-modifier">
+<h3>Function Modifier<a class="headerlink" href="#function-modifier" title="Permalink to this headline">¶</a></h3>
+<p>Modifiers can automatically check a condition prior to executing the function.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">modifier</span> <span class="nx">onlyOwner</span> <span class="p">{</span>
+    <span class="nx">require</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">==</span> <span class="nx">owner</span><span class="p">);</span>
+    <span class="nx">_</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">close</span><span class="p">()</span> <span class="nx">onlyOwner</span> <span class="p">{</span>
+    <span class="nx">selfdestruct</span><span class="p">(</span><span class="nx">owner</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="view-or-constant-functions">
+<h3>View or Constant Functions<a class="headerlink" href="#view-or-constant-functions" title="Permalink to this headline">¶</a></h3>
+<p>Functions can be declared view or constant in which case they promise not to modify the state, but can read from them.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">a</span><span class="p">)</span> <span class="nx">view</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span> <span class="c1">// where b is a storage variable</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The compiler does not enforce yet that a view method is not modifying state.</p>
+</div>
+<div class="section" id="pure-functions">
+<h3>Pure Functions<a class="headerlink" href="#pure-functions" title="Permalink to this headline">¶</a></h3>
+<p>Functions can be declared pure in which case they promise not to read
+from or modify the state.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">a</span><span class="p">)</span> <span class="nx">pure</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="mi">42</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="payable-functions">
+<h3>Payable Functions<a class="headerlink" href="#payable-functions" title="Permalink to this headline">¶</a></h3>
+<p>Functions that receive Ether are marked as payable function.</p>
+</div>
+<div class="section" id="fallback-function">
+<h3>Fallback Function<a class="headerlink" href="#fallback-function" title="Permalink to this headline">¶</a></h3>
+<p>A contract can have exactly one unnamed function. This function cannot have arguments and cannot return anything. It is executed on a call to the contract if none of the other functions match the given function identifier (or if no data was supplied at all).</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do something</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="contracts">
+<h2>Contracts<a class="headerlink" href="#contracts" title="Permalink to this headline">¶</a></h2>
+<p>Creating contracts using new Contracts can be created from another contract using new keyword. The source of the contract has to be known in advance.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_a</span> <span class="o">+</span> <span class="nx">_b</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">C</span> <span class="p">{</span>
+    <span class="nx">address</span> <span class="nx">a</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">A</span><span class="p">();</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="contract-inheritance">
+<h3>Contract Inheritance<a class="headerlink" href="#contract-inheritance" title="Permalink to this headline">¶</a></h3>
+<p>Solidity supports multiple inheritance and polymorphism.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">owned</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">owned</span><span class="p">()</span> <span class="p">{</span> <span class="nx">owner</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">address</span> <span class="nx">owner</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">mortal</span> <span class="nx">is</span> <span class="nx">owned</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">kill</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span> <span class="o">==</span> <span class="nx">owner</span><span class="p">)</span> <span class="nx">selfdestruct</span><span class="p">(</span><span class="nx">owner</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="kr">final</span> <span class="nx">is</span> <span class="nx">mortal</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">kill</span><span class="p">()</span> <span class="p">{</span> 
+        <span class="kr">super</span><span class="p">.</span><span class="nx">kill</span><span class="p">();</span> <span class="c1">// Calls kill() of mortal.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiple-inheritance">
+<h3>Multiple inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">A</span> <span class="p">{}</span> <span class="nx">contract</span> <span class="nx">B</span> <span class="p">{}</span> <span class="nx">contract</span> <span class="nx">C</span> <span class="nx">is</span> <span class="nx">A</span><span class="p">,</span> <span class="nx">B</span> <span class="p">{}</span>
+<span class="nx">Constructor</span> <span class="k">of</span> <span class="nx">base</span> <span class="kr">class</span> <span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
+    <span class="nx">uint</span> <span class="nx">a</span><span class="p">;</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="p">{</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">B</span> <span class="nx">is</span> <span class="nx">A</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="nx">A</span><span class="p">(</span><span class="nx">_b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="abstract-contracts">
+<h3>Abstract Contracts<a class="headerlink" href="#abstract-contracts" title="Permalink to this headline">¶</a></h3>
+<p>Contracts that contain implemented and non-implemented functions. Such contracts cannot be compiled, but they can be used as base contracts.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4.0</span><span class="p">;</span>
+
+<span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">C</span><span class="p">()</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">bytes32</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">B</span> <span class="nx">is</span> <span class="nx">A</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">C</span><span class="p">()</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">bytes32</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">&quot;c&quot;</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="interface">
+<h3>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h3>
+<p>Interfaces are similar to abstract contracts, but they have restrictions:</p>
+<ul class="simple">
+<li><p>Cannot have any functions implemented.</p></li>
+<li><p>Cannot inherit other contracts or interfaces.</p></li>
+<li><p>Cannot define constructor.</p></li>
+<li><p>Cannot define variables.</p></li>
+<li><p>Cannot define structs.</p></li>
+<li><p>Cannot define enums.</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4.11</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">Token</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">transfer</span><span class="p">(</span><span class="nx">address</span> <span class="nx">recipient</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">amount</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="events">
+<h3>Events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h3>
+<p>Events allow the convenient usage of the EVM logging facilities, which in turn can be used to “call” JavaScript callbacks in the user interface of a dapp, which listen for these events.</p>
+<p>Up to three parameters can receive the attribute indexed, which will cause the respective arguments to be searched for.</p>
+<p>All non-indexed arguments will be stored in the data part of the log.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4.0</span><span class="p">;</span>
+
+<span class="nx">contract</span> <span class="nx">ClientReceipt</span> <span class="p">{</span>
+    <span class="nx">event</span> <span class="nx">Deposit</span><span class="p">(</span>
+        <span class="nx">address</span> <span class="nx">indexed</span> <span class="nx">_from</span><span class="p">,</span>
+        <span class="nx">bytes32</span> <span class="nx">indexed</span> <span class="nx">_id</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">_value</span>
+    <span class="p">);</span>
+
+    <span class="kd">function</span> <span class="nx">deposit</span><span class="p">(</span><span class="nx">bytes32</span> <span class="nx">_id</span><span class="p">)</span> <span class="nx">payable</span> <span class="p">{</span>
+        <span class="nx">emit</span> <span class="nx">Deposit</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">,</span> <span class="nx">_id</span><span class="p">,</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="library">
+<h3>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h3>
+<p>Libraries are similar to contracts, but they are deployed only once at a specific address, and their code is used with delegatecall (callcode).</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">library</span> <span class="nx">arithmatic</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_a</span> <span class="o">+</span> <span class="nx">_b</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">C</span> <span class="p">{</span>
+
+    <span class="nx">uint</span> <span class="nx">sum</span><span class="p">;</span>
+
+    <span class="kd">function</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">arithmatic</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-for">
+<h3>Using - For<a class="headerlink" href="#using-for" title="Permalink to this headline">¶</a></h3>
+<p>Using A for B; can be used to attach library functions to any type.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">library</span> <span class="nx">arithmatic</span> <span class="p">{</span>
+
+    <span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">_a</span> <span class="o">+</span> <span class="nx">_b</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">contract</span> <span class="nx">C</span> <span class="p">{</span>
+    <span class="nx">using</span> <span class="nx">arithmatic</span> <span class="k">for</span> <span class="nx">uint</span><span class="p">;</span>
+    
+    <span class="nx">uint</span> <span class="nx">sum</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="error-handling">
+<h3>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assert(bool</span> <span class="pre">condition)</span></code>: throws if the condition is not met - to be used for internal errors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">require(bool</span> <span class="pre">condition)</span></code>: throws if the condition is not met - to be used for errors in inputs or external components.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revert()</span></code>: abort execution and revert state changes.</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sendHalf</span><span class="p">(</span><span class="nx">address</span> <span class="nx">addr</span><span class="p">)</span> <span class="nx">payable</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">balance</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">require</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Only allow even numbers</span>
+    <span class="nx">uint</span> <span class="nx">balanceBeforeTransfer</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">balance</span><span class="p">;</span>
+    <span class="nx">addr</span><span class="p">.</span><span class="nx">transfer</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="nx">assert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">balance</span> <span class="o">==</span> <span class="nx">balanceBeforeTransfer</span> <span class="o">-</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">balance</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Catching exceptions is not yet possible.</p>
+</div>
+</div>
+<div class="section" id="global-variables">
+<h2>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="block-variables">
+<h3>Block variables<a class="headerlink" href="#block-variables" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">block.blockhash(uint</span> <span class="pre">blockNumber)</span> <span class="pre">returns</span> <span class="pre">(bytes32)</span></code>: hash of the given block - only works for the 256 most recent blocks excluding current</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block.coinbase</span> <span class="pre">(address)</span></code>: current block miner’s address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block.difficulty</span> <span class="pre">(uint)</span></code>: current block difficulty</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block.gaslimit</span> <span class="pre">(uint)</span></code>: current block gaslimit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block.number</span> <span class="pre">(uint)</span></code>: current block number</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block.timestamp</span> <span class="pre">(uint)</span></code>: current block timestamp as seconds since unix epoch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">now</span> <span class="pre">(uint)</span></code>: current block timestamp (alias for block.timestamp)</p></li>
+</ul>
+</div>
+<div class="section" id="transaction-variables">
+<h3>Transaction variables<a class="headerlink" href="#transaction-variables" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">msg.data</span> <span class="pre">(bytes)</span></code>: complete calldata</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">msg.gas</span> <span class="pre">(uint)</span></code>: remaining gas</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">msg.sender</span> <span class="pre">(address)</span></code>: sender of the message (current call)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">msg.sig</span> <span class="pre">(bytes4)</span></code>: first four bytes of the calldata (i.e. function identifier)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">msg.value</span> <span class="pre">(uint)</span></code>: number of wei sent with the message</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tx.gasprice</span> <span class="pre">(uint)</span></code>: gas price of the transaction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tx.origin</span> <span class="pre">(address)</span></code>: sender of the transaction (full call chain)</p></li>
+</ul>
+</div>
+<div class="section" id="mathematical-and-cryptographic-functions">
+<h3>Mathematical and Cryptographic Functions<a class="headerlink" href="#mathematical-and-cryptographic-functions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>addmod(uint x, uint y, uint k) returns (uint): compute (x + y) % k where the addition is performed with arbitrary precision and does not wrap around at 2^256.</p></li>
+<li><p>mulmod(uint x, uint y, uint k) returns (uint): compute (x * y) % k where the multiplication is performed with arbitrary precision and does not wrap around at 2^256.</p></li>
+<li><p>keccak256(…) returns (bytes32): compute the Ethereum-SHA-3 (Keccak-256) hash of the (tightly packed) arguments</p></li>
+<li><p>sha256(…) returns (bytes32): compute the SHA-256 hash of the (tightly packed) arguments</p></li>
+<li><p>sha3(…) returns (bytes32): alias to keccak256</p></li>
+<li><p>ripemd160(…) returns (bytes20): compute RIPEMD-160 hash of the (tightly packed) arguments</p></li>
+<li><p>ecrecover(bytes32 hash, uint8 v, bytes32 r, bytes32 s) returns (address): recover the address associated with the public key from elliptic curve signature or return zero on error (example usage)</p></li>
+</ul>
+</div>
+<div class="section" id="contract-related">
+<h3>Contract Related<a class="headerlink" href="#contract-related" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>this (current contract’s type): the current contract, explicitly convertible to Address</p></li>
+<li><p>selfdestruct(address recipient): destroy the current contract, sending its funds to the given Address</p></li>
+<li><p>suicide(address recipient): alias to selfdestruct. Soon to be deprecated.</p></li>
+<li><p>solidity-cheatsheet is maintained by manojpramesh.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

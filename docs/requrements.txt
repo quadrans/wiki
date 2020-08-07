@@ -1,0 +1,5 @@
+sphinx
+recommonmark
+markdown
+sphinx-markdown-tables
+pydata-sphinx-theme

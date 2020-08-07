@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Quadrans on Raspberry Pi &#8212; Quadrans Wiki  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Install Quadrans on Orange Pi" href="linux_orangepi.html" />
+    <link rel="prev" title="Install Quadrans on Linux x86-64" href="linux_x86-64.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../projects/index.html">Projects</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/quadrans-wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+          
+              <li class="">
+                  <a href="linux_x86-64.html">Install Quadrans on Linux x86-64</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Install Quadrans on Raspberry Pi</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="linux_orangepi.html">Install Quadrans on Orange Pi</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="windows.html">Install Quadrans on Windows</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="macos.html">Install Quadrans on macOS (darwin)</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/command_line_options.html">Command Line Options</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/node_status.html">Checking the status of your Quadrans node</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/statuspy_tool.html">Status.py tool</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/paths_and_folders.html">Node paths and folders</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/external_connections.html">How to open RPC/WS to external connections</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/testnet.html">How to setup your node for Testnet</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../troubleshooting/invalid_merkle_root.html">Error : invalid merkle root</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-is-raspberry-pi" class="nav-link">What is Raspberry Pi</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#raspberry-pi-3-4" class="nav-link">Raspberry Pi 3/4</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#suggested-operating-system" class="nav-link">Suggested Operating System</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#manual-installation-for-linux-arm-7" class="nav-link">Manual installation for Linux (arm 7)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#software-requirements" class="nav-link">Software requirements</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#create-the-quadrans-user-and-download-the-latest-binary" class="nav-link">Create the quadrans user and download the latest binary</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#arm7-32-bit-cpu" class="nav-link">ARM7 32 bit CPU</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#useful-command-line-options" class="nav-link">Useful command line options</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-up-the-quadrans-node-launcher-optional" class="nav-link">Set up the Quadrans node launcher (optional)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-up-the-quadrans-node-as-systemd-service-optional" class="nav-link">Set up the Quadrans node as systemd service (optional)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#enable-and-start-the-service" class="nav-link">Enable and start the service</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#connect-the-node-to-testnet" class="nav-link">Connect the node to Testnet</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#important" class="nav-link">Important</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/quadrans-wiki/edit/master/docs/nodes/installation/linux_raspberrypi.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="install-quadrans-on-raspberry-pi">
+<h1>Install Quadrans on Raspberry Pi<a class="headerlink" href="#install-quadrans-on-raspberry-pi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-raspberry-pi">
+<h2>What is Raspberry Pi<a class="headerlink" href="#what-is-raspberry-pi" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://www.raspberrypi.org">Raspberry Pi</a> is a low cost, credit-card sized computer developed by <a class="reference external" href="https://www.raspberrypi.org">Raspberry Pi Foundation</a>. It can run Linux operating system. Recent models use <a class="reference external" href="https://en.wikipedia.org/wiki/Broadcom_Inc.">Broadcom</a> SoC, and could have 1, 2 or 4 GB of RAM.</p>
+<p><img alt="img400" src="../../_images/raspberry-pi-3-board.jpg" /></p>
+<div class="section" id="raspberry-pi-3-4">
+<h3>Raspberry Pi 3/4<a class="headerlink" href="#raspberry-pi-3-4" title="Permalink to this headline">¶</a></h3>
+<p>Quadrans Technical Team** tested the <a class="reference external" href="http://repo.quadrans.io/arm/arm7/">arm7 binary</a> (32bit) in combination with <a class="reference external" href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a> operating system with the Raspberry devboards.</p>
+<p>Models tested are:</p>
+<ul class="simple">
+<li><p>Raspberry Pi 4</p></li>
+<li><p>Raspberry Pi 3 Model B+</p></li>
+</ul>
+</div>
+<div class="section" id="suggested-operating-system">
+<h3>Suggested Operating System<a class="headerlink" href="#suggested-operating-system" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a> Buster (Ubuntu 18.04.3 LTS based)</p></li>
+<li><p><a class="reference external" href="https://www.raspberrypi.org/documentation/installation/installing-images/README">Installation guides</a> are available in the <a class="reference external" href="https://www.raspberrypi.org">official Raspberry website</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="manual-installation-for-linux-arm-7">
+<h2>Manual installation for Linux (arm 7)<a class="headerlink" href="#manual-installation-for-linux-arm-7" title="Permalink to this headline">¶</a></h2>
+<p>This guide will recreate the same conditions as the go-quadrans binary automatically creates on Debian/Ubuntu for Linux x86-64.</p>
+<p>The basic steps are :</p>
+<ul class="simple">
+<li><p>Create a <em>quadrans</em> user with no password</p></li>
+<li><p>Download the binary</p></li>
+<li><p>Setup your configuration file (optional)</p></li>
+<li><p>Create the go-quadrans launcher (optional)</p></li>
+<li><p>Make the launcher a systemd service (optional)</p></li>
+</ul>
+<div class="section" id="software-requirements">
+<h3>Software requirements<a class="headerlink" href="#software-requirements" title="Permalink to this headline">¶</a></h3>
+<p>Before downloading the go-quadrans verify in <code class="docutils literal notranslate"><span class="pre">dialog</span></code>, <code class="docutils literal notranslate"><span class="pre">python3</span></code>, <code class="docutils literal notranslate"><span class="pre">systemd</span></code> are already installed in your Linux Machine. For clock sync (mandatory) you can use indifferently <code class="docutils literal notranslate"><span class="pre">ntp</span></code> or <code class="docutils literal notranslate"><span class="pre">systemd-timesyncd</span></code>.</p>
+</div>
+<div class="section" id="create-the-quadrans-user-and-download-the-latest-binary">
+<h3>Create the quadrans user and download the latest binary<a class="headerlink" href="#create-the-quadrans-user-and-download-the-latest-binary" title="Permalink to this headline">¶</a></h3>
+<p>As <em>root</em> create a <em>quadrans</em> user with no password:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>useradd -r -m quadrans
+</pre></div>
+</div>
+<div class="section" id="arm7-32-bit-cpu">
+<h4>ARM7 32 bit CPU<a class="headerlink" href="#arm7-32-bit-cpu" title="Permalink to this headline">¶</a></h4>
+<p>Download the latest binary:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /usr/local/bin/
+wget http://repo.quadrans.io/arm/arm7/gqdc
+chmod +x gqdc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="useful-command-line-options">
+<h3>Useful command line options<a class="headerlink" href="#useful-command-line-options" title="Permalink to this headline">¶</a></h3>
+<p>After downloading, run <code class="docutils literal notranslate"><span class="pre">gqdc</span></code> to connect your node to the Quadrans Network. Make sure to check the different options and commands with <code class="docutils literal notranslate"><span class="pre">gqdc</span> <span class="pre">--help</span></code></p>
+<p>To set your data directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--datadir datadir_path
+</pre></div>
+</div>
+<p>To show your node in the Quadrans Network Status page:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--ethstats <span class="s2">&quot;Your Node Name&quot;</span>:QuadransStatsNetwork@status.quadrans.io:3000
+</pre></div>
+</div>
+<p>To create a new Quadrans wallet create a password inside a text file and execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>account new --password Your_Password_File.txt
+</pre></div>
+</div>
+<p>To execute the node as a <em>Miner</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
+</pre></div>
+</div>
+<p>To connect to Quadrans Testnet (download the <a class="reference internal" href="../management/testnet.html"><span class="doc">last test Quadrans node binary</span></a>).</p>
+</div>
+<div class="section" id="set-up-the-quadrans-node-launcher-optional">
+<h3>Set up the Quadrans node launcher (optional)<a class="headerlink" href="#set-up-the-quadrans-node-launcher-optional" title="Permalink to this headline">¶</a></h3>
+<p>To create a go-quadrans launcher firstly create and edit a configuration file called <code class="docutils literal notranslate"><span class="pre">environment</span></code>.</p>
+<p>Enviromnent variable like <em>NODE_LISTED</em> (options <em>true</em> or <em>false</em>) and <em>NODE_NAME</em> are required to be listed in the <a class="reference external" href="https://status.quadrans.io">Quadrans Status page</a>. <em>Your node information will be publicly available</em>.</p>
+<p>If your node will be a Miner or a Masternode <em>MINER_OPTIONS</em> (options <em>true</em> or <em>false</em>) and <em>MINER_WALLET</em> with the <em>MINER_PASSWORD</em> are required.</p>
+<p>To create your configuration simpy edit and type the following code as <strong>quadrans</strong> user:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; /home/quadrans/environment <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<span class="s">export NODE_LISTED=true</span>
+<span class="s">export NODE_NAME=&quot;Your node name&quot;</span>
+<span class="s">export MINER_OPTIONS=false</span>
+<span class="s">export MINER_WALLET=0xYourQuadransWalletAddress</span>
+<span class="s">export MINER_PASSWORD=/path/to/wallet_password_file.txt</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+<p>The next step is create a go-quadrans launcher:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; /home/quadrans/gqdc.sh <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<span class="s">#!/bin/bash</span>
+<span class="s">source /home/quadrans/environment</span>
+
+<span class="s">MINER_OPTS=&quot;&quot;</span>
+<span class="s">STATS_OPTS=&quot;&quot;</span>
+
+<span class="s">if [ &quot;${MINER_OPTIONS}&quot; = &quot;true&quot; ]; then</span>
+<span class="s">    MINER_OPTS=&quot;--mine --unlock ${MINER_WALLET} --password ${MINER_PASSWORD}&quot;</span>
+<span class="s">fi</span>
+
+<span class="s">if [ $(grep -c &quot;NODE_LISTED=true&quot; /home/quadrans/environment ) -eq 1 ]; then</span>
+<span class="s">    STATS_OPTS=$(printf &quot;%sethstats \&quot;%s\&quot;:\&quot;QuadransStatsNetwork\&quot;@status.quadrans.io:3000&quot; &quot;--&quot; &quot;${NODE_NAME}&quot;)</span>
+<span class="s">fi</span>
+
+<span class="s">eval &quot;/usr/local/bin/gqdc ${GETH_PARAMS} ${MINER_OPTS} ${STATS_OPTS}&quot;</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+<p>Make the <code class="docutils literal notranslate"><span class="pre">gqdc.sh</span></code> launcher executable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x /home/quadrans/gqdc.sh
+</pre></div>
+</div>
+<p>Run.</p>
+</div>
+<div class="section" id="set-up-the-quadrans-node-as-systemd-service-optional">
+<h3>Set up the Quadrans node as systemd service (optional)<a class="headerlink" href="#set-up-the-quadrans-node-as-systemd-service-optional" title="Permalink to this headline">¶</a></h3>
+<p>To make your node a systemd service and type the following code as <strong>root</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; /etc/systemd/system/quadrans-node.service <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<span class="s">Description=Quadrans Node Service</span>
+<span class="s">After=network.target</span>
+
+<span class="s">[Service]</span>
+<span class="s">Type=simple</span>
+<span class="s">User=quadrans</span>
+<span class="s">WorkingDirectory=/home/quadrans</span>
+<span class="s">EnvironmentFile=/home/quadrans/environment</span>
+<span class="s">ExecStart=/home/quadrans/gqdc.sh</span>
+<span class="s">Restart=on-failure</span>
+<span class="s">RestartSec=60</span>
+<span class="s">StandardOutput=syslog</span>
+<span class="s">StandardError=syslog</span>
+<span class="s">SyslogIdentifier=QuadransNode</span>
+
+<span class="s">[Install]</span>
+<span class="s">WantedBy=default.target</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+<div class="section" id="enable-and-start-the-service">
+<h4>Enable and start the service<a class="headerlink" href="#enable-and-start-the-service" title="Permalink to this headline">¶</a></h4>
+<p>To launch the service for the first time and start automatically on boot:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>systemctl start quadrans-node
+systemctl <span class="nb">enable</span> quadrans-node
+</pre></div>
+</div>
+<p>To check your node status:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>systemctl status quadrans-node
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>journalctl -f <span class="p">|</span> grep Quadrans
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="connect-the-node-to-testnet">
+<h2>Connect the node to Testnet<a class="headerlink" href="#connect-the-node-to-testnet" title="Permalink to this headline">¶</a></h2>
+<p>Please read the <strong>How to setup your node for testnet</strong> documentation.</p>
+<div class="section" id="important">
+<h3>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h3>
+<p>You can move from <strong>Testnet</strong> to <strong>Mainnet</strong> at any time but <strong>you can’t connect to the two networks at the same time</strong>.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

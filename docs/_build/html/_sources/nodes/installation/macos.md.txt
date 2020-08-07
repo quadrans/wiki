@@ -1,0 +1,55 @@
+Install Quadrans on macOS (darwin)
+==================================
+
+## Hardware requirements
+
+Minimum system requirements:
+
+* Apple Mac, Server or Virtual Machine
+* 2 Core 64bit CPU
+* 4 GB RAM
+* 50 GB storage
+
+Suggested requirements:
+
+* Apple Mac, Server or Virtual Machine
+* 2 Core 64bit CPU
+* 4 GB RAM
+* 100 GB storage
+
+## Manual installation for macOS (Intel 64bit)
+
+From macOS Terminal application type:
+
+``` bash
+cd /your_destination_folder/
+curl http://repo.quadrans.io/macos/intel64/gqdc -o gqdc
+chmod +x gqdc
+```
+
+After downloading, run *gqdc* to connect your node to the Quadrans Network.
+
+Make sure to check the different options and commands with ``gqdc --help``
+
+### Useful options
+
+To change your data directory.
+
+`--datadir datadir_path`
+
+To show your node in the Quadrans Network Status page.
+
+`--ethstats "Your Node Name":QuadransStatsNetwork@status.quadrans.io:3000`
+
+To create a new Quadrans wallet create a password inside a text file and
+execute the following command.
+
+`account new --password Your_Password_File.txt`
+
+To execute the node as a **Miner**
+
+`--mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt`
+
+To connect to Quadrans Testnet (download the [last test Quadrans node binary](../management/testnet)).
+
+`--testnet`

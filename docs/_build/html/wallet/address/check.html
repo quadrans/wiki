@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Quadrans Addresses on your node &#8212; Quadrans Wiki  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to safely Backup a Quadrans Address" href="storage.html" />
+    <link rel="prev" title="Create a Quadrans Address" href="creation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../nodes/index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../projects/index.html">Projects</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/quadrans-wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="creation.html">Create a Quadrans Address</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Checking Quadrans Addresses on your node</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="storage.html">How to safely Backup a Quadrans Address</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/metamask.html">Using MetaMask wallet with Quadrans</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../management/importjson.html">Importing a json wallet file to your node</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#directory-inspection" class="nav-link">Directory inspection</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#via-gqdc-command-line-interface" class="nav-link">Via gqdc command line interface</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#via-web3" class="nav-link">Via Web3</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/quadrans-wiki/edit/master/docs/wallet/address/check.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="checking-quadrans-addresses-on-your-node">
+<h1>Checking Quadrans Addresses on your node<a class="headerlink" href="#checking-quadrans-addresses-on-your-node" title="Permalink to this headline">¶</a></h1>
+<p>There are several ways to check and list the address present in a node. All the following methods listed are equivalent and should bring you to the same results. You can choose the method that you prefer and/or use other methods to cross-check the results.</p>
+<div class="section" id="directory-inspection">
+<h2>Directory inspection<a class="headerlink" href="#directory-inspection" title="Permalink to this headline">¶</a></h2>
+<p>All addresses/wallets created on the node are stored in the <em>keystore</em> folder in those directories</p>
+<p>For mainnet nodes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">quadrans</span><span class="o">/.</span><span class="n">quadrans</span><span class="o">/</span><span class="n">keystore</span>
+</pre></div>
+</div>
+<p>For testnet nodes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">quadrans</span><span class="o">/.</span><span class="n">quadrans</span><span class="o">/</span><span class="n">testnet</span><span class="o">/</span><span class="n">keystore</span>
+</pre></div>
+</div>
+<p>Access the corresponding directory in your node and inspect it’s contents. You should see a list of json files in a the following format, one for each address</p>
+<p>UTC–YYYY-MM-DDTHH-mm-ss.sssssssssZ–<address></p>
+</div>
+<div class="section" id="via-gqdc-command-line-interface">
+<h2>Via gqdc command line interface<a class="headerlink" href="#via-gqdc-command-line-interface" title="Permalink to this headline">¶</a></h2>
+<p>Connect to the node via ssh and be sure to use the <em>quadrans</em> user.</p>
+<p>Issue the command <code class="docutils literal notranslate"><span class="pre">gqdc</span> <span class="pre">account</span> <span class="pre">list</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc account list
+Account <span class="c1">#0: {5afdd78bdacb56ab1dad28741ea2a0e87fe41331} keystore:///tmp/mykeystore/UTC--2017-04-28T08-46-27.437847599Z--5afdd78bdacb56ab1dad28741ea2a0e87fe41331</span>
+Account <span class="c1">#1: {9acb9ff906641a434803efb474c96a83775628f7} keystore:///tmp/mykeystore/UTC--2017-04-28T08-46-52.180688336Z--9acb9ff906641a434803efb474c96a83775628f7</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="via-web3">
+<h2>Via Web3<a class="headerlink" href="#via-web3" title="Permalink to this headline">¶</a></h2>
+<p>Go to the node socket folder and attach the cli to that socket</p>
+<p>For mainnet nodes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/.quadrans
+</pre></div>
+</div>
+<p>For testnet nodes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/.quadrans/testnet
+</pre></div>
+</div>
+<p>Common:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc attach geth.ipc
+</pre></div>
+</div>
+<p>once presented with the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> prompt use the following command to list your accoutns <code class="docutils literal notranslate"><span class="pre">personal.listAccounts</span></code></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;0x3ce6d53998e0b45b46d62c5e3a08025156544ef9&quot;</span><span class="p">,</span> <span class="s2">&quot;0xaacbe83d9054f14e18cbf2cd0e11ba16ec759760&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
