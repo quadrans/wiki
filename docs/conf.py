@@ -14,8 +14,9 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import recommonmark
-source_suffix = ['.rst', '.md']
 from recommonmark.transform import AutoStructify
+
+source_suffix = ['.rst', '.md']
 
 github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 
@@ -61,7 +62,7 @@ html_theme_options = {
   "external_links": [
     {"url": "https://quadrans.io", "name": "Quadrans Foundation"}
   ],
-  "github_url": "https://github.com/quadrans/quadrans-wiki",
+  "github_url": "https://github.com/quadrans/wiki",
   "twitter_url": "https://twitter.com/quadransf",
   "google_analytics_id": "UA-132858178-7",
   "use_edit_page_button": True,
@@ -70,7 +71,7 @@ html_theme_options = {
 
 html_context = {
     "github_user": "quadrans",
-    "github_repo": "quadrans-wiki",
+    "github_repo": "wiki",
     "github_version": "master",
     "doc_path": "docs",
 }
