@@ -11,15 +11,19 @@ Programming
 
    </div></div>
 
+Guides
+******
+
 .. toctree::
    :maxdepth: 1
-   :caption: Programming guides:
 
    /programming/solidity_101
    /programming/web3
 
+Tests
+*****
+
 .. toctree::
    :maxdepth: 1
-   :caption: Tests:
 
    /programming/test-echo

@@ -11,8 +11,10 @@ Projects
 
    </div></div>
 
+Affiliate Projects
+******************
+
 .. toctree::
    :maxdepth: 1
-   :caption: Affiliate Projects:
 
    /projects/folding_at_home

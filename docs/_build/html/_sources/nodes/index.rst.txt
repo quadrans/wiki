@@ -7,27 +7,9 @@
 Nodes
 =====
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   installation/linux_x86-64
-   installation/linux_raspberrypi
-   installation/linux_orangepi
-   installation/windows
-   installation/macos
-   management/command_line_options
-   management/node_status
-   management/statuspy_tool
-   management/paths_and_folders
-   management/external_connections
-   management/testnet
-   troubleshooting/invalid_merkle_root
-
 .. raw:: html
 
    </div></div>
-
 
 How-to
 ******

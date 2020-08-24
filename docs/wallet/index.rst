@@ -11,17 +11,21 @@ Wallets
 
    </div></div>
 
+Quadrans Address
+****************
+
 .. toctree::
    :maxdepth: 1
-   :caption: Quadrans Address:
 
    /wallet/address/creation
    /wallet/address/check
    /wallet/address/storage
 
+Wallet Management
+*****************
+
 .. toctree::
    :maxdepth: 1
-   :caption: Wallets Management:
 
    /wallet/management/metamask
    /wallet/management/importjson

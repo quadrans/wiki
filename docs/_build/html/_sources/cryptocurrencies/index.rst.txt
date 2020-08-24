@@ -11,9 +11,11 @@ Cryptocurrencies
 
    </div></div>
 
+Quadrans Cryptocurrencies
+*************************
+
 .. toctree::
    :maxdepth: 1
-   :caption: Quadrans Cryptocurrencies:
 
    /cryptocurrencies/quadrans_token
    
