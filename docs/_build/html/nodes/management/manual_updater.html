@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update your manually configured Quadrans node &#8212; Quadrans Wiki  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Command Line Options" href="command_line_options.html" />
+    <link rel="prev" title="Install Quadrans on macOS (darwin)" href="../installation/macos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../projects/index.html">Projects</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-is-orange-pi" class="nav-link">What is Orange Pi</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#updater-for-amd64-devices" class="nav-link">Updater for AMD64 devices</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#updater-for-arm64-devices" class="nav-link">Updater for ARM64 devices</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#updater-for-arm7-devices" class="nav-link">Updater for ARM7 devices</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#make-the-updater-executable" class="nav-link">Make the updater executable</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#update-your-quadrans-node" class="nav-link">Update your Quadrans Node</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/nodes/management/manual_updater.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="update-your-manually-configured-quadrans-node">
+<h1>Update your manually configured Quadrans node<a class="headerlink" href="#update-your-manually-configured-quadrans-node" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-orange-pi">
+<h2>What is Orange Pi<a class="headerlink" href="#what-is-orange-pi" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://www.orangepi.org/">Orange Pi</a> is an open-source single-board computer developed by <a class="reference external" href="https://www.orangepi.org/">Shenzhen Xunlong Software CO.</a>. It can run Android 4.4 or Linux. Recent models use the <a class="reference external" href="https://en.wikipedia.org/wiki/Rockchip">Rockchip</a> RK3399, <a class="reference external" href="https://en.wikipedia.org/wiki/Allwinner_Technology">AllWinner Technology</a> H6 SoC, and could have 1, 2 or 4 GB of RAM.</p>
+<div class="section" id="updater-for-amd64-devices">
+<h3>Updater for AMD64 devices<a class="headerlink" href="#updater-for-amd64-devices" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; /home/quadrans/gqdc-update.sh <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<span class="s">#!/bin/bash</span>
+<span class="s"># Test your internet connection</span>
+<span class="s">printf &quot;\e[1mNetwork test...\n\e[0m&quot;</span>
+<span class="s">wget -q --spider http://google.com</span>
+<span class="s">if [ $? -eq 0 ]; then</span>
+<span class="s">    printf &quot;\e[32m...it works! \n\n\e[0m&quot;</span>
+<span class="s">    figlet Quadrans Node</span>
+<span class="s">    printf &quot;Update in progress...\n\n&quot;</span>
+<span class="s">    # Close the Quadrans Node Service</span>
+<span class="s">    systemctl stop quadrans-node</span>
+<span class="s">    # Download the new binary and make it executable</span>
+<span class="s">    wget http://repo.quadrans.io/linx/amd64/gqdc -O /usr/bin/gqdc</span>
+<span class="s">    chmod +x /usr/bin/gqdc</span>
+<span class="s">    # Start the Quadrans Node Service</span>
+<span class="s">    systemctl start quadrans-node</span>
+<span class="s">    printf &quot;Quadrans Node update completed.\n\n&quot;</span>
+<span class="s">else</span>
+<span class="s">    printf &quot;\e[31moffline.\e[0m\n\nQuadrans Node update skipped this time.\n&quot;</span>
+<span class="s">fi</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="updater-for-arm64-devices">
+<h3>Updater for ARM64 devices<a class="headerlink" href="#updater-for-arm64-devices" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; /home/quadrans/gqdc-update.sh <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<span class="s">#!/bin/bash</span>
+<span class="s"># Test your internet connection</span>
+<span class="s">printf &quot;\e[1mNetwork test...\n\e[0m&quot;</span>
+<span class="s">wget -q --spider http://google.com</span>
+<span class="s">if [ $? -eq 0 ]; then</span>
+<span class="s">    printf &quot;\e[32m...it works! \n\n\e[0m&quot;</span>
+<span class="s">    figlet Quadrans Node</span>
+<span class="s">    printf &quot;Update in progress...\n\n&quot;</span>
+<span class="s">    # Close the Quadrans Node Service</span>
+<span class="s">    systemctl stop quadrans-node</span>
+<span class="s">    # Download the new binary and make it executable</span>
+<span class="s">    wget http://repo.quadrans.io/arm/arm64/gqdc -O /usr/bin/gqdc</span>
+<span class="s">    chmod +x /usr/bin/gqdc</span>
+<span class="s">    # Start the Quadrans Node Service</span>
+<span class="s">    systemctl start quadrans-node</span>
+<span class="s">    printf &quot;Quadrans Node update completed.\n\n&quot;</span>
+<span class="s">else</span>
+<span class="s">    printf &quot;\e[31moffline.\e[0m\n\nQuadrans Node update skipped this time.\n&quot;</span>
+<span class="s">fi</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="updater-for-arm7-devices">
+<h3>Updater for ARM7 devices<a class="headerlink" href="#updater-for-arm7-devices" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; /home/quadrans/gqdc-update.sh <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<span class="s">#!/bin/bash</span>
+<span class="s"># Test your internet connection</span>
+<span class="s">printf &quot;\e[1mNetwork test...\n\e[0m&quot;</span>
+<span class="s">wget -q --spider http://google.com</span>
+<span class="s">if [ $? -eq 0 ]; then</span>
+<span class="s">    printf &quot;\e[32m...it works! \n\n\e[0m&quot;</span>
+<span class="s">    figlet Quadrans Node</span>
+<span class="s">    printf &quot;Update in progress...\n\n&quot;</span>
+<span class="s">    # Close the Quadrans Node Service</span>
+<span class="s">    systemctl stop quadrans-node</span>
+<span class="s">    # Download the new binary and make it executable</span>
+<span class="s">    wget http://repo.quadrans.io/arm/arm7/gqdc -O /usr/bin/gqdc</span>
+<span class="s">    chmod +x /usr/bin/gqdc</span>
+<span class="s">    # Start the Quadrans Node Service</span>
+<span class="s">    systemctl start quadrans-node</span>
+<span class="s">    printf &quot;Quadrans Node update completed.\n\n&quot;</span>
+<span class="s">else</span>
+<span class="s">    printf &quot;\e[31moffline.\e[0m\n\nQuadrans Node update skipped this time.\n&quot;</span>
+<span class="s">fi</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="make-the-updater-executable">
+<h2>Make the updater executable<a class="headerlink" href="#make-the-updater-executable" title="Permalink to this headline">¶</a></h2>
+<p>Make the <em>gqdc-update.sh</em> executable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x gqdc-update.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-your-quadrans-node">
+<h2>Update your Quadrans Node<a class="headerlink" href="#update-your-quadrans-node" title="Permalink to this headline">¶</a></h2>
+<p>Run the updater.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo ./gqdc-update.sh
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

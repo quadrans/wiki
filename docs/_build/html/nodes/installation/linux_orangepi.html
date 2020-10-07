@@ -197,6 +197,10 @@
             </ul>
         </li>
     
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#create-a-quadrans-node-updater-script-optional" class="nav-link">Create a Quadrans Node updater script (optional)</a>
+        </li>
+    
             </ul>
         </li>
     
@@ -305,19 +309,19 @@ chmod +x gqdc
 <h3>Useful command line options<a class="headerlink" href="#useful-command-line-options" title="Permalink to this headline">¶</a></h3>
 <p>After downloading, run <code class="docutils literal notranslate"><span class="pre">gqdc</span></code> to connect your node to the Quadrans Network. Make sure to check the different options and commands with <code class="docutils literal notranslate"><span class="pre">gqdc</span> <span class="pre">--help</span></code></p>
 <p>To set your data directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--datadir datadir_path
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc -datadir datadir_path
 </pre></div>
 </div>
 <p>To show your node in the Quadrans Network Status page:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--ethstats <span class="s2">&quot;Your Node Name&quot;</span>:QuadransStatsNetwork@status.quadrans.io:3000
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc --ethstats <span class="s2">&quot;Your Node Name&quot;</span>:QuadransStatsNetwork@status.quadrans.io:3000
 </pre></div>
 </div>
 <p>To create a new Quadrans wallet create a password inside a text file and execute the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>account new --password Your_Password_File.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc account new --password Your_Password_File.txt
 </pre></div>
 </div>
 <p>To execute the node as a <em>Miner</em>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc --mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
 </pre></div>
 </div>
 <p>To connect to Quadrans Testnet (download the <a class="reference internal" href="../management/testnet.html"><span class="doc">last test Quadrans node binary</span></a>).</p>
@@ -403,6 +407,10 @@ systemctl <span class="nb">enable</span> quadrans-node
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="create-a-quadrans-node-updater-script-optional">
+<h3>Create a Quadrans Node updater script (optional)<a class="headerlink" href="#create-a-quadrans-node-updater-script-optional" title="Permalink to this headline">¶</a></h3>
+<p><strong>Quadrans Node Update Installer</strong> for <a class="reference external" href="../management/gqdc-update.html#script-for-arm64-devices">ARM64</a> or <a class="reference external" href="../management/update_installer.html#script-for-arm7-devices">ARM7</a> is bash script that check Internet connection, suspend the Quadrans Node Service, download the new version of the <strong>gqdc</strong> binary and relaunch the service at the end of the process.</p>
 </div>
 </div>
 <div class="section" id="connect-the-node-to-testnet">

@@ -35,21 +35,34 @@ Make sure to check the different options and commands with ``gqdc --help``
 
 To change your data directory.
 
-`--datadir datadir_path`
+``` bash
+gqdc -datadir datadir_path
+``` 
 
-To show your node in the Quadrans Network Status page.
+To show your node in the Quadrans Network Status page:
 
-`--ethstats "Your Node Name":QuadransStatsNetwork@status.quadrans.io:3000`
+``` bash
+gqdc --ethstats "Your Node Name":QuadransStatsNetwork@status.quadrans.io:3000
+``` 
 
-To create a new Quadrans wallet create a password inside a text file and
-execute the following command.
+To create a new Quadrans wallet create a password inside a text file and execute the following command:
 
-`account new --password Your_Password_File.txt`
+``` bash
+gqdc account new --password Your_Password_File.txt
+``` 
 
-To execute the node as a **Miner**
+To execute the node as a *Miner*:
 
-`--mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt`
+``` bash
+gqdc --mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
+``` 
 
 To connect to Quadrans Testnet (download the [last test Quadrans node binary](../management/testnet)).
 
-`--testnet`
+``` bash
+--testnet
+``` 
+
+### Enable your node for mining
+
+Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.

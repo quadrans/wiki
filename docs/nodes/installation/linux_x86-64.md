@@ -69,25 +69,25 @@ After downloading, run `gqdc` to connect your node to the Quadrans Network. Make
 To set your data directory:
 
 ``` bash
---datadir datadir_path
+gqdc -datadir datadir_path
 ``` 
 
 To show your node in the Quadrans Network Status page:
 
 ``` bash
---ethstats "Your Node Name":QuadransStatsNetwork@status.quadrans.io:3000
+gqdc --ethstats "Your Node Name":QuadransStatsNetwork@status.quadrans.io:3000
 ``` 
 
 To create a new Quadrans wallet create a password inside a text file and execute the following command:
 
 ``` bash
-account new --password Your_Password_File.txt
+gqdc account new --password Your_Password_File.txt
 ``` 
 
 To execute the node as a *Miner*:
 
 ``` bash
---mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
+gqdc --mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
 ``` 
 
 To connect to Quadrans Testnet (download the [last test Quadrans node binary](../management/testnet)).
@@ -188,6 +188,14 @@ or
 ``` bash
 journalctl -f | grep Quadrans
 ``` 
+
+### Enable your node for mining
+
+Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.
+
+### Create a Quadrans Node updater script (optional)
+
+**Quadrans Node Update Installer** for [x86-64](../management/gqdc-update.html#script-for-x86-64-devices) is bash script that check Internet connection, suspend the Quadrans Node Service, download the new version of the **gqdc** binary and relaunch the service at the end of the process.
 
 ## Connect the node to Testnet 
 

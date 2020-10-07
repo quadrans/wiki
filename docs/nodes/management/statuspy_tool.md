@@ -7,12 +7,12 @@ The status.py tool is a simple python script that connects to the node and gives
 
 ``` bash
 sudo apt install python3-pip python3-dev
-sudo pip3 install wheel setuptools termcolor web3 pyfiglet
+sudo pip3 install wheel setuptools termcolor rlp web3 pyfiglet
 ``` 
 
 ## Code
 
-[status.py](../../_static/doc/status.py "status.py file") file content:
+Create a new **status.py** file with this content:
 
 ``` python
 #!/usr/bin/python3

@@ -18,4 +18,5 @@ Quadrans Cryptocurrencies
    :maxdepth: 1
 
    /cryptocurrencies/quadrans_token
-   
+   /cryptocurrencies/quadrans_coin
+   /cryptocurrencies/mining_and_reward   

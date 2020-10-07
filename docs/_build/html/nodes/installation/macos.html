@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Command Line Options" href="../management/command_line_options.html" />
+    <link rel="next" title="Update your manually configured Linux Quadrans node" href="../management/gqdc-update.html" />
     <link rel="prev" title="Install Quadrans on Windows" href="windows.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -206,16 +206,25 @@ chmod +x gqdc
 <div class="section" id="useful-options">
 <h3>Useful options<a class="headerlink" href="#useful-options" title="Permalink to this headline">¶</a></h3>
 <p>To change your data directory.</p>
-<p><code class="docutils literal notranslate"><span class="pre">--datadir</span> <span class="pre">datadir_path</span></code></p>
-<p>To show your node in the Quadrans Network Status page.</p>
-<p><code class="docutils literal notranslate"><span class="pre">--ethstats</span> <span class="pre">&quot;Your</span> <span class="pre">Node</span> <span class="pre">Name&quot;:QuadransStatsNetwork&#64;status.quadrans.io:3000</span></code></p>
-<p>To create a new Quadrans wallet create a password inside a text file and
-execute the following command.</p>
-<p><code class="docutils literal notranslate"><span class="pre">account</span> <span class="pre">new</span> <span class="pre">--password</span> <span class="pre">Your_Password_File.txt</span></code></p>
-<p>To execute the node as a <strong>Miner</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">--mine</span> <span class="pre">--unlock</span> <span class="pre">0xYour_Wallet_Address</span> <span class="pre">--password</span> <span class="pre">Your_Password_File.txt</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc -datadir datadir_path
+</pre></div>
+</div>
+<p>To show your node in the Quadrans Network Status page:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc --ethstats <span class="s2">&quot;Your Node Name&quot;</span>:QuadransStatsNetwork@status.quadrans.io:3000
+</pre></div>
+</div>
+<p>To create a new Quadrans wallet create a password inside a text file and execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc account new --password Your_Password_File.txt
+</pre></div>
+</div>
+<p>To execute the node as a <em>Miner</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc --mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt
+</pre></div>
+</div>
 <p>To connect to Quadrans Testnet (download the <a class="reference internal" href="../management/testnet.html"><span class="doc">last test Quadrans node binary</span></a>).</p>
-<p><code class="docutils literal notranslate"><span class="pre">--testnet</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--testnet
+</pre></div>
+</div>
 </div>
 </div>
 </div>

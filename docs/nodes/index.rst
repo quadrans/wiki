@@ -105,6 +105,7 @@ Management
 .. toctree::
    :maxdepth: 1
 
+   management/gqdc-update
    management/command_line_options
    management/node_status
    management/statuspy_tool
