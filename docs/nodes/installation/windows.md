@@ -106,7 +106,7 @@ If you choosed to create a Quadrans wallet you can copy and paste the public add
 
 ### Enable your node for mining
 
-Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.
+Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
 
 ### Backup your configuration, wallet private key and password
 

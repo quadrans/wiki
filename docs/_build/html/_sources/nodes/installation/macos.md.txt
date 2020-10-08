@@ -65,4 +65,4 @@ To connect to Quadrans Testnet (download the [last test Quadrans node binary](..
 
 ### Enable your node for mining
 
-Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.
+Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.

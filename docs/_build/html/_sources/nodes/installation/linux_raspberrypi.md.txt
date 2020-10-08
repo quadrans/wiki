@@ -185,7 +185,7 @@ journalctl -f | grep Quadrans
 
 ### Enable your node for mining
 
-Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.
+Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
 
 ### Create a Quadrans Node updater script (optional)
 
