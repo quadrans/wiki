@@ -364,7 +364,7 @@ function f(uint a) pure returns (uint) {
 
 ### Payable Functions
 
-Functions that receive Ether are marked as payable function.
+Functions that receive Quadrans Coins (QDC) are marked as payable function.
 
 ### Fallback Function
 
