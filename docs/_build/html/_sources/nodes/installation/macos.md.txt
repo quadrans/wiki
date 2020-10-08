@@ -62,3 +62,7 @@ To connect to Quadrans Testnet (download the [last test Quadrans node binary](..
 ``` bash
 --testnet
 ``` 
+
+### Enable your node for mining
+
+Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.

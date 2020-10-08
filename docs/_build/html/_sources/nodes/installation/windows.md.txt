@@ -104,6 +104,10 @@ In the new window please click **Install** to complete the Go Quadrans installat
 
 If you choosed to create a Quadrans wallet you can copy and paste the public address from the last setup screen. Click **Next** to end the setup procedure.
 
+### Enable your node for mining
+
+Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.
+
 ### Backup your configuration, wallet private key and password
 
 Important data regarding your node is stored in the installation folder.

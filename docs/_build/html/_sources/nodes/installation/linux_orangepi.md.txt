@@ -198,6 +198,10 @@ or
 journalctl -f | grep Quadrans
 ``` 
 
+### Enable your node for mining
+
+Go to [Mining and Reward](mining_and_reward) chapter of this Wiki.
+
 ### Create a Quadrans Node updater script (optional)
 
 **Quadrans Node Update Installer** for [ARM64](../management/gqdc-update.html#script-for-arm64-devices) or [ARM7](../management/update_installer.html#script-for-arm7-devices) is bash script that check Internet connection, suspend the Quadrans Node Service, download the new version of the **gqdc** binary and relaunch the service at the end of the process.
