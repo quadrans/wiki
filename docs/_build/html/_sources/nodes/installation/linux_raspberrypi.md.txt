@@ -21,7 +21,7 @@ Models tested are:
 ### Suggested Operating System
 
 * [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) Buster (Ubuntu 18.04.3 LTS based) 
-* [Installation guides](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) are available in the [official Raspberry website](https://www.raspberrypi.org)
+* [Installation guides](https://www.raspberrypi.org/documentation/installation/installing-images/) are available in the [official Raspberry website](https://www.raspberrypi.org)
 
 ## Manual installation for Linux (arm 7) 
 
@@ -51,9 +51,8 @@ useradd -r -m quadrans
 Download the latest binary:
 
 ``` bash
-cd /usr/local/bin/
-wget http://repo.quadrans.io/arm/arm7/gqdc
-chmod +x gqdc
+wget -O /usr/local/bin/gqdc http://repo.quadrans.io/arm/arm7/gqdc 
+chmod +x /usr/local/bin/gqdc
 ``` 
 
 ### Useful command line options 

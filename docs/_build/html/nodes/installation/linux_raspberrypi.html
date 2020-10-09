@@ -249,7 +249,7 @@
 <h3>Suggested Operating System<a class="headerlink" href="#suggested-operating-system" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a> Buster (Ubuntu 18.04.3 LTS based)</p></li>
-<li><p><a class="reference external" href="https://www.raspberrypi.org/documentation/installation/installing-images/README">Installation guides</a> are available in the <a class="reference external" href="https://www.raspberrypi.org">official Raspberry website</a></p></li>
+<li><p><a class="reference external" href="https://www.raspberrypi.org/documentation/installation/installing-images/">Installation guides</a> are available in the <a class="reference external" href="https://www.raspberrypi.org">official Raspberry website</a></p></li>
 </ul>
 </div>
 </div>
@@ -277,9 +277,8 @@
 <div class="section" id="arm7-32-bit-cpu">
 <h4>ARM7 32 bit CPU<a class="headerlink" href="#arm7-32-bit-cpu" title="Permalink to this headline">¶</a></h4>
 <p>Download the latest binary:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /usr/local/bin/
-wget http://repo.quadrans.io/arm/arm7/gqdc
-chmod +x gqdc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -O /usr/local/bin/gqdc http://repo.quadrans.io/arm/arm7/gqdc 
+chmod +x /usr/local/bin/gqdc
 </pre></div>
 </div>
 </div>
