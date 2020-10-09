@@ -57,9 +57,9 @@ useradd -r -m quadrans
 Download the latest binary:
 
 ``` bash
-cd /usr/local/bin/
-wget http://repo.quadrans.io/linux/amd64/gqdc
-chmod +x gqdc
+wget -O /usr/local/bin/gqdc http://repo.quadrans.io/linux/amd64/gqdc 
+chmod +x /usr/local/bin/gqdc
+
 ``` 
 
 ### Useful options 

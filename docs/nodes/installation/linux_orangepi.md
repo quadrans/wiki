@@ -57,18 +57,16 @@ useradd -r -m quadrans
 Download the latest binary:
 
 ``` bash
-cd /usr/local/bin/
-wget http://repo.quadrans.io/arm/arm64/gqdc
-chmod +x gqdc
+wget -O /usr/local/bin/gqdc http://repo.quadrans.io/arm/arm64/gqdc 
+chmod +x /usr/local/bin/gqdc
 ``` 
 
 #### ARM7 32 bit CPU
 Download the latest binary:
 
 ``` bash
-cd /usr/local/bin/
-wget http://repo.quadrans.io/arm/arm7/gqdc
-chmod +x gqdc
+wget -O /usr/local/bin/gqdc http://repo.quadrans.io/arm/arm7/gqdc 
+chmod +x /usr/local/bin/gqdc
 ``` 
 
 ### Useful command line options 
