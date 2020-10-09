@@ -206,7 +206,7 @@ Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of t
 
 ## Connect the node to Testnet 
 
-Please read the **How to setup your node for testnet** documentation.
+Please read the [How to setup your node for testnet](../management/testnet) documentation.
 
 ### Important
 

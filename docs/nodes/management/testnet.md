@@ -19,7 +19,7 @@ As *root* or *sudo* user stop the node
 systemctl stop quadrans-node
 ``` 
 
-Substitute the `gqdc` binary with the latest test version:
+Substitute the `gqdc` binary with the latest test version for your architecture:
 
 ``` bash
 wget -O /usr/local/bin/gqdc http://repo.quadrans.io/linux/test/amd64/gqdc
