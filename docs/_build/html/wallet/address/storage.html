@@ -141,7 +141,7 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#keystore-json-account-files" class="nav-link">Keystore Json account files</a>
+            <a href="#keystore-json-account-and-password-files" class="nav-link">Keystore Json account and password files</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -172,14 +172,18 @@
 <h1>How to safely Backup a Quadrans Address<a class="headerlink" href="#how-to-safely-backup-a-quadrans-address" title="Permalink to this headline">¶</a></h1>
 <p>Depending on the way you created your address there are different things you can do and best practices to follow to backup an adderss/wallet.</p>
 <p>If the address is in use on a node, you will for sure have the json file of the address and can follow the directions here</p>
-<div class="section" id="keystore-json-account-files">
-<h2>Keystore Json account files<a class="headerlink" href="#keystore-json-account-files" title="Permalink to this headline">¶</a></h2>
-<p>Each node stores data of the addresses it can work with in the keystore directory.</p>
-<p>For mainnet nodes:</p>
+<div class="section" id="keystore-json-account-and-password-files">
+<h2>Keystore Json account and password files<a class="headerlink" href="#keystore-json-account-and-password-files" title="Permalink to this headline">¶</a></h2>
+<p>Each node stores data of the addresses it can work with in the keystore directory. The directory tree used in this guide is based on a self-installing Quadrans Linux node.</p>
+<p>The unlock <code class="docutils literal notranslate"><span class="pre">password.txt</span></code> file is tipically stored on <em>quadrans</em> user home folder</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/
+</pre></div>
+</div>
+<p>The wallet private key for Mainnet nodes is available in:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/.quadrans/keystore
 </pre></div>
 </div>
-<p>For testnet nodes:</p>
+<p>The wallet private key for Testnet nodes is available in:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/.quadrans/testnet/keystore
 </pre></div>
 </div>
@@ -222,8 +226,8 @@
 <h2>What to store<a class="headerlink" href="#what-to-store" title="Permalink to this headline">¶</a></h2>
 <p>In order to operate and/or migrate the account form one node to another you need to have:</p>
 <ul class="simple">
-<li><p>the json file</p></li>
-<li><p>the corresponding password</p></li>
+<li><p>the Json file</p></li>
+<li><p>the corresponding password (<em>password.txt</em> for Quadrans nodes)</p></li>
 </ul>
 <p>Save those two, back them up and store them in a safe place</p>
 </div>

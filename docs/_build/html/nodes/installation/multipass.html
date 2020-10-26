@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Quadrans with Multipass &#8212; Quadrans Wiki  documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Install Quadrans on Raspberry Pi" href="linux_raspberrypi.html" />
+    <link rel="prev" title="Install Quadrans on Linux x86-64" href="linux_x86-64.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../../index.html">
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../projects/index.html">Projects</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
+        </li>
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-is-multipass" class="nav-link">What is Multipass</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#how-to-start" class="nav-link">How-to start</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#download-and-install-multipass-on-windows-10" class="nav-link">Download and install Multipass on Windows 10</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#prerequisites" class="nav-link">Prerequisites</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#installation" class="nav-link">Installation</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#download-and-install-multipass-on-mac-os" class="nav-link">Download and install Multipass on Mac OS</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#download-and-install-multipass-on-linux" class="nav-link">Download and install Multipass on Linux</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#create-the-quadrans-virtual-machine" class="nav-link">Create the Quadrans virtual machine</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#connect-and-install-the-quadrans-node" class="nav-link">Connect and install the Quadrans node</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#useful-informations" class="nav-link">Useful informations</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/nodes/installation/multipass.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="install-quadrans-with-multipass">
+<h1>Install Quadrans with Multipass<a class="headerlink" href="#install-quadrans-with-multipass" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-multipass">
+<h2>What is Multipass<a class="headerlink" href="#what-is-multipass" title="Permalink to this headline">¶</a></h2>
+<p>Multipass is a mini-cloud on your workstation using native hypervisors of all the supported plaforms (Windows, macOS and Linux), it will give you an Ubuntu command line in just a few minutes and allows you to create a secure and fully working Quadrans node in your computer.</p>
+<p>With Multipass you will create a virtual server with basic environment and you can install the latest Quadrans node for Ubuntu Linux without without having to perform complicated steps.</p>
+</div>
+<div class="section" id="how-to-start">
+<h2>How-to start<a class="headerlink" href="#how-to-start" title="Permalink to this headline">¶</a></h2>
+<p>Multipass provides a command line interface to launch, manage and generally fiddle about with instances of Linux. First of wall you need to simply prepare your computer to create an environment.</p>
+<div class="section" id="download-and-install-multipass-on-windows-10">
+<h3>Download and install Multipass on Windows 10<a class="headerlink" href="#download-and-install-multipass-on-windows-10" title="Permalink to this headline">¶</a></h3>
+<p>To get Multipass for Windows, download the latest installer from the  <a class="reference external" href="https://github.com/CanonicalLtd/multipass/releases/">official GitHub releases page</a>. It is the <em>.exe</em> file.</p>
+<div class="section" id="prerequisites">
+<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
+<p>Multipass will work without additional requirements on <strong>Windows 10 Pro</strong> or <strong>Windows Enterprise</strong>, version 1803 (“April 2018 Update”) or later that integrate the <strong>Hyper-V</strong> virtualization provider (or <em>hypervisor</em>).</p>
+<p>For <strong>Windows 10 Home</strong> user (or if you want to change the virtualization provider) you need to download and install <strong>Oracle VirtualBox</strong> from the <a class="reference external" href="https://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html">official website</a>.</p>
+</div>
+<div class="section" id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h4>
+<p>Run the installer and it will guide you through the steps necessary.</p>
+<ul class="simple">
+<li><p>You will need to allow the installer to gain Administrator privileges;</p></li>
+<li><p>Select your preferred hypervisor (<em>Hyper-V</em> is the default or Windows 10 Pro/Enterprise, or <em>VirtualBox</em> is mandatory for Windows 10 Home);</p></li>
+<li><p>Select <em>Add multipass to the system PATH for all users</em>;</p></li>
+<li><p>Confirm the installation folder;</p></li>
+<li><p>Click on <em>Install</em> and reboot at the end of the process.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="download-and-install-multipass-on-mac-os">
+<h3>Download and install Multipass on Mac OS<a class="headerlink" href="#download-and-install-multipass-on-mac-os" title="Permalink to this headline">¶</a></h3>
+<p><em>Work in progress</em></p>
+</div>
+<div class="section" id="download-and-install-multipass-on-linux">
+<h3>Download and install Multipass on Linux<a class="headerlink" href="#download-and-install-multipass-on-linux" title="Permalink to this headline">¶</a></h3>
+<p>Multipass for Linux is published as a <strong>snap</strong> package. Before to start verify if your <a class="reference external" href="https://docs.snapcraft.io/installing-snapd">Linux distribution supports snap</a> or <a class="reference external" href="https://docs.snapcraft.io/installing-snapd">how to get ready for snap</a>.</p>
+<p>After that, to install multipass simply type this command in your Terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>snap install multipass
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-the-quadrans-virtual-machine">
+<h2>Create the Quadrans virtual machine<a class="headerlink" href="#create-the-quadrans-virtual-machine" title="Permalink to this headline">¶</a></h2>
+<p><strong>Quadrans node</strong> minimum requirements are tipically a computer or VPS with 2 core CPU, 4 GB of RAM and 100 GB of hard disk. In Multipass configuration you can easily reduce to 2 GB of RAM your virtual machine.</p>
+<p>To create a new Multipass instance you can use the following command inside the Windows <em>Command Prompt</em> or <em>PowerShell</em>, and Mac OS or Linux <em>Terminal</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass launch -c <span class="m">2</span> -m 2G -d 100G --name quadrans
+</pre></div>
+</div>
+<p>This will automatically create a new virtual machine with the latest version of <strong>Ubuntu LTS</strong> with minimal setup.</p>
+<p>For your information <em>-c 2</em> means the number of logical core allocated from your CPU, <em>-m 2</em> to allocate 2 GB of RAM, <em>-d 100G</em> to create a virtual drive of 100 GB for data, <em>–name quadrans</em> is the name of your VM. You can customize and increase the allocation of resources for your virtual machine based on the power of your computer and the available amount of logical core, RAM or disk space.</p>
+</div>
+<div class="section" id="connect-and-install-the-quadrans-node">
+<h2>Connect and install the Quadrans node<a class="headerlink" href="#connect-and-install-the-quadrans-node" title="Permalink to this headline">¶</a></h2>
+<p>Once your virtual machine were created you can <em>execute</em> commands or <em>connect</em> to your enviroment. For the first run and the installation of your node use this command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass shell quadrans
+</pre></div>
+</div>
+<p>You will be connected to your virtual machine. From here you can simply copy and paste the commands to use the self-installer for Ubuntu Linux.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo wget -O /etc/apt/sources.list.d/quadrans.list http://repo.quadrans.io/apt/conf/quadrans.list
+sudo wget -O - http://repo.quadrans.io/apt/conf/quadrans.gpg.key<span class="p">|</span>sudo apt-key add -
+sudo apt update
+sudo apt install -y python quadrans-node
+</pre></div>
+</div>
+<p>The installer will guide you through the steps necessary.</p>
+<p>At the end of the process your node will start to sync and you can type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to disconnect from the virtual machine.</p>
+</div>
+<div class="section" id="useful-informations">
+<h2>Useful informations<a class="headerlink" href="#useful-informations" title="Permalink to this headline">¶</a></h2>
+<p>Your Multipass virtual machine will be automatically launched on boot as a service, you don’t need to log-in on your operating system to start the <strong>Quadrans node</strong>.</p>
+<p>You can stop the virtual machine (and it will not restart automatically on boot) with this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass stop quadrans
+</pre></div>
+</div>
+<p>To start the virtual machine the command is similar:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass start quadrans
+</pre></div>
+</div>
+<p>You can obtain information about the status and your virtual machine (CPU load, disk usage, memory usage, etc.) with this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass info quadrans
+</pre></div>
+</div>
+<p>You can execute a command outside the virtual machine, for example to check the status of your node:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass <span class="nb">exec</span> quadrans -- systemctl status quadrans-node
+</pre></div>
+</div>
+<p>To update your virtual machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass <span class="nb">exec</span> quadrans -- sudo apt update
+multipass <span class="nb">exec</span> quadrans -- sudo apt upgrade -y
+</pre></div>
+</div>
+<p>To connect to your virtual machine and use the Linux console:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass shell quadrans
+</pre></div>
+</div>
+<p>To disconnect:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">exit</span>
+</pre></div>
+</div>
+<p>On Windows machine Multipass will install a simple to use systray icon. By clicking with the right button of you mouse you will find the “quadrans” virtual machine and you can <em>start</em>, <em>stop</em> or connect (<em>shell</em>) directly from this menu.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

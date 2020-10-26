@@ -5,17 +5,23 @@ Depending on the way you created your address there are different things you can
 
 If the address is in use on a node, you will for sure have the json file of the address and can follow the directions here
 
-## Keystore Json account files
+## Keystore Json account and password files
 
-Each node stores data of the addresses it can work with in the keystore directory.
+Each node stores data of the addresses it can work with in the keystore directory. The directory tree used in this guide is based on a self-installing Quadrans Linux node.
 
-For mainnet nodes:
+The unlock `password.txt` file is tipically stored on *quadrans* user home folder
+
+``` bash
+cd /home/quadrans/
+``` 
+
+The wallet private key for Mainnet nodes is available in:
 
 ``` bash
 cd /home/quadrans/.quadrans/keystore
 ``` 
 
-For testnet nodes:
+The wallet private key for Testnet nodes is available in:
 
 ``` bash
 cd /home/quadrans/.quadrans/testnet/keystore
@@ -67,7 +73,7 @@ Those files are **encrypted format** and can safely be copied from one node to a
 
 In order to operate and/or migrate the account form one node to another you need to have:
 
-* the json file
-* the corresponding password
+* the Json file
+* the corresponding password (*password.txt* for Quadrans nodes)
 
 Save those two, back them up and store them in a safe place

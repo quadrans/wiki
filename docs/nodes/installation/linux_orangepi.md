@@ -27,7 +27,7 @@ Models tested are:
 
 **Quadrans Technical Team** tested the [arm7 binary (32 bit)](http://repo.quadrans.io/arm/arm7/) in combination with [Armbian for Orange Pi](https://www.armbian.com/download/?tx_maker=xunlong) operating system with these devboards:
 
-+ Orange Pi Zero+
+* Orange Pi Zero Plus
 
 ## Manual installation for Linux (arm64 or arm 7) 
 
