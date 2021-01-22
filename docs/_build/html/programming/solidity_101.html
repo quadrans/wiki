@@ -1,40 +1,58 @@
 
-
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solidity Cheatsheet and Best practices &#8212; Quadrans Wiki  documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Accessing Blockchain via CURL" href="web3.html" />
     <link rel="prev" title="Programming" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
 <div class="container-xl">
 
-    
     <a class="navbar-brand" href="../index.html">
-      <img src="../_static/logo-quadrans-black.svg" class="logo" alt="logo">
-    </a>
     
+      <img src="../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,6 +60,10 @@
     <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
       <ul id="navbar-main-elements" class="navbar-nav mr-auto">
         
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../get-started.html">Get Started</a>
+        </li>
         
         <li class="nav-item ">
             <a class="nav-link" href="../nodes/index.html">Nodes</a>
@@ -97,36 +119,34 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
-
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-  <div class="bd-toc-item active">
+    <div class="bd-toc-item active">
+    
   
-
-  <ul class="nav bd-sidenav">
-      
-      
-      
-      
-      
-      
-      
-      
+    <ul class="nav bd-sidenav">
         
-      
-      
-      
-      
-    </ul>
-
-</nav>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
           </div>
           
 
@@ -397,9 +417,9 @@
 </div>
 <div class="section" id="import-files">
 <h2>Import files<a class="headerlink" href="#import-files" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">symbolName</span> <span class="nx">from</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span> <span class="nx">or</span> <span class="kr">import</span> <span class="s2">&quot;filename&quot;</span> <span class="nx">as</span> <span class="nx">symbolName</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">symbol1</span> <span class="nx">as</span> <span class="nx">alias</span><span class="p">,</span> <span class="nx">symbol2</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">symbolName</span> <span class="nx">from</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span> <span class="nx">or</span> <span class="k">import</span> <span class="s2">&quot;filename&quot;</span> <span class="nx">as</span> <span class="nx">symbolName</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">symbol1</span> <span class="nx">as</span> <span class="nx">alias</span><span class="p">,</span> <span class="nx">symbol2</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;filename&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -474,9 +494,9 @@ negation)</p>
 </table><p>Delegatecall uses the code of the target address, taking all other aspects (storage, balance, …) from the calling contract. The purpose of delegatecall is to use library code which is stored in another contract. The user has to ensure that the layout of storage in both contracts is suitable for delegatecall to be used.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
 <span class="kr">int</span> <span class="nx">value</span><span class="p">;</span>
-<span class="nx">address</span> <span class="kr">public</span> <span class="nx">sender</span><span class="p">;</span>
-<span class="nx">address</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">address</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// address of contract B</span>
-<span class="kd">function</span> <span class="nx">makeDelegateCall</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+<span class="nx">address</span> <span class="nx">public</span> <span class="nx">sender</span><span class="p">;</span>
+<span class="nx">address</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">address</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span> <span class="c1">// address of contract B</span>
+<span class="kd">function</span> <span class="nx">makeDelegateCall</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span> <span class="nx">public</span> <span class="p">{</span>
         <span class="nx">a</span><span class="p">.</span><span class="nx">delegatecall</span><span class="p">(</span>
             <span class="nx">abi</span><span class="p">.</span><span class="nx">encodePacked</span><span class="p">(</span><span class="nx">bytes4</span><span class="p">(</span><span class="nx">keccak256</span><span class="p">(</span><span class="s2">&quot;setValue(uint)&quot;</span><span class="p">)),</span> <span class="nx">_value</span><span class="p">)</span>
         <span class="p">);</span> <span class="c1">// Value of A is modified</span>
@@ -485,8 +505,8 @@ negation)</p>
 
 <span class="nx">contract</span> <span class="nx">B</span> <span class="p">{</span>
 <span class="nx">uint</span> <span class="nx">value</span><span class="p">;</span>
-<span class="nx">address</span> <span class="kr">public</span> <span class="nx">sender</span><span class="p">;</span>
-<span class="kd">function</span> <span class="nx">setValue</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span> <span class="kr">public</span> <span class="p">{</span>
+<span class="nx">address</span> <span class="nx">public</span> <span class="nx">sender</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">setValue</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span> <span class="nx">public</span> <span class="p">{</span>
         <span class="nx">value</span> <span class="o">=</span> <span class="nx">_value</span><span class="p">;</span>
         <span class="nx">sender</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">sender</span><span class="p">;</span> <span class="c1">// msg.sender is preserved in delegatecall. It was not available in callcode.</span>
     <span class="p">}</span>
@@ -585,7 +605,7 @@ except for switch and goto.</p>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Structure</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">parameter</span> <span class="nx">types</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span><span class="nx">internal</span><span class="o">|</span><span class="nx">external</span><span class="o">|</span><span class="kr">public</span><span class="o">|</span><span class="kr">private</span><span class="p">}</span> <span class="p">[</span><span class="nx">pure</span><span class="o">|</span><span class="nx">constant</span><span class="o">|</span><span class="nx">view</span><span class="o">|</span><span class="nx">payable</span><span class="p">]</span> <span class="p">[</span><span class="nx">returns</span> <span class="p">(</span><span class="o">&lt;</span><span class="k">return</span> <span class="nx">types</span><span class="o">&gt;</span><span class="p">)]</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">parameter</span> <span class="nx">types</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span><span class="nx">internal</span><span class="o">|</span><span class="nx">external</span><span class="o">|</span><span class="nx">public</span><span class="o">|</span><span class="kr">private</span><span class="p">}</span> <span class="p">[</span><span class="nx">pure</span><span class="o">|</span><span class="nx">constant</span><span class="o">|</span><span class="nx">view</span><span class="o">|</span><span class="nx">payable</span><span class="p">]</span> <span class="p">[</span><span class="nx">returns</span> <span class="p">(</span><span class="o">&lt;</span><span class="k">return</span> <span class="nx">types</span><span class="o">&gt;</span><span class="p">)]</span>
 </pre></div>
 </div>
 <div class="section" id="access-modifiers">
@@ -641,7 +661,7 @@ constructor keyword.</p>
 <p>Functions of the current contract can be called directly (internally - via jumps) and also recursively</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">C</span> <span class="p">{</span>
     <span class="kd">function</span> <span class="nx">funA</span><span class="p">()</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="k">return</span> <span class="mf">5</span><span class="p">;</span>
     <span class="p">}</span>
     
     <span class="kd">function</span> <span class="nx">FunB</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">ret</span><span class="p">)</span> <span class="p">{</span>
@@ -661,7 +681,7 @@ constructor keyword.</p>
 <p>Function call arguments can also be given by name in any order as below.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
 <span class="kd">function</span> <span class="nx">g</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">f</span><span class="p">({</span><span class="nx">b</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">2</span><span class="p">});</span>
+    <span class="nx">f</span><span class="p">({</span><span class="nx">b</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nx">a</span><span class="o">:</span> <span class="mf">2</span><span class="p">});</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -689,7 +709,7 @@ constructor keyword.</p>
     <span class="nx">event</span> <span class="nx">NewRequest</span><span class="p">(</span><span class="nx">uint</span><span class="p">);</span>
     <span class="kd">function</span> <span class="nx">query</span><span class="p">(</span><span class="nx">bytes</span> <span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bytes</span> <span class="nx">memory</span><span class="p">)</span> <span class="nx">external</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">requests</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">Request</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">));</span>
-    <span class="nx">NewRequest</span><span class="p">(</span><span class="nx">requests</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">NewRequest</span><span class="p">(</span><span class="nx">requests</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="kd">function</span> <span class="nx">reply</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">requestID</span><span class="p">,</span> <span class="nx">bytes</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Here goes the check that the reply comes from a trusted source</span>
@@ -739,7 +759,7 @@ constructor keyword.</p>
 <p>Functions can be declared pure in which case they promise not to read
 from or modify the state.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">a</span><span class="p">)</span> <span class="nx">pure</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="mi">42</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="mf">42</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -791,7 +811,7 @@ from or modify the state.</p>
 
 <span class="nx">contract</span> <span class="kr">final</span> <span class="nx">is</span> <span class="nx">mortal</span> <span class="p">{</span>
     <span class="kd">function</span> <span class="nx">kill</span><span class="p">()</span> <span class="p">{</span> 
-        <span class="kr">super</span><span class="p">.</span><span class="nx">kill</span><span class="p">();</span> <span class="c1">// Calls kill() of mortal.</span>
+        <span class="k">super</span><span class="p">.</span><span class="nx">kill</span><span class="p">();</span> <span class="c1">// Calls kill() of mortal.</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -800,12 +820,12 @@ from or modify the state.</p>
 <div class="section" id="multiple-inheritance">
 <h3>Multiple inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">contract</span> <span class="nx">A</span> <span class="p">{}</span> <span class="nx">contract</span> <span class="nx">B</span> <span class="p">{}</span> <span class="nx">contract</span> <span class="nx">C</span> <span class="nx">is</span> <span class="nx">A</span><span class="p">,</span> <span class="nx">B</span> <span class="p">{}</span>
-<span class="nx">Constructor</span> <span class="k">of</span> <span class="nx">base</span> <span class="kr">class</span> <span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
+<span class="nx">Constructor</span> <span class="k">of</span> <span class="nx">base</span> <span class="kd">class</span> <span class="nx">contract</span> <span class="nx">A</span> <span class="p">{</span>
     <span class="nx">uint</span> <span class="nx">a</span><span class="p">;</span>
     <span class="nx">constructor</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="p">{</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">contract</span> <span class="nx">B</span> <span class="nx">is</span> <span class="nx">A</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">contract</span> <span class="nx">B</span> <span class="nx">is</span> <span class="nx">A</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">constructor</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_b</span><span class="p">)</span> <span class="nx">A</span><span class="p">(</span><span class="nx">_b</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -881,7 +901,7 @@ from or modify the state.</p>
     <span class="nx">uint</span> <span class="nx">sum</span><span class="p">;</span>
 
     <span class="kd">function</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">arithmatic</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">arithmatic</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -902,7 +922,7 @@ from or modify the state.</p>
     
     <span class="nx">uint</span> <span class="nx">sum</span><span class="p">;</span>
     <span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">uint</span> <span class="nx">_a</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+        <span class="nx">sum</span> <span class="o">=</span> <span class="nx">_a</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -916,10 +936,10 @@ from or modify the state.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">revert()</span></code>: abort execution and revert state changes.</p></li>
 </ul>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sendHalf</span><span class="p">(</span><span class="nx">address</span> <span class="nx">addr</span><span class="p">)</span> <span class="nx">payable</span> <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">balance</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">require</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Only allow even numbers</span>
+    <span class="nx">require</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">==</span> <span class="mf">0</span><span class="p">);</span> <span class="c1">// Only allow even numbers</span>
     <span class="nx">uint</span> <span class="nx">balanceBeforeTransfer</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">balance</span><span class="p">;</span>
-    <span class="nx">addr</span><span class="p">.</span><span class="nx">transfer</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
-    <span class="nx">assert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">balance</span> <span class="o">==</span> <span class="nx">balanceBeforeTransfer</span> <span class="o">-</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="nx">addr</span><span class="p">.</span><span class="nx">transfer</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mf">2</span><span class="p">);</span>
+    <span class="nx">assert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">balance</span> <span class="o">==</span> <span class="nx">balanceBeforeTransfer</span> <span class="o">-</span> <span class="nx">msg</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mf">2</span><span class="p">);</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">balance</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -987,7 +1007,10 @@ from or modify the state.</p>
       </div>
     </div>
 
-    <script src="../_static/js/index.js"></script>
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>
@@ -1002,7 +1025,7 @@ from or modify the state.</p>
   <div class="container">
     <p>
           &copy; Copyright 2020, Quadrans Foundation.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
     </p>
   </div>
 </footer>

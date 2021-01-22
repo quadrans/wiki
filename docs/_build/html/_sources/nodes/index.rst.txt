@@ -11,6 +11,13 @@ Nodes
 
    </div></div>
 
+Before to start
+***************
+
+.. toctree::
+   
+   quadrans-nodes
+
 How-to
 ******
 
@@ -32,20 +39,6 @@ How-to
                 </div>
                 </div>
             </div>
-            <!-- div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card card-q text-center intro-card shadow w-100">
-                <img src="../_static/images/icons/icn_multipass.png" class="card-img-top" alt="icon">
-                <div class="card-body flex-fill">
-                    <h2 class="card-title">Multipass</h2>
-                    <h4 class="card-title" style="margin-top: 0; margin-bottom: 1em;">(Windows, Mac OS, Linux)</h4>
-                     <div class="text-center">
-                        <a href="installation/multipass.html">
-                           <button class="fill disabled">How-to</button>
-                        </a>
-                      </div>
-                </div>
-                </div>
-            </div -->
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card card-q text-center intro-card shadow w-100">
                 <img src="../_static/images/icons/icn_rasp.png" class="card-img-top" alt="icon">
@@ -90,6 +83,20 @@ How-to
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card card-q text-center intro-card shadow w-100">
+                <img src="../_static/images/icons/icn_multipass.png" class="card-img-top" alt="icon">
+                <div class="card-body flex-fill">
+                    <h2 class="card-title">Multipass</h2>
+                    <h4 class="card-title" style="margin-top: 0; margin-bottom: 1em;">(Windows, Mac OS, Linux)</h4>
+                     <div class="text-center">
+                        <a href="installation/multipass.html">
+                           <button class="fill disabled">How-to</button>
+                        </a>
+                      </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+                <div class="card card-q text-center intro-card shadow w-100">
                 <img src="../_static/images/icons/icn_mac.png" class="card-img-top" alt="icon">
                 <div class="card-body flex-fill">
                     <h2 class="card-title">macOS</h2>
@@ -113,10 +120,10 @@ Installation
    :maxdepth: 1
 
    installation/linux_x86-64
-   installation/multipass
    installation/linux_raspberrypi
    installation/linux_orangepi
    installation/windows
+   installation/multipass
    installation/macos
 
 Management

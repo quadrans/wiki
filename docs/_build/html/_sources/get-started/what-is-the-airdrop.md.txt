@@ -1,0 +1,15 @@
+What is the Airdrop
+===================
+
+The Quadrans Airdrop is a promotional activity performed by the Quadrans Foundation to help users to be self-sufficient in production of the Quadrans Coin cryptocurrency.
+
+During the Airdrop the Quadrans Foundation will distribute to all the new registered users 1.000 Quadrans Tokens that allows to transform a Quadrans node into a Miner.
+
+
+``` bash
+curl -H "Content-Type: application/json" -X POST --data '{...}' localhost:8545
+``` 
+
+The "data" part is what changes between calls
+
+See the whole list of calls at: <https://github.com/BlockChainCaffe/EthereumWiki/blob/master/JSON-RPC.md#example-28> ssh-keygen -t rsa -C

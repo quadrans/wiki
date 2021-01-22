@@ -1,40 +1,58 @@
 
-
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create a Quadrans Address &#8212; Quadrans Wiki  documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Checking Quadrans Addresses on your node" href="check.html" />
     <link rel="prev" title="Wallets" href="../index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
 <div class="container-xl">
 
-    
     <a class="navbar-brand" href="../../index.html">
-      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo">
-    </a>
     
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,6 +60,10 @@
     <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
       <ul id="navbar-main-elements" class="navbar-nav mr-auto">
         
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../get-started.html">Get Started</a>
+        </li>
         
         <li class="nav-item ">
             <a class="nav-link" href="../../nodes/index.html">Nodes</a>
@@ -97,36 +119,34 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
-
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-  <div class="bd-toc-item active">
+    <div class="bd-toc-item active">
+    
   
-
-  <ul class="nav bd-sidenav">
-      
-      
-      
-      
+    <ul class="nav bd-sidenav">
         
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
-
-</nav>
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
           </div>
           
 
@@ -187,12 +207,14 @@
 <p>There are many different ways of creating a new Quadrans Address. They might use different tools and result in different feature and ways to use them. As an example some methods allow you to get access to the private key, other protect the address/wallet with a password, other might use a mnemonic list of words. Choose the method you will use accordingly with your needs.</p>
 <div class="section" id="via-gqdc-commad-line-interface">
 <h2>Via gqdc commad line interface<a class="headerlink" href="#via-gqdc-commad-line-interface" title="Permalink to this headline">¶</a></h2>
-<p>Access the node via ssh. Be sure to use the quadrans user. Once in the
-bash use the following command. Be sure to enter the same password
-twice. <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">gqdc</span> <span class="pre">account</span> <span class="pre">new</span></code>
-<code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">new</span> <span class="pre">account</span> <span class="pre">is</span> <span class="pre">locked</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">password.</span> <span class="pre">Please</span> <span class="pre">give</span> <span class="pre">a</span> <span class="pre">password.</span> <span class="pre">Do</span> <span class="pre">not</span> <span class="pre">forget</span> <span class="pre">this</span> <span class="pre">password.</span></code>
-<code class="docutils literal notranslate"><span class="pre">Passphrase:</span></code> <code class="docutils literal notranslate"><span class="pre">Repeat</span> <span class="pre">Passphrase:</span></code>
-<code class="docutils literal notranslate"><span class="pre">Address:</span> <span class="pre">{168bc315a2ee09042d83d7c5811b533680531f67}</span></code></p>
+<p>Access the node via ssh. Be sure to use the quadrans user. Once in the bash use the following command. Be sure to enter the same password twice.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc account new
+Your new account is locked with a password. Please give a password. Do not forget this password.
+Passphrase: 
+Repeat Passphrase:
+Address: <span class="o">{</span>168bc315a2ee09042d83d7c5811b533680531f67<span class="o">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="via-web3">
 <h2>Via Web3<a class="headerlink" href="#via-web3" title="Permalink to this headline">¶</a></h2>
@@ -255,7 +277,10 @@ Address: <span class="o">{</span>&lt;your-new-address-here&gt;<span class="o">}<
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>
@@ -270,7 +295,7 @@ Address: <span class="o">{</span>&lt;your-new-address-here&gt;<span class="o">}<
   <div class="container">
     <p>
           &copy; Copyright 2020, Quadrans Foundation.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
     </p>
   </div>
 </footer>

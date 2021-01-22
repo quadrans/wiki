@@ -1,5 +1,5 @@
-Using MetaMask wallet with Quadrans
-===================================
+Using MetaMask wallet with Quadrans Coins
+=========================================
 
 ## What is MetaMask
 
@@ -43,14 +43,17 @@ Click **Save** to confirm.
 
 ## Create a new Quadrans wallet
 
+**Attention:** If you intend to install a Quadrans node please ignore this step: your node will ask to create a new wallet during the installation process and if you want to transfer your Quadrans Coin please follow the [Import your Quadrans node wallet](#import-your-quadrans-node-wallet) step.
+
 It's important to understand that the first wallet created in MetaMask is compatible only with Ethereum blockchain.
 
 After you added Quadrans Mainnet or Testnet network select one and click on the icon on the top right of MetaMask interface, in the new menu press **Create Account**.
 
 ![image](../../_static/images/metamask/quadrans-new-wallet-1.png)
 
-The **New Account** window will appear. Give a name to your new
-wallet, click Create and remember that **Quadrans wallets for Mainnet or Testnet are usable in both networks**. Simply change the network to see the two balances.
+The **New Account** window will appear. Give a name to your new wallet, click **Create** 
+
+**Quadrans wallets for Mainnet or Testnet are usable in both networks**. Simply change the network to see the two balances.
 
 ![image](../../_static/images/metamask/quadrans-new-wallet-2.png)
 
@@ -63,3 +66,15 @@ Click on the menu button below the MetaMask fox icon and click on Details.
 ![thumb](../../_static/images/metamask/quadrans-wallet-backup-3.png)
 
 In the new window click on Export Private Key, when asked insert your MetaMask password and copy the private key in a safe place.
+
+## Import your Quadrans node wallet
+
+After you added Quadrans Mainnet or Testnet network select one and click on the icon on the top right of MetaMask interface, in the new menu press **Import Account**.
+
+![image](../../_static/images/metamask/quadrans-import-wallet-1.png)
+
+The **Import Account** window will appear. Select JSON File as Type ad choose your *UTC-\** file of your wallet from [your backup](../address/storage), type the password and press **Import**.
+
+ **Quadrans wallets for Mainnet or Testnet are usable in both networks**. Simply change the network to see the two balances.
+
+![image](../../_static/images/metamask/quadrans-import-wallet-2.png)

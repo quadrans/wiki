@@ -14,6 +14,11 @@ Cryptocurrencies
 Quadrans Cryptocurrencies
 *************************
 
+The Quadrans Blockchain runs on two cryptographic elements, **Quadrans Tokens** (QDT) and **Quadrans Coins** (QDC), designed as utilities to ensure the correct functioning of the inf rastructure and support a suitable use in the industry.
+
+The combined use of QDT and QDC is a game-changing feature that has been designed to minimize the economic impact on the use of the system and support the formation of a reliable environment that ensures operational eff iciency.
+
+
 .. toctree::
    :maxdepth: 1
 

@@ -7,9 +7,22 @@ Multipass is a mini-cloud on your workstation using native hypervisors of all th
 
 With Multipass you will create a virtual server with basic environment and you can install the latest Quadrans node for Ubuntu Linux without without having to perform complicated steps.
 
-## How-to start
+## Before to start
 
 Multipass provides a command line interface to launch, manage and generally fiddle about with instances of Linux. First of wall you need to simply prepare your computer to create an environment.
+
+Suggested requirements:
+
+* Computer Desktop, Server or Virtual Machine
+* 4 Core 64bit CPU
+* 6 GB RAM
+* 200 GB storage
+
+The Multipass virtual machine will use:
+
+* 2 Core
+* 2 GB RAM
+* 100 GB storage
 
 ### Download and install Multipass on Windows 10
 
@@ -78,13 +91,26 @@ sudo apt install -y python quadrans-node
 
 The installer will guide you through the steps necessary.
 
-At the end of the process your node will start to sync and you can type ``exit`` to disconnect from the virtual machine.
+At the end of the process your node will start to sync and you can verify the status of your node by typing
+
+``` bash 
+sudo journalctl -f | grep Quadrans
+```
+
+And press *CTRL C* in your keyboard to return to the shell. 
+
+
+Type ``exit`` to disconnect from the virtual machine, the node will remain active.
 
 ## Useful informations
 
 Your Multipass virtual machine will be automatically launched on boot as a service, you don't need to log-in on your operating system to start the **Quadrans node**.
 
-You can stop the virtual machine (and it will not restart automatically on boot) with this command:
+You can control your virtual machine on Windows directly from **Multipass GUI** systray application that allows you to start a new default Multipass VM (with 1 core, 1 GB, 10 GB storage) or control your **Quadrans** Virtual Machine to stop, connect to the *Shell* or restart if powered off. From that Icon you can also select if the Multipass service must start on boot or not.
+
+You can also controll your Multipass from your Terminal or Windows PowerShell:
+
+You can stop the virtual machine with this command:
 
 ``` bash
 multipass stop quadrans

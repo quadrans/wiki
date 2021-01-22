@@ -5,12 +5,15 @@ There are many different ways of creating a new Quadrans Address. They might use
 
 ## Via gqdc commad line interface
 
-Access the node via ssh. Be sure to use the quadrans user. Once in the
-bash use the following command. Be sure to enter the same password
-twice. `$ gqdc account new`
-`Your new account is locked with a password. Please give a password. Do not forget this password.`
-`Passphrase:` `Repeat Passphrase:`
-`Address: {168bc315a2ee09042d83d7c5811b533680531f67}`
+Access the node via ssh. Be sure to use the quadrans user. Once in the bash use the following command. Be sure to enter the same password twice.
+
+```bash
+gqdc account new
+Your new account is locked with a password. Please give a password. Do not forget this password.
+Passphrase: 
+Repeat Passphrase:
+Address: {168bc315a2ee09042d83d7c5811b533680531f67}
+```
 
 ## Via Web3
 

@@ -14,6 +14,8 @@ Programming
 Guides
 ******
 
+Quadrans is fully interoperable with any data flows and ensures compatibility and transferrable features with Ethereum and Ethereum-like ecosystems to allow a seamless and immediate transition of existing solutions into the Quadrans blockchain.
+
 .. toctree::
    :maxdepth: 1
 

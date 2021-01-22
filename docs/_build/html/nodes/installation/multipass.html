@@ -1,40 +1,58 @@
 
-
 <!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Install Quadrans with Multipass &#8212; Quadrans Wiki  documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Install Quadrans on Raspberry Pi" href="linux_raspberrypi.html" />
-    <link rel="prev" title="Install Quadrans on Linux x86-64" href="linux_x86-64.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <link rel="next" title="Install Quadrans on macOS (darwin)" href="macos.html" />
+    <link rel="prev" title="Install Quadrans on Windows" href="windows.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
 <div class="container-xl">
 
-    
     <a class="navbar-brand" href="../../index.html">
-      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo">
-    </a>
     
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,6 +60,10 @@
     <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
       <ul id="navbar-main-elements" class="navbar-nav mr-auto">
         
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../get-started.html">Get Started</a>
+        </li>
         
         <li class="nav-item active">
             <a class="nav-link" href="../index.html">Nodes</a>
@@ -97,36 +119,34 @@
     <div class="container-xl">
       <div class="row">
           
-          <div class="col-12 col-md-3 bd-sidebar">
-
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
-
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-  <div class="bd-toc-item active">
+    <div class="bd-toc-item active">
+    
   
-
-  <ul class="nav bd-sidenav">
-      
-      
+    <ul class="nav bd-sidenav">
         
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
-
-</nav>
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
           </div>
           
 
@@ -145,7 +165,7 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#how-to-start" class="nav-link">How-to start</a><ul class="nav section-nav flex-column">
+            <a href="#before-to-start" class="nav-link">Before to start</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
             <a href="#download-and-install-multipass-on-windows-10" class="nav-link">Download and install Multipass on Windows 10</a><ul class="nav section-nav flex-column">
@@ -211,9 +231,22 @@
 <p>Multipass is a mini-cloud on your workstation using native hypervisors of all the supported plaforms (Windows, macOS and Linux), it will give you an Ubuntu command line in just a few minutes and allows you to create a secure and fully working Quadrans node in your computer.</p>
 <p>With Multipass you will create a virtual server with basic environment and you can install the latest Quadrans node for Ubuntu Linux without without having to perform complicated steps.</p>
 </div>
-<div class="section" id="how-to-start">
-<h2>How-to start<a class="headerlink" href="#how-to-start" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="before-to-start">
+<h2>Before to start<a class="headerlink" href="#before-to-start" title="Permalink to this headline">¶</a></h2>
 <p>Multipass provides a command line interface to launch, manage and generally fiddle about with instances of Linux. First of wall you need to simply prepare your computer to create an environment.</p>
+<p>Suggested requirements:</p>
+<ul class="simple">
+<li><p>Computer Desktop, Server or Virtual Machine</p></li>
+<li><p>4 Core 64bit CPU</p></li>
+<li><p>6 GB RAM</p></li>
+<li><p>200 GB storage</p></li>
+</ul>
+<p>The Multipass virtual machine will use:</p>
+<ul class="simple">
+<li><p>2 Core</p></li>
+<li><p>2 GB RAM</p></li>
+<li><p>100 GB storage</p></li>
+</ul>
 <div class="section" id="download-and-install-multipass-on-windows-10">
 <h3>Download and install Multipass on Windows 10<a class="headerlink" href="#download-and-install-multipass-on-windows-10" title="Permalink to this headline">¶</a></h3>
 <p>To get Multipass for Windows, download the latest installer from the  <a class="reference external" href="https://github.com/CanonicalLtd/multipass/releases/">official GitHub releases page</a>. It is the <em>.exe</em> file.</p>
@@ -271,12 +304,19 @@ sudo apt install -y python quadrans-node
 </pre></div>
 </div>
 <p>The installer will guide you through the steps necessary.</p>
-<p>At the end of the process your node will start to sync and you can type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to disconnect from the virtual machine.</p>
+<p>At the end of the process your node will start to sync and you can verify the status of your node by typing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo journalctl -f <span class="p">|</span> grep Quadrans
+</pre></div>
+</div>
+<p>And press <em>CTRL C</em> in your keyboard to return to the shell.</p>
+<p>Type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to disconnect from the virtual machine, the node will remain active.</p>
 </div>
 <div class="section" id="useful-informations">
 <h2>Useful informations<a class="headerlink" href="#useful-informations" title="Permalink to this headline">¶</a></h2>
 <p>Your Multipass virtual machine will be automatically launched on boot as a service, you don’t need to log-in on your operating system to start the <strong>Quadrans node</strong>.</p>
-<p>You can stop the virtual machine (and it will not restart automatically on boot) with this command:</p>
+<p>You can control your virtual machine on Windows directly from <strong>Multipass GUI</strong> systray application that allows you to start a new default Multipass VM (with 1 core, 1 GB, 10 GB storage) or control your <strong>Quadrans</strong> Virtual Machine to stop, connect to the <em>Shell</em> or restart if powered off. From that Icon you can also select if the Multipass service must start on boot or not.</p>
+<p>You can also controll your Multipass from your Terminal or Windows PowerShell:</p>
+<p>You can stop the virtual machine with this command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>multipass stop quadrans
 </pre></div>
 </div>
@@ -319,7 +359,10 @@ multipass <span class="nb">exec</span> quadrans -- sudo apt upgrade -y
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
     <!-- Google Analytics -->
     <script>
@@ -334,7 +377,7 @@ multipass <span class="nb">exec</span> quadrans -- sudo apt upgrade -y
   <div class="container">
     <p>
           &copy; Copyright 2020, Quadrans Foundation.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
     </p>
   </div>
 </footer>
