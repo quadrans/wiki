@@ -20,7 +20,7 @@ Models tested are:
 
 ### Suggested Operating System
 * [Raspberry OS](https://www.raspberrypi.org/software/) (32 bit)
-* * Installation guides are available in the [official Raspberry website](https://www.raspberrypi.org)
+  * Installation guides are available in the [official Raspberry website](https://www.raspberrypi.org)
 * [Ubuntu](https://ubuntu.com/download/raspberry-pi) (64 bit)
 
 ## Self-installing via Quadrans Installer

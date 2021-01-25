@@ -10,7 +10,7 @@ The [Raspberry Pi](https://www.raspberrypi.org) is a low cost, credit-card sized
 
 ### Raspberry Pi 3/4
 
-Quadrans Technical Team\*\* tested the [arm7 binary](http://repo.quadrans.io/arm/arm7/) (32bit) in combination with [Raspberry OS](https://www.raspberrypi.org/software/) operating system with the Raspberry devboards.
+**Quadrans Technical Team** tested the [arm7 binary](http://repo.quadrans.io/arm/arm7/) (32bit) in combination with [Raspberry OS](https://www.raspberrypi.org/software/) operating system with the Raspberry devboards.
 
 Models tested are:
 
@@ -20,7 +20,7 @@ Models tested are:
 
 ### Suggested Operating System
 * [Raspberry OS](https://www.raspberrypi.org/software/) (32 bit)
-* * Installation guides are available in the [official Raspberry website](https://www.raspberrypi.org)
+  * Installation guides are available in the [official Raspberry website](https://www.raspberrypi.org)
 * [Ubuntu](https://ubuntu.com/download/raspberry-pi) (64 bit)
 
 ## Self-installing via Quadrans Installer
