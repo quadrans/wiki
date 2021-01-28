@@ -24,7 +24,7 @@ github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 # -- Project information -----------------------------------------------------
 
 project = 'Quadrans Wiki'
-copyright = '2020-2021, Quadrans Foundation'
+copyright = '2018-2021, Quadrans Foundation'
 author = 'Piersandro Guerrera, Marco Crotta'
 
 
