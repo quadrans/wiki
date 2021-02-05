@@ -13,6 +13,7 @@ The first pages of this documentation were written by **Piersandro Guerrera** an
 
 ## Main Arguments
 
+* **Get Started**: What is Quadrans? How the Quadrans blockchain works? What is a Token or a Coin?
 * **Nodes**: Installation guides, management informations and much more about Quadrans Nodes.
 * **Wallets**: How-to create a wallet, check your balance, backup your private key and transfer Quadrans Coins.
 * **Cryptocurrencies**: What is a Quadrans Token and how it works?
