@@ -65,6 +65,7 @@ code{
 pre {
   line-height: 1.6em;
   background-color: #16173D !important;
+  color: #e7e9db !important;
   border: 0 !important;
   box-shadow: none !important;
   border-radius: 10px !important;
@@ -73,7 +74,6 @@ pre {
 .highlight {
   background: none !important;
 }
-
 .codeBox{
     display: block;
     margin-top:20px;
