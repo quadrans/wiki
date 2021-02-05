@@ -85,6 +85,10 @@ a.copybtn > img {
   width: 30px !important;
 }
 
+.o-tooltip--left:after {
+  background: rgba(128,128,128,0.25) !important;
+}
+
 .codeBox{
     display: block;
     margin-top:20px;
