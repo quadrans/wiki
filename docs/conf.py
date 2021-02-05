@@ -86,6 +86,7 @@ html_css_files = [
     'css/quadrans_style.css',
 ]
 
+pygments_style = "paraiso-dark"
 
 # Recommonmark
 def setup(app):
