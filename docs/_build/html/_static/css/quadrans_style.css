@@ -74,6 +74,17 @@ pre {
 .highlight {
   background: none !important;
 }
+
+a.copybtn {
+  width: 2em !important;
+  height: 2em !important;
+}
+
+a.copybtn > img {
+  filter: brightness(3) !important;
+  width: 30px !important;
+}
+
 .codeBox{
     display: block;
     margin-top:20px;
