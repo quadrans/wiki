@@ -168,11 +168,11 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#self-installing-from-quadrans-repository-on-debian-ubuntu" class="nav-link">Self-installing from Quadrans repository on Debian/Ubuntu</a>
+            <a href="#self-installing-via-quadrans-installer" class="nav-link">Self-installing via Quadrans Installer</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#self-installing-via-quadrans-installer" class="nav-link">Self-installing via Quadrans Installer</a>
+            <a href="#self-installing-from-quadrans-repository-only-for-debian-ubuntu" class="nav-link">Self-installing from Quadrans repository (only for Debian/Ubuntu)</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -232,17 +232,6 @@
 <li><p>100 GB storage</p></li>
 </ul>
 </div>
-<div class="section" id="self-installing-from-quadrans-repository-on-debian-ubuntu">
-<h2>Self-installing from Quadrans repository on Debian/Ubuntu<a class="headerlink" href="#self-installing-from-quadrans-repository-on-debian-ubuntu" title="Permalink to this headline">¶</a></h2>
-<p>Quadrans team recommends to use a supported <strong>Ubuntu LTS</strong> (18.04 or 20.04) or an updated <strong>Debian</strong> installation.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo wget -O /etc/apt/sources.list.d/quadrans.list http://repo.quadrans.io/apt/conf/quadrans.list
-sudo wget -O - http://repo.quadrans.io/apt/conf/quadrans.gpg.key<span class="p">|</span>sudo apt-key add -
-sudo apt update
-sudo apt install -y python quadrans-node
-</pre></div>
-</div>
-<p>Follow the on screen instructions to install the node, enable miner options and create a Quadrans wallet address.</p>
-</div>
 <div class="section" id="self-installing-via-quadrans-installer">
 <h2>Self-installing via Quadrans Installer<a class="headerlink" href="#self-installing-via-quadrans-installer" title="Permalink to this headline">¶</a></h2>
 <p>This bash script allows you to install or update your node for other Linux distributions.</p>
@@ -251,7 +240,18 @@ sudo bash gqdc-installer.sh
 </pre></div>
 </div>
 <p>The installation process will ask for a node name and a password if you want to create a wallet to became a Quadrans Miner.</p>
-<p>This tool allow you to update your node if needed.</p>
+<p>This tool allow you to update your node if needed, move from Mainnet to Testnet, uninstall and recover a previous installation.</p>
+</div>
+<div class="section" id="self-installing-from-quadrans-repository-only-for-debian-ubuntu">
+<h2>Self-installing from Quadrans repository (only for Debian/Ubuntu)<a class="headerlink" href="#self-installing-from-quadrans-repository-only-for-debian-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>Quadrans team recommends to use a supported <strong>Ubuntu LTS</strong> (18.04 or 20.04) or an updated <strong>Debian</strong> installation.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo wget -O /etc/apt/sources.list.d/quadrans.list http://repo.quadrans.io/apt/conf/quadrans.list
+sudo wget -O - http://repo.quadrans.io/apt/conf/quadrans.gpg.key<span class="p">|</span>sudo apt-key add -
+sudo apt update
+sudo apt install -y python quadrans-node
+</pre></div>
+</div>
+<p>Follow the on screen instructions to install the node, enable miner options and create a Quadrans wallet address.</p>
 </div>
 <div class="section" id="enable-your-node-for-mining">
 <h2>Enable your node for mining<a class="headerlink" href="#enable-your-node-for-mining" title="Permalink to this headline">¶</a></h2>
