@@ -18,10 +18,19 @@ What is Quadrans
 
 **Quadrans** is an open-source, public, decentralized platform enabled by blockchain technology with the mandate to build a digital infrastructure that combines customizable data sharing, cryptography and smart-contract automation and establish a self-governed digital economy between businesses, institutions and individuals globally.
 
+To learn more:
+
+* `Quadrans Light Paper <https://www.quadrans.io/f/light-paper>`_
+* `Quadrans White Paper <https://www.quadrans.io/f/white-paper>`_
+* `Quadrans Members <https://quadrans.io/members.php>`_
+
 The Quadrans Network
 ********************
 
 The Quadrans blockchain infrastructure is composed by a network of nodes. Each node stores a copy of the blockchain database structured in blocks of data and is responsible for distributing the blocks across the network.
+
+* `Quadrans Network Status <https://status.quadrans.io>`_
+* `Quadrans Blockchain Explorer <https://explorer.quadrans.io>`_
 
 A node constantly exchanges data with other peer nodes to ensure that new blocks are validated and all nodes stay up to date.
 
