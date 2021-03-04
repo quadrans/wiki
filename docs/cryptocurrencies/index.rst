@@ -20,8 +20,8 @@ The combined use of QDT and QDC is a game-changing feature that has been designe
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    /cryptocurrencies/quadrans_token
    /cryptocurrencies/quadrans_coin
-   /cryptocurrencies/mining_and_reward   
+   /cryptocurrencies/mining_and_reward

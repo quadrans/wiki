@@ -34,7 +34,7 @@ Models tested are:
 This bash script allows you to install or update your node on various Linux distributions.
 
 ``` bash
-wget http://repo.quadrans.io/linux/experiments/installer/gqdc-installer.sh
+wget http://repo.quadrans.io/installer/gqdc-installer.sh
 sudo bash gqdc-installer.sh
 ``` 
 

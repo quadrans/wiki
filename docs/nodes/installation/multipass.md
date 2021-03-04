@@ -83,11 +83,9 @@ multipass shell quadrans
 You will be connected to your virtual machine. From here you can simply copy and paste the commands to use the self-installer for Ubuntu Linux.
 
 ``` bash
-sudo wget -O /etc/apt/sources.list.d/quadrans.list http://repo.quadrans.io/apt/conf/quadrans.list
-sudo wget -O - http://repo.quadrans.io/apt/conf/quadrans.gpg.key|sudo apt-key add -
-sudo apt update
-sudo apt install -y python quadrans-node
-```
+wget http://repo.quadrans.io/installer/gqdc-installer.sh
+sudo bash gqdc-installer.sh
+``` 
 
 The installer will guide you through the steps necessary.
 

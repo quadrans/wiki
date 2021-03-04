@@ -17,6 +17,23 @@ Suggested requirements:
 * 4 GB RAM
 * 100 GB storage
 
+## Self-installing via Quadrans Installer
+
+This bash script allows you to install or update your node on various Linux distributions.
+
+``` bash
+wget http://repo.quadrans.io/installer/gqdc-installer.sh
+sudo bash gqdc-installer.sh
+``` 
+
+The installation process will ask for a node name and a password if you want to create a wallet to became a Quadrans Miner.
+
+This tool allow you to update your node if needed.
+
+## Enable your node for mining
+
+Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
+
 ## Manual installation for macOS (Intel 64bit)
 
 From macOS Terminal application type:

@@ -15,7 +15,7 @@ Quadrans Address
 ****************
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    /wallet/address/creation
    /wallet/address/check
@@ -25,7 +25,7 @@ Wallet Management
 *****************
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    /wallet/management/metamask
    /wallet/management/importjson

@@ -22,7 +22,7 @@ Suggested requirements:
 This bash script allows you to install or update your node for other Linux distributions.
 
 ``` bash
-wget http://repo.quadrans.io/linux/experiments/installer/gqdc-installer.sh
+wget http://repo.quadrans.io/installer/gqdc-installer.sh
 sudo bash gqdc-installer.sh
 ``` 
 
