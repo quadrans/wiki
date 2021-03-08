@@ -69,8 +69,8 @@ Through the `Quadrans Airdrop <https://quadrans.io/airdrop/>`_  the Quadrans Fou
 To learn more:
 
 * `Quadrans Airdrop <https://quadrans.io/airdrop/>`_
-* `Mining and Reward </wiki/cryptocurrencies/mining_and_reward.html>`_
-* `Projects </wiki/projects/index.html>`_
+* `Mining and Reward </cryptocurrencies/mining_and_reward.html>`_
+* `Projects </projects/index.html>`_
 
 
 What is the KYC
