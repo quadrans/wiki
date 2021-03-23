@@ -28,7 +28,7 @@ Jinja2==2.11.2
 lazy-object-proxy==1.4.3
 lensfun==0.3.95
 louis==3.16.0
-lxml==4.6.2
+lxml==4.6.3
 Markdown==3.3.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
