@@ -17,7 +17,7 @@ Suggested requirements:
 * 4 GB RAM
 * 100 GB storage
 
-## Self-installing via Quadrans Installer
+## Self-installing go-quadrans binary via Quadrans Installer
 
 This bash script allows you to install or update your node for other Linux distributions.
 
@@ -30,7 +30,7 @@ The installation process will ask for a node name and a password if you want to 
 
 This tool allow you to update your node if needed, move from Mainnet to Testnet, uninstall and recover a previous installation.
 
-## Self-installing from Quadrans repository (only for Debian/Ubuntu)
+## Self-installing gp-quadrans binary from Quadrans repository (only for Debian/Ubuntu)
 
 Quadrans team recommends to use a supported **Ubuntu LTS** (18.04 or 20.04) or an updated **Debian** installation. 
 
@@ -46,6 +46,10 @@ Follow the on screen instructions to install the node, enable miner options and 
 ## Enable your node for mining
 
 Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
+
+## Manually build go-quadrans from source
+
+Please refer to the guide [build go-quadrans from source](../build/source-code) to compile the binary from the source code.
 
 ## Useful options 
 

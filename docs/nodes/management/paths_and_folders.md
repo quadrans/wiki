@@ -10,7 +10,7 @@ Node paths and folders
 ├── gqdc.sh                                      |  start script (uses the environment file)
 ├── status.py                                    |  status python script
 └── .quadrans                                    |  
-	├── geth.ipc                                 |  IPC socket for main net
+	├── gqdc.ipc                                 |  IPC socket for main net
 	├── gqdc                                     |  
 	│   ├── LOCK                                 |  
 	│   ├── chaindata                            |  
@@ -33,7 +33,7 @@ Node paths and folders
 	├── keystore                                 |  main net wallet folder
 	│   └── UTC--2019-09-27T20-01-52...          |      main net wallet
 	└── testnet                                  |  testnet folder (not present if running on main net)
-		├── geth.ipc                             |  IPC socket for test net 
+		├── gqdc.ipc                             |  IPC socket for test net 
 		├── gqdc                                 |  
 		│   ├── LOCK                             |  lock file
 		│   ├── chaindata                        |  local blockchain copy

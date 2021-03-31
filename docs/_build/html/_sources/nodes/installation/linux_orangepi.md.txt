@@ -29,7 +29,7 @@ Models tested are:
 
 * Orange Pi Zero Plus
 
-## Self-installing via Quadrans Installer
+## Self-installing go-quadrans binary via Quadrans Installer
 
 This bash script allows you to install or update your node on various Linux distributions.
 
@@ -45,6 +45,10 @@ This tool allow you to update your node if needed.
 ## Enable your node for mining
 
 Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
+
+## Manually build go-quadrans from source
+
+Please refer to the guide [build go-quadrans from source](../build/source-code) to compile the binary from the source code.
 
 ## Useful command line options 
 

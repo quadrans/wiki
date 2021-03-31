@@ -60,14 +60,16 @@ html_theme = 'pydata_sphinx_theme'
 html_logo = "_static/images/logo-quadrans-black.svg"
 
 html_theme_options = {
-  "external_links": [
-    {"url": "https://quadrans.io", "name": "Quadrans Foundation"}
-  ],
+#  "external_links": [
+#    {"url": "https://quadrans.io", "name": "Quadrans Foundation"}
+#  ],
   "github_url": "https://github.com/quadrans/wiki",
   "twitter_url": "https://twitter.com/quadransf",
   "google_analytics_id": "UA-132858178-7",
   "use_edit_page_button": True,
   "show_prev_next": False,
+  "show_toc_level": 1,
+#  "navbar_align": "right",  # For testing that the navbar items align properly
 }
 
 html_context = {

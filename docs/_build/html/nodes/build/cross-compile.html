@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cross Platform compile Go Quadrans from Source &#8212; Quadrans Wiki  documentation</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Command Line Options" href="../management/command_line_options.html" />
+    <link rel="prev" title="Build Go Quadrans from Source" href="source-code.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../get-started.html">Get Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../development/index.html">Development</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../projects/index.html">Projects</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#cross-compilation-environment" class="nav-link">Cross compilation environment</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#building-quadrans" class="nav-link">Building Quadrans</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#building-locally" class="nav-link">Building locally</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-the-makefile" class="nav-link">Using the Makefile</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#tuning-the-cross-builds" class="nav-link">Tuning the cross builds</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/nodes/build/cross-compile.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="cross-platform-compile-go-quadrans-from-source">
+<h1>Cross Platform compile Go Quadrans from Source<a class="headerlink" href="#cross-platform-compile-go-quadrans-from-source" title="Permalink to this headline">¶</a></h1>
+<p><strong>Note: All of these and much more have been merged into the project Makefile. You can cross build via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">gqdc-&lt;os&gt;-&lt;platform&gt;</span></code> without needing to know any of these details from below.</strong></p>
+<p>Developers usually have a preferred platform that they feel most comfortable working in, with all the necessary tools, libraries and environments set up for an optimal workflow.
+However, there’s often need to build for either a different CPU architecture, or an entirely different operating system; but maintaining a development environment for each and switching between the them quickly becomes unwieldy.</p>
+<p>Here we present a very simple way to cross compile Quadrans to various operating systems and architectures using a minimal set of prerequisites and a completely containerized approach, guaranteeing that your development environment remains clean even after the complex requirements and mechanisms of a cross compilation.</p>
+<p>The currently supported target platforms are:</p>
+<ul class="simple">
+<li><p>32 bit, 64 bit and ARMv5+ Linux</p></li>
+<li><p>32 bit and 64 bit Darwin (Mac OSX)</p></li>
+<li><p>32 bit and 64 bit Windows</p></li>
+</ul>
+<p>Please note, that cross compilation does not replace a release build. Although resulting binaries can usually run perfectly on the desired platform, compiling on a native system with the specialized tools provided by the official vendor can often result in more a finely optimized code.</p>
+<div class="section" id="cross-compilation-environment">
+<h2>Cross compilation environment<a class="headerlink" href="#cross-compilation-environment" title="Permalink to this headline">¶</a></h2>
+<p>Although the <code class="docutils literal notranslate"><span class="pre">go-quadrans</span></code> project is written in Go, it does include a bit of C code shared between all implementations to ensure that all perform equally well, including a dependency to the GNU Multiple Precision Arithmetic Library. Because of these, Go cannot by itself compile to a different platform than the host. To overcome this limitation, we will use <a class="reference external" href="https://github.com/karalabe/xgo"><code class="docutils literal notranslate"><span class="pre">xgo</span></code></a>, a Go cross compiler package based on Docker containers that has been architected specifically to allow both embedded C snippets as well as simpler external C dependencies during compilation.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">xgo</span></code> project has two simple dependencies: Docker (to ensure that the build environment is completely contained) and Go. On most platforms these should be available from the official package repositories. For manually installing them, please consult their install guides at <a class="reference external" href="https://docs.docker.com/installation/">Docker</a> and <a class="reference external" href="https://golang.org/doc/install">Go</a> respectively. This guide assumes that these two dependencies are met.</p>
+<p>To install and/or update xgo, simply type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ go get -u github.com/karalabe/xgo
+</pre></div>
+</div>
+<p>You can test whether <code class="docutils literal notranslate"><span class="pre">xgo</span></code> is functioning correctly by requesting it to cross compile itself and verifying that all cross compilations succeeded or not.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xgo github.com/karalabe/xgo
+...
+
+$ ls -al
+-rwxr-xr-x  1 root     root      2353212 Sep 14 16:45 xgo-darwin-386
+-rwxr-xr-x  1 root     root      2906128 Sep 14 16:45 xgo-darwin-amd64
+-rwxr-xr-x  1 root     root      2388288 Sep 14 16:45 xgo-linux-386
+-rwxr-xr-x  1 root     root      2960560 Sep 14 16:45 xgo-linux-amd64
+-rwxr-xr-x  1 root     root      2437864 Sep 14 16:45 xgo-linux-arm
+-rwxr-xr-x  1 root     root      2551808 Sep 14 16:45 xgo-windows-386.exe
+-rwxr-xr-x  1 root     root      3130368 Sep 14 16:45 xgo-windows-amd64.exe
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-quadrans">
+<h2>Building Quadrans<a class="headerlink" href="#building-quadrans" title="Permalink to this headline">¶</a></h2>
+<p>Cross compiling Quadrans is analogous to the above example, but an additional flags is required to satisfy the dependencies:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--deps</span></code> is used to inject arbitrary C dependency packages and pre-build them</p></li>
+</ul>
+<p>Injecting the GNU Arithmetic Library dependency and selecting <code class="docutils literal notranslate"><span class="pre">gqdc</span></code> would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
+      github.com/quadrans/go-quadrans/cmd/gqdc
+...
+
+$ ls -al
+-rwxr-xr-x  1 root     root     14373980 Sep 14 17:59 gqdc-darwin-386
+-rwxr-xr-x  1 root     root     17373676 Sep 14 17:59 gqdc-darwin-amd64
+-rwxr-xr-x  1 root     root     21098910 Sep 14 17:59 gqdc-linux-386
+-rwxr-xr-x  1 root     root     25049693 Sep 14 17:59 gqdc-linux-amd64
+-rwxr-xr-x  1 root     root     20573442 Sep 14 17:59 gqdc-linux-arm64
+-rwxr-xr-x  1 root     root     20578535 Sep 14 17:59 gqdc-linux-arm-7
+-rwxr-xr-x  1 root     root     16351260 Sep 14 17:59 gqdc-windows-386.exe
+-rwxr-xr-x  1 root     root     19418071 Sep 14 17:59 gqdc-windows-amd64.exe
+</pre></div>
+</div>
+<p>As the cross compiler needs to build all the dependencies as well as the main project itself for each platform, it may take a while for the build to complete (approximately 3-4 minutes on a Core i7 3770K machine).</p>
+<div class="section" id="building-locally">
+<h3>Building locally<a class="headerlink" href="#building-locally" title="Permalink to this headline">¶</a></h3>
+<p>If you would like to cross compile your local development version, simply specify a local path (starting with <code class="docutils literal notranslate"><span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">/</span></code>), and <code class="docutils literal notranslate"><span class="pre">xgo</span></code> will use all local code from <code class="docutils literal notranslate"><span class="pre">GOPATH</span></code>, only downloading missing dependencies. In such a case of course, the <code class="docutils literal notranslate"><span class="pre">--branch</span></code>, <code class="docutils literal notranslate"><span class="pre">--remote</span></code> and <code class="docutils literal notranslate"><span class="pre">--pkg</span></code> arguments are no-op:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
+      ./cmd/gqdc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-makefile">
+<h2>Using the Makefile<a class="headerlink" href="#using-the-makefile" title="Permalink to this headline">¶</a></h2>
+<p>Having understood the gist of <code class="docutils literal notranslate"><span class="pre">xgo</span></code> based cross compilation, you do not need to actually memorize and maintain these commands, as they have been incorporated into the official <a class="reference external" href="https://github.com/quadrans/go-quadrans/blob/main/Makefile">Makefile</a> and can be invoked with a trivial <code class="docutils literal notranslate"><span class="pre">make</span></code> request:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">gqdc-cross</span></code>: Cross compiles to every supported OS and architecture</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">gqdc-&lt;os&gt;</span></code>: Cross compiles supported architectures of a particular OS (e.g. <code class="docutils literal notranslate"><span class="pre">linux</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">gqdc-&lt;os&gt;-&lt;arch&gt;</span></code>: Cross compiles to a specific OS/architecture (e.g. <code class="docutils literal notranslate"><span class="pre">linux</span></code>, <code class="docutils literal notranslate"><span class="pre">arm</span></code>)</p></li>
+</ul>
+<p>We advise using the <code class="docutils literal notranslate"><span class="pre">make</span></code> based commands opposed to manually invoking <code class="docutils literal notranslate"><span class="pre">xgo</span></code> as we do maintain the Makefile actively whereas we cannot guarantee that this document will be always readily updated to latest advancements.</p>
+<div class="section" id="tuning-the-cross-builds">
+<h3>Tuning the cross builds<a class="headerlink" href="#tuning-the-cross-builds" title="Permalink to this headline">¶</a></h3>
+<p>A few of the <code class="docutils literal notranslate"><span class="pre">xgo</span></code> build options have also been surfaced directly into the Makefile to allow fine tuning builds to work around either upstream Go issues, or to enable some fancier mechanics.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">...</span> <span class="pre">GO=&lt;go&gt;</span></code>: Use a specific Go runtime (e.g. <code class="docutils literal notranslate"><span class="pre">1.5.1</span></code>, <code class="docutils literal notranslate"><span class="pre">1.5-develop</span></code>, <code class="docutils literal notranslate"><span class="pre">develop</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">...</span> <span class="pre">MODE=&lt;mode&gt;</span></code>: Build a specific target type (e.g. <code class="docutils literal notranslate"><span class="pre">exe</span></code>, <code class="docutils literal notranslate"><span class="pre">c-archive</span></code>).</p></li>
+</ul>
+<p>Please note that these are not yet fully finalized, so they may or may not change in the future as our code and the Go runtime features change.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2018-2021, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

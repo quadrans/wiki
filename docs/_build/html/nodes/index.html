@@ -85,13 +85,13 @@
         </li>
         
         <li class="nav-item ">
+            <a class="nav-link" href="../development/index.html">Development</a>
+        </li>
+        
+        <li class="nav-item ">
             <a class="nav-link" href="../projects/index.html">Projects</a>
         </li>
         
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
-        </li>
         
       </ul>
 
@@ -147,6 +147,8 @@
         
         
         
+        
+        
       </ul>
   
   </nav>
@@ -168,11 +170,11 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#how-to" class="nav-link">How-to</a>
+            <a href="#go-quadrans-binary-installation" class="nav-link">Go-Quadrans binary Installation</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#installation" class="nav-link">Installation</a>
+            <a href="#go-quadrans-compile-and-build" class="nav-link">Go-Quadrans compile and build</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
@@ -219,8 +221,10 @@
 </ul>
 </div>
 </div>
-<div class="section" id="how-to">
-<h2>How-to<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="go-quadrans-binary-installation">
+<h2>Go-Quadrans binary Installation<a class="headerlink" href="#go-quadrans-binary-installation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
@@ -309,16 +313,23 @@
         </div>
     </div>
 </div></div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="go-quadrans-compile-and-build">
+<h2>Go-Quadrans compile and build<a class="headerlink" href="#go-quadrans-compile-and-build" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation/linux_x86-64.html">Install Quadrans on Linux x86-64</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/linux_raspberrypi.html">Install Quadrans on Raspberry Pi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/linux_orangepi.html">Install Quadrans on Orange Pi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/windows.html">Install Quadrans on Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/multipass.html">Install Quadrans with Multipass</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/macos.html">Install Quadrans on macOS (darwin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build/source-code.html">Build Go Quadrans from Source</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build/source-code.html#most-linux-systems-and-macos">Most Linux systems and macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build/source-code.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build/source-code.html#freebsd">FreeBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build/source-code.html#building-without-a-go-workflow">Building without a Go workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="build/cross-compile.html">Cross Platform compile Go Quadrans from Source</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build/cross-compile.html#cross-compilation-environment">Cross compilation environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build/cross-compile.html#building-quadrans">Building Quadrans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build/cross-compile.html#using-the-makefile">Using the Makefile</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -326,8 +337,8 @@
 <h2>Management<a class="headerlink" href="#management" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="management/gqdc-update.html">Update your manually configured Linux Quadrans node</a></li>
 <li class="toctree-l1"><a class="reference internal" href="management/command_line_options.html">Command Line Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management/javascript-console.html">JavaScript Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="management/node_status.html">Checking the status of your Quadrans node</a></li>
 <li class="toctree-l1"><a class="reference internal" href="management/statuspy_tool.html">Status.py tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="management/paths_and_folders.html">Node paths and folders</a></li>
@@ -340,7 +351,8 @@
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting/invalid_merkle_root.html">Error : invalid merkle root</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/invalid_merkle_root.html">Error: invalid merkle root</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/chain_is_invalid.html">Error: retrieved hash chain is invalid</a></li>
 </ul>
 </div>
 </div>
@@ -374,7 +386,7 @@
   <div class="container">
     <p>
           &copy; Copyright 2018-2021, Quadrans Foundation.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
     </p>
   </div>
 </footer>

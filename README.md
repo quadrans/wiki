@@ -14,10 +14,11 @@ The first pages of this documentation were written by **Piersandro Guerrera** an
 ## Main Arguments
 
 * **Get Started**: What is Quadrans? How the Quadrans blockchain works? What is a Token or a Coin?
-* **Nodes**: Installation guides, management informations and much more about Quadrans Nodes.
+* **Nodes**: Installation guides, compile and build, management informations and much more about Quadrans Nodes.
 * **Wallets**: How-to create a wallet, check your balance, backup your private key and transfer Quadrans Coins.
 * **Cryptocurrencies**: What is a Quadrans Token and how it works?
 * **Programming**: Useful information for starting programming your first Quadrans blockchain smart contract.
+* **Development***: How to become a go-quadrans contributor.
 * **Projects**: Projects related to Quadrans Foundation and its partners.
 
 ## Contributing
@@ -29,3 +30,4 @@ Contributing to the documentation benefits everyone who uses *Quadrans blockchai
 
 ## Documentation
 The official documentation is hosted on Quadrans Documentation website: https://docs.quadrans.io
+Thanks to the complete compatibility between the **Quadrans** and **Ethereum** blockchains, some parts of the documentation are inherited from the [Go-Ethereum documentation](https://geth.ethereum.org/docs/).

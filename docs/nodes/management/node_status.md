@@ -93,13 +93,13 @@ cd /home/quadrans/.quadrans/testnet
 Run:
 
 ``` bash
-gqdc attach geth.ipc
+gqdc attach gqdc.ipc
 ``` 
 
 This is what you will see inside the JavaScript console:
 
 ``` console
-Welcome to the Geth JavaScript console!
+Welcome to the Gqdc JavaScript console!
 
 instance: gqdc/v1.3.0-stable-1528b791/linux-amd64/go1.12 coinbase: 0x8598b3e931aacb7c1c708427702fa419b0762d57 at block: 1000805 (Mon, 14 Oct 2019 15:34:17 CEST)
 

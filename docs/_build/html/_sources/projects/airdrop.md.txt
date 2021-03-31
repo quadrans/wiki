@@ -9,8 +9,7 @@ Through the `Quadrans Airdrop <https://quadrans.io/airdrop/>`_  the Quadrans Fou
 
 To obtain your Quadrans Tokens follows the steps indicated in the Welcome Mail after the `token reservation registration <https://quadrans.io/airdrop/>`_.
 
-What is the KYC
-***************
+## What is the KYC
 
 **Know your Customer** (KYC) is the process of a business verifying the identity of its clients.
 

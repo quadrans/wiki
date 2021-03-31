@@ -19,6 +19,7 @@ Quadrans is fully interoperable with any data flows and ensures compatibility an
 .. toctree::
    :maxdepth: 2
 
+   /programming/native-bindings
    /programming/solidity_101
    /programming/web3
 
@@ -29,3 +30,4 @@ Tests
    :maxdepth: 2
 
    /programming/test-echo
+

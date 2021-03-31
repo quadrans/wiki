@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Contract Bindings &#8212; Quadrans Wiki  documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Solidity Cheatsheet and Best practices" href="solidity_101.html" />
+    <link rel="prev" title="Programming" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../index.html">
+    
+      <img src="../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../get-started.html">Get Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../nodes/index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../development/index.html">Development</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../projects/index.html">Projects</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#token-contract" class="nav-link">Token contract</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#go-binding-generator" class="nav-link">Go binding generator</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#generating-the-bindings" class="nav-link">Generating the bindings</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#accessing-an-quadrans-contract" class="nav-link">Accessing an Quadrans contract</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#transacting-with-an-quadrans-contract" class="nav-link">Transacting with an Quadrans contract</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pre-configured-contract-sessions" class="nav-link">Pre-configured contract sessions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#deploying-contracts-to-quadrans" class="nav-link">Deploying contracts to Quadrans</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#bind-solidity-directly" class="nav-link">Bind Solidity directly</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#project-integration-i-e-go-generate" class="nav-link">Project integration (i.e. go generate)</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#blockchain-simulator" class="nav-link">Blockchain simulator</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/programming/native-bindings.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="go-contract-bindings">
+<h1>Go Contract Bindings<a class="headerlink" href="#go-contract-bindings" title="Permalink to this headline">¶</a></h1>
+<p>The original roadmap and/or dream of the Quadrans platform was to provide a solid, high performing client implementation of the consensus protocol in various languages, which would provide an RPC interface for JavaScript DApps to communicate with, pushing towards the direction of the Mist browser, through which users can interact with the blockchain.</p>
+<p>Although this was a solid plan for mainstream adoption and does cover quite a lot of use cases that people come up with (mostly where people manually interact with the blockchain), it eludes the server side (backend, fully automated, devops) use cases where JavaScript is usually not the language of choice given its dynamic nature.</p>
+<p>This page introduces the concept of server side native Dapps: Go language bindings to any Quadrans contract that is compile time type safe, highly performant and best of all, can be generated fully automatically from a contract ABI and optionally the EVM bytecode.</p>
+<p><em>This page is written in a more beginner friendly tutorial style to make it easier for people to start out with writing Go native Dapps. The used concepts will be introduced gradually as a developer would need/encounter them. However, we do assume the reader is familiar with Quadrans in general, has a fair understanding of Solidity and can code Go.</em></p>
+<div class="section" id="token-contract">
+<h2>Token contract<a class="headerlink" href="#token-contract" title="Permalink to this headline">¶</a></h2>
+<p>To avoid falling into the fallacy of useless academic examples, we’re going to take the official Token contract as the base for introducing the Go native bindings. If you’re unfamiliar with the contract, skimming the linked page should probably be enough, the details aren’t relevant for now. <em>In short the contract implements a custom token that can be deployed on top of Quadrans.</em> To make sure this tutorial doesn’t go stale if the linked website changes, the Solidity source code of the Token contract is also available at <a class="reference external" href="https://gist.github.com/karalabe/08f4b780e01c8452d989"><code class="docutils literal notranslate"><span class="pre">token.sol</span></code></a>.</p>
+<div class="section" id="go-binding-generator">
+<h3>Go binding generator<a class="headerlink" href="#go-binding-generator" title="Permalink to this headline">¶</a></h3>
+<p>Interacting with a contract on the Quadrans blockchain from Go (or any other language for a matter of fact) is already possible via the RPC interfaces exposed by Quadrans clients. However, writing the boilerplate code that translates decent Go language constructs into RPC calls and back is extremely time consuming and also extremely brittle: implementation bugs can only be detected during runtime and it’s almost impossible to evolve a contract as even a tiny change in Solidity can be painful to port over to Go.</p>
+<p>To avoid all this mess, the go-quadrans implementation introduces a source code generator that can convert Quadrans ABI definitions into easy to use, type-safe Go packages. Assuming you have a valid Go development environment set up and the go-quadrans repository checked out correctly, you can build the generator with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd $GOPATH/src/github.com/quadrans/go-quadrans
+$ make abigen
+</pre></div>
+</div>
+</div>
+<div class="section" id="generating-the-bindings">
+<h3>Generating the bindings<a class="headerlink" href="#generating-the-bindings" title="Permalink to this headline">¶</a></h3>
+<p>The single essential thing needed to generate a Go binding to an Quadrans contract is the contract’s ABI definition <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file. For our <code class="docutils literal notranslate"><span class="pre">Token</span></code> contract tutorial you can obtain this either by compiling the Solidity code yourself (e.g. via &#64;chriseth’s <a class="reference external" href="https://chriseth.github.io/browser-solidity/">online Solidity compiler</a>), or you can download our pre-compiled <a class="reference external" href="https://gist.github.com/karalabe/b8dfdb6d301660f56c1b"><code class="docutils literal notranslate"><span class="pre">token.abi</span></code></a>.</p>
+<p>To generate a binding, simply call:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ abigen --abi token.abi --pkg main --type Token --out token.go
+</pre></div>
+</div>
+<p>Where the flags are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--abi</span></code>: Mandatory path to the contract ABI to bind to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--pkg</span></code>: Mandatory Go package name to place the Go code into</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--type</span></code>: Optional Go type name to assign to the binding struct</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--out</span></code>: Optional output path for the generated Go source file (not set = stdout)</p></li>
+</ul>
+<p>This will generate a type-safe Go binding for the Token contract. The generated code will look something like <a class="reference external" href="https://gist.github.com/karalabe/5839509295afa4f7e2215bc4116c7a8f"><code class="docutils literal notranslate"><span class="pre">token.go</span></code></a>, but please generate your own as this will change as more work is put into the generator.</p>
+</div>
+<div class="section" id="accessing-an-quadrans-contract">
+<h3>Accessing an Quadrans contract<a class="headerlink" href="#accessing-an-quadrans-contract" title="Permalink to this headline">¶</a></h3>
+<p>To interact with a contract deployed on the blockchain, you’ll need to know the <code class="docutils literal notranslate"><span class="pre">address</span></code> of the contract itself, and need to specify a <code class="docutils literal notranslate"><span class="pre">backend</span></code> through which to access Quadrans. The binding generator provides out of the box an RPC backend through which you can attach to an existing Quadrans node via IPC, HTTP or WebSockets.</p>
+<p>We’ll use the foundation’s Unicorn token contract deployed on the testnet to demonstrate calling contract methods. It is deployed at the address <code class="docutils literal notranslate"><span class="pre">0x21e6fc92f93c8a1bb41e2be64b4e1f88a54d3576</span></code>.</p>
+<p>To run the snippet below, please ensure a Geth instance is running and attached to the Morden test network where the above mentioned contract was deployed. Also please update the path to the IPC socket below to the one reported by your own local Geth node.</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&quot;fmt&quot;</span>
+	<span class="s">&quot;log&quot;</span>
+
+	<span class="s">&quot;github.com/quadrans/go-quadrans/common&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/ethclient&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// Create an IPC based RPC connection to a remote node</span>
+	<span class="nx">conn</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ethclient</span><span class="p">.</span><span class="nx">Dial</span><span class="p">(</span><span class="s">&quot;/home/quadrans/.quadrans/testnet/gqdc.ipc&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to connect to the Quadrans client: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="c1">// Instantiate the contract and display its name</span>
+	<span class="nx">token</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">NewToken</span><span class="p">(</span><span class="nx">common</span><span class="p">.</span><span class="nx">HexToAddress</span><span class="p">(</span><span class="s">&quot;0x21e6fc92f93c8a1bb41e2be64b4e1f88a54d3576&quot;</span><span class="p">),</span> <span class="nx">conn</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to instantiate a Token contract: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">name</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Name</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to retrieve token name: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Token name:&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And the output (yay):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Token</span> <span class="n">name</span><span class="p">:</span> <span class="n">Testnet</span> <span class="n">Unicorn</span>
+</pre></div>
+</div>
+<p>If you look at the method invoked to read the token name <code class="docutils literal notranslate"><span class="pre">token.Name(nil)</span></code>, it required a parameter to be passed, even though the original Solidity contract requires none. This is a <code class="docutils literal notranslate"><span class="pre">*bind.CallOpts</span></code> type, which can be used to fine tune the call.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Pending</span></code>: Whether to access pending contract state or the current stable one</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GasLimit</span></code>: Place a limit on the computing resources the call might consume</p></li>
+</ul>
+</div>
+<div class="section" id="transacting-with-an-quadrans-contract">
+<h3>Transacting with an Quadrans contract<a class="headerlink" href="#transacting-with-an-quadrans-contract" title="Permalink to this headline">¶</a></h3>
+<p>Invoking a method that changes contract state (i.e. transacting) is a bit more involved, as a live transaction needs to be authorized and broadcast into the network. <strong>Opposed o the conventional way of storing accounts and keys in the node we attach to, Go bindings require signing transactions locally and do not delegate this to a remote node.</strong> This is done so to facilitate the general direction of the Quadrans community where accounts are kept private to DApps, and not shared (by default) between them.</p>
+<p>Thus to allow transacting with a contract, your code needs to implement a method that given an input transaction, signs it and returns an authorized output transaction. Since most users have their keys in the <a class="reference internal" href="../development/web3-secrets-storage-definition.html"><span class="doc">Web3 Secret Storage</span></a> format, the <code class="docutils literal notranslate"><span class="pre">bind</span></code> package contains a small utility method
+(<code class="docutils literal notranslate"><span class="pre">bind.NewTransactor(keyjson,</span> <span class="pre">passphrase)</span></code>) that can create an authorized transactor from
+a key file and associated password, without the user needing to implement key signing himself.</p>
+<p>Changing the previous code snippet to send one unicorn to the zero address:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&quot;fmt&quot;</span>
+	<span class="s">&quot;log&quot;</span>
+	<span class="s">&quot;math/big&quot;</span>
+	<span class="s">&quot;strings&quot;</span>
+
+	<span class="s">&quot;github.com/quadrans/go-quadrans/accounts/abi/bind&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/common&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/ethclient&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">const</span> <span class="nx">key</span> <span class="p">=</span> <span class="s">`paste the contents of your *testnet* key json here`</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// Create an IPC based RPC connection to a remote node and instantiate a contract binding</span>
+	<span class="nx">conn</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">ethclient</span><span class="p">.</span><span class="nx">Dial</span><span class="p">(</span><span class="s">&quot;/home/quadrans/.quadrans/testnet/gqdc.ipc&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to connect to the Quadrans client: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">token</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">NewToken</span><span class="p">(</span><span class="nx">common</span><span class="p">.</span><span class="nx">HexToAddress</span><span class="p">(</span><span class="s">&quot;0x21e6fc92f93c8a1bb41e2be64b4e1f88a54d3576&quot;</span><span class="p">),</span> <span class="nx">conn</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to instantiate a Token contract: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="c1">// Create an authorized transactor and spend 1 unicorn</span>
+	<span class="nx">auth</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">NewTransactor</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">NewReader</span><span class="p">(</span><span class="nx">key</span><span class="p">),</span> <span class="s">&quot;my awesome super secret password&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to create authorized transactor: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">tx</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Transfer</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span> <span class="nx">common</span><span class="p">.</span><span class="nx">HexToAddress</span><span class="p">(</span><span class="s">&quot;0x0000000000000000000000000000000000000000&quot;</span><span class="p">),</span> <span class="nx">big</span><span class="p">.</span><span class="nx">NewInt</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to request token transfer: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Transfer pending: 0x%x\n&quot;</span><span class="p">,</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">Hash</span><span class="p">())</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And the output (yay):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Transfer</span> <span class="n">pending</span><span class="p">:</span> <span class="mh">0x4f4aaeb29ed48e88dd653a81f0b05d4df64a86c99d4e83b5bfeb0f0006b0e55b</span>
+</pre></div>
+</div>
+<p><em>Note, with high probability you won’t have any testnet unicorns available to spend, so the
+above program will fail with an error. Send at least 2.014 testnet(!) Ethers to the foundation
+testnet tipjar <code class="docutils literal notranslate"><span class="pre">0xDf7D0030bfed998Db43288C190b63470c2d18F50</span></code> to receive a unicorn token and
+you’ll be able to see the above code run without an error!</em></p>
+<p>Similar to the method invocations in the previous section which only read contract state,
+transacting methods also require a mandatory first parameter, a <code class="docutils literal notranslate"><span class="pre">*bind.TransactOpts</span></code> type,
+which authorizes the transaction and potentially fine tunes it:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">From</span></code>: Address of the account to invoke the method with (mandatory)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Signer</span></code>: Method to sign a transaction locally before broadcasting it (mandatory)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Nonce</span></code>: Account nonce to use for the transaction ordering (optional)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GasLimit</span></code>: Place a limit on the computing resources the call might consume (optional)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GasPrice</span></code>: Explicitly set the gas price to run the transaction with (optional)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Value</span></code>: Any funds to transfer along with the method call (optional)</p></li>
+</ul>
+<p>The two mandatory fields are automatically set by the <code class="docutils literal notranslate"><span class="pre">bind</span></code> package if the auth options are
+constructed using <code class="docutils literal notranslate"><span class="pre">bind.NewTransactor</span></code>. The nonce and gas related fields are automatically
+derived by the binding if they are not set. An unset value is assumed to be zero.</p>
+</div>
+<div class="section" id="pre-configured-contract-sessions">
+<h3>Pre-configured contract sessions<a class="headerlink" href="#pre-configured-contract-sessions" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned in the previous two sections, both reading as well as state modifying contract
+calls require a mandatory first parameter which can both authorize as well as fine tune some
+of the internal parameters. However, most of the time we want to use the same parameters and
+issue transactions with the same account, so always constructing the call/transact options or
+passing them along with the binding can become unwieldy.</p>
+<p>To avoid these scenarios, the generator also creates specialized wrappers that can be pre-
+configured with tuning and authorization parameters, allowing all the Solidity defined methods
+to be invoked without needing an extra parameter.</p>
+<p>These are named analogous to the original contract type name, just suffixed with <code class="docutils literal notranslate"><span class="pre">Sessions</span></code>:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="c1">// Wrap the Token contract instance into a session</span>
+<span class="nx">session</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">TokenSession</span><span class="p">{</span>
+	<span class="nx">Contract</span><span class="p">:</span> <span class="nx">token</span><span class="p">,</span>
+	<span class="nx">CallOpts</span><span class="p">:</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">CallOpts</span><span class="p">{</span>
+		<span class="nx">Pending</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+	<span class="p">},</span>
+	<span class="nx">TransactOpts</span><span class="p">:</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">TransactOpts</span><span class="p">{</span>
+		<span class="nx">From</span><span class="p">:</span>     <span class="nx">auth</span><span class="p">.</span><span class="nx">From</span><span class="p">,</span>
+		<span class="nx">Signer</span><span class="p">:</span>   <span class="nx">auth</span><span class="p">.</span><span class="nx">Signer</span><span class="p">,</span>
+		<span class="nx">GasLimit</span><span class="p">:</span> <span class="nx">big</span><span class="p">.</span><span class="nx">NewInt</span><span class="p">(</span><span class="mi">3141592</span><span class="p">),</span>
+	<span class="p">},</span>
+<span class="p">}</span>
+<span class="c1">// Call the previous methods without the option parameters</span>
+<span class="nx">session</span><span class="p">.</span><span class="nx">Name</span><span class="p">()</span>
+<span class="nx">session</span><span class="p">.</span><span class="nx">Transfer</span><span class="p">(</span><span class="s">&quot;0x0000000000000000000000000000000000000000&quot;</span><span class="p">),</span> <span class="nx">big</span><span class="p">.</span><span class="nx">NewInt</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deploying-contracts-to-quadrans">
+<h3>Deploying contracts to Quadrans<a class="headerlink" href="#deploying-contracts-to-quadrans" title="Permalink to this headline">¶</a></h3>
+<p>Interacting with existing contracts is nice, but let’s take it up a notch and deploy
+a brand new contract onto the Quadrans blockchain! To do so however, the contract ABI
+we used to generate the binding is not enough. We need the compiled bytecode too to
+allow deploying it.</p>
+<p>To get the bytecode, either go back to the online compiler with which you may generate it,
+or alternatively download our <a class="reference external" href="https://gist.github.com/karalabe/026548f6a5f5f97b54de"><code class="docutils literal notranslate"><span class="pre">token.bin</span></code></a>.
+You’ll need to rerun the Go generator with the bytecode included for it to create deploy
+code too:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ abigen --abi token.abi --pkg main --type Token --out token.go --bin token.bin
+</pre></div>
+</div>
+<p>This will generate something similar to <a class="reference external" href="https://gist.github.com/karalabe/2153b087c1f80f651fd87dd4c439fac4"><code class="docutils literal notranslate"><span class="pre">token.go</span></code></a>.
+If you quickly skim this file, you’ll find an extra <code class="docutils literal notranslate"><span class="pre">DeployToken</span></code> function that was just
+injected compared to the previous code. Beside all the parameters specified by Solidity,
+it also needs the usual authorization options to deploy the contract with and the Quadrans
+backend to deploy the contract through.</p>
+<p>Putting it all together would result in:</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&quot;fmt&quot;</span>
+	<span class="s">&quot;log&quot;</span>
+	<span class="s">&quot;math/big&quot;</span>
+	<span class="s">&quot;strings&quot;</span>
+	<span class="s">&quot;time&quot;</span>
+
+	<span class="s">&quot;github.com/quadrans/go-quadrans/accounts/abi/bind&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/ethclient&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">const</span> <span class="nx">key</span> <span class="p">=</span> <span class="s">`paste the contents of your *testnet* key json here`</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// Create an IPC based RPC connection to a remote node and an authorized transactor</span>
+	<span class="nx">conn</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">NewIPCClient</span><span class="p">(</span><span class="s">&quot;/home/quadrans/.quadrans/testnet/gqdc.ipc&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to connect to the Quadrans client: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">auth</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">NewTransactor</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">NewReader</span><span class="p">(</span><span class="nx">key</span><span class="p">),</span> <span class="s">&quot;my awesome super secret password&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to create authorized transactor: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="c1">// Deploy a new awesome contract for the binding demo</span>
+	<span class="nx">address</span><span class="p">,</span> <span class="nx">tx</span><span class="p">,</span> <span class="nx">token</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">DeployToken</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span> <span class="nx">conn</span><span class="p">),</span> <span class="nb">new</span><span class="p">(</span><span class="nx">big</span><span class="p">.</span><span class="nx">Int</span><span class="p">),</span> <span class="s">&quot;Contracts in Go!!!&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;Go!&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to deploy new token contract: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Contract pending deploy: 0x%x\n&quot;</span><span class="p">,</span> <span class="nx">address</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Transaction waiting to be mined: 0x%x\n\n&quot;</span><span class="p">,</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">Hash</span><span class="p">())</span>
+
+	<span class="c1">// Don&#39;t even wait, check its presence in the local pending state</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">250</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">)</span> <span class="c1">// Allow it to be processed by the local node :P</span>
+
+	<span class="nx">name</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Name</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">bind</span><span class="p">.</span><span class="nx">CallOpts</span><span class="p">{</span><span class="nx">Pending</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to retrieve pending name: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Pending name:&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And the code performs as expected: it requests the creation of a brand new Token contract
+on the Quadrans blockchain, which we can either wait for to be mined or as in the above code
+start calling methods on it in the pending state :)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Contract pending deploy: 0x46506d900559ad005feb4645dcbb2dbbf65e19cc
+Transaction waiting to be mined: 0x6a81231874edd2461879b7280ddde1a857162a744e3658ca7ec276984802183b
+
+Pending name: Contracts in Go!!!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bind-solidity-directly">
+<h2>Bind Solidity directly<a class="headerlink" href="#bind-solidity-directly" title="Permalink to this headline">¶</a></h2>
+<p>If you’ve followed the tutorial along until this point you’ve probably realized that
+every contract modification needs to be recompiled, the produced ABIs and bytecodes
+(especially if you need multiple contracts) individually saved to files and then the
+binding executed for them. This can become a quite bothersome after the Nth iteration,
+so the <code class="docutils literal notranslate"><span class="pre">abigen</span></code> command supports binding from Solidity source files directly (<code class="docutils literal notranslate"><span class="pre">--sol</span></code>),
+which first compiles the source code (via <code class="docutils literal notranslate"><span class="pre">--solc</span></code>, defaulting to <code class="docutils literal notranslate"><span class="pre">solc</span></code>) into it’s
+constituent components and binds using that.</p>
+<p>Binding the official Token contract <a class="reference external" href="https://gist.github.com/karalabe/08f4b780e01c8452d989"><code class="docutils literal notranslate"><span class="pre">token.sol</span></code></a>
+would then entail to running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ abigen --sol token.sol --pkg main --out token.go
+</pre></div>
+</div>
+<p><em>Note: Building from Solidity (<code class="docutils literal notranslate"><span class="pre">--sol</span></code>) is mutually exclusive with individually setting
+the bind components (<code class="docutils literal notranslate"><span class="pre">--abi</span></code>, <code class="docutils literal notranslate"><span class="pre">--bin</span></code> and <code class="docutils literal notranslate"><span class="pre">--type</span></code>), as all of them are extracted from
+the Solidity code and produced build results directly.</em></p>
+<p>Building a contract directly from Solidity has the nice side effect that all contracts
+contained within a Solidity source file are built and bound, so if your file contains many
+contract sources, each and every one of them will be available from Go code. The sample
+Token solidity file results in <a class="reference external" href="https://gist.github.com/karalabe/c22aab73194ba7da834ab5b379621031"><code class="docutils literal notranslate"><span class="pre">token.go</span></code></a>.</p>
+<div class="section" id="project-integration-i-e-go-generate">
+<h3>Project integration (i.e. <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">generate</span></code>)<a class="headerlink" href="#project-integration-i-e-go-generate" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">abigen</span></code> command was made in such a way as to play beautifully together with existing
+Go toolchains: instead of having to remember the exact command needed to bind an Quadrans
+contract into a Go project, we can leverage <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">generate</span></code> to remember all the nitty-gritty
+details.</p>
+<p>Place the binding generation command into a Go source file before the package definition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">go</span><span class="p">:</span><span class="n">generate</span> <span class="n">abigen</span> <span class="o">--</span><span class="n">sol</span> <span class="n">token</span><span class="o">.</span><span class="n">sol</span> <span class="o">--</span><span class="n">pkg</span> <span class="n">main</span> <span class="o">--</span><span class="n">out</span> <span class="n">token</span><span class="o">.</span><span class="n">go</span>
+</pre></div>
+</div>
+<p>After which whenever the Solidity contract is modified, instead of needing to remember and
+run the above command, we can simply call <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">generate</span></code> on the package (or even the entire
+source tree via <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">generate</span> <span class="pre">./...</span></code>), and it will correctly generate the new bindings for us.</p>
+</div>
+</div>
+<div class="section" id="blockchain-simulator">
+<h2>Blockchain simulator<a class="headerlink" href="#blockchain-simulator" title="Permalink to this headline">¶</a></h2>
+<p>Being able to deploy and access already deployed Quadrans contracts from within native Go
+code is an extremely powerful feature, but there is one facet with developing native code
+that not even the testnet lends itself well to: <em>automatic unit testing</em>. Using go-quadrans
+internal constructs it’s possible to create test chains and verify them, but it is unfeasible
+to do high level contract testing with such low level mechanisms.</p>
+<p>To sort out this last issue that would make it hard to run (and test) native DApps, we’ve also
+implemented a <em>simulated blockchain</em>, that can be set as a backend to native contracts the same
+way as a live RPC backend could be: <code class="docutils literal notranslate"><span class="pre">backends.NewSimulatedBackend(genesisAccounts)</span></code>.</p>
+<div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&quot;fmt&quot;</span>
+	<span class="s">&quot;log&quot;</span>
+	<span class="s">&quot;math/big&quot;</span>
+
+	<span class="s">&quot;github.com/quadrans/go-quadrans/accounts/abi/bind&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/accounts/abi/bind/backends&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/core&quot;</span>
+	<span class="s">&quot;github.com/quadrans/go-quadrans/crypto&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// Generate a new random account and a funded simulator</span>
+	<span class="nx">key</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">crypto</span><span class="p">.</span><span class="nx">GenerateKey</span><span class="p">()</span>
+	<span class="nx">auth</span> <span class="o">:=</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">NewKeyedTransactor</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+
+	<span class="nx">sim</span> <span class="o">:=</span> <span class="nx">backends</span><span class="p">.</span><span class="nx">NewSimulatedBackend</span><span class="p">(</span><span class="nx">core</span><span class="p">.</span><span class="nx">GenesisAccount</span><span class="p">{</span><span class="nx">Address</span><span class="p">:</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">From</span><span class="p">,</span> <span class="nx">Balance</span><span class="p">:</span> <span class="nx">big</span><span class="p">.</span><span class="nx">NewInt</span><span class="p">(</span><span class="mi">10000000000</span><span class="p">)})</span>
+
+	<span class="c1">// Deploy a token contract on the simulated blockchain</span>
+	<span class="nx">_</span><span class="p">,</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">token</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">DeployMyToken</span><span class="p">(</span><span class="nx">auth</span><span class="p">,</span> <span class="nx">sim</span><span class="p">,</span> <span class="nb">new</span><span class="p">(</span><span class="nx">big</span><span class="p">.</span><span class="nx">Int</span><span class="p">),</span> <span class="s">&quot;Simulated blockchain tokens&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;SBT&quot;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nx">Fatalf</span><span class="p">(</span><span class="s">&quot;Failed to deploy new token contract: %v&quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="c1">// Print the current (non existent) and pending name of the contract</span>
+	<span class="nx">name</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Name</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Pre-mining name:&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+
+	<span class="nx">name</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Name</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">bind</span><span class="p">.</span><span class="nx">CallOpts</span><span class="p">{</span><span class="nx">Pending</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Pre-mining pending name:&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+
+	<span class="c1">// Commit all pending transactions in the simulator and print the names again</span>
+	<span class="nx">sim</span><span class="p">.</span><span class="nx">Commit</span><span class="p">()</span>
+
+	<span class="nx">name</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Name</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Post-mining name:&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+
+	<span class="nx">name</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">token</span><span class="p">.</span><span class="nx">Name</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">bind</span><span class="p">.</span><span class="nx">CallOpts</span><span class="p">{</span><span class="nx">Pending</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Post-mining pending name:&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And the output (yay):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pre</span><span class="o">-</span><span class="n">mining</span> <span class="n">name</span><span class="p">:</span> 
+<span class="n">Pre</span><span class="o">-</span><span class="n">mining</span> <span class="n">pending</span> <span class="n">name</span><span class="p">:</span> <span class="n">Simulated</span> <span class="n">blockchain</span> <span class="n">tokens</span>
+<span class="n">Post</span><span class="o">-</span><span class="n">mining</span> <span class="n">name</span><span class="p">:</span> <span class="n">Simulated</span> <span class="n">blockchain</span> <span class="n">tokens</span>
+<span class="n">Post</span><span class="o">-</span><span class="n">mining</span> <span class="n">pending</span> <span class="n">name</span><span class="p">:</span> <span class="n">Simulated</span> <span class="n">blockchain</span> <span class="n">tokens</span>
+</pre></div>
+</div>
+<p>Note, that we don’t have to wait for a local private chain miner, or testnet miner to
+integrate the currently pending transactions. When we decide to mine the next block,
+we simply <code class="docutils literal notranslate"><span class="pre">Commit()</span></code> the simulator.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2018-2021, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

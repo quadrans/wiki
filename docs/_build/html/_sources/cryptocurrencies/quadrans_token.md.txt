@@ -33,7 +33,7 @@ To obtain for free the 1,000 QDT required to transform a Lightnode in a Miner no
 
 Partecipate to the Airdrop requires a registration and a Know Your Customers (KYC) procedure to allow the withdraw of 1.000 QDT.
 
-### How to show QDT in Ethereum wallets
+## How to show QDT in Ethereum wallets
 
 QDT have been generated in compliance with the standardized Ethereum ERC20 tokens and can be used in any Ethereum wallet that supports this kind of cryptocurrencies.
 

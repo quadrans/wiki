@@ -1,5 +1,5 @@
 
-Error : invalid merkle root
+Error: invalid merkle root
 ===========================
 
 ## Sample

@@ -34,7 +34,7 @@ cd /home/quadrans/.quadrans/testnet
 Common:
 
 ``` bash
-gqdc attach geth.ipc
+gqdc attach gqdc.ipc
 ``` 
 
 once presented with the `>` prompt use the following command to create the new account

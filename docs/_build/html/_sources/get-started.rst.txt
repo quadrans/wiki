@@ -20,8 +20,8 @@ What is Quadrans
 
 To learn more:
 
-* `Quadrans Light Paper <https://www.quadrans.io/f/light-paper>`_
 * `Quadrans White Paper <https://www.quadrans.io/f/white-paper>`_
+* `Quadrans Yellow Paper <https://www.quadrans.io/f/yellow-paper>`_
 * `Quadrans Members <https://quadrans.io/members.php>`_
 
 The Quadrans Network
@@ -107,4 +107,5 @@ Sections of this Documentation
    /wallet/index
    /cryptocurrencies/index
    /programming/index
+   /development/index
    /projects/index

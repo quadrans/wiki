@@ -27,7 +27,7 @@ cd /home/quadrans/.quadrans/testnet
 Common:
 
 ``` bash
-gqdc attach geth.ipc
+gqdc attach gegqdcth.ipc
 ```
 
 ``` js

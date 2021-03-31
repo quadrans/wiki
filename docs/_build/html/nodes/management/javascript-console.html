@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Console &#8212; Quadrans Wiki  documentation</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Checking the status of your Quadrans node" href="node_status.html" />
+    <link rel="prev" title="Command Line Options" href="command_line_options.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../../index.html">
+    
+      <img src="../../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../get-started.html">Get Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../programming/index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../development/index.html">Development</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../../projects/index.html">Projects</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#interactive-use-the-console" class="nav-link">Interactive Use: The Console</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#non-interactive-use-script-mode" class="nav-link">Non-interactive Use: Script Mode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#caveats" class="nav-link">Caveats</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#timers" class="nav-link">Timers</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/nodes/management/javascript-console.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="javascript-console">
+<h1>JavaScript Console<a class="headerlink" href="#javascript-console" title="Permalink to this headline">¶</a></h1>
+<p>The Gqdc JavaScript console exposes the full <a class="reference external" href="https://web3js.readthedocs.io/en/v1.2.9/">web3 JavaScript Dapp API</a> and further administrative APIs.</p>
+<div class="section" id="interactive-use-the-console">
+<h2>Interactive Use: The Console<a class="headerlink" href="#interactive-use-the-console" title="Permalink to this headline">¶</a></h2>
+<p>The gqdc JavaScript console is started with the <code class="docutils literal notranslate"><span class="pre">console</span></code> or <code class="docutils literal notranslate"><span class="pre">attach</span></code> gqdc sub-commands.
+The <code class="docutils literal notranslate"><span class="pre">console</span></code> subcommands starts the gqdc node and then opens the console. The <code class="docutils literal notranslate"><span class="pre">attach</span></code> subcommand attaches to the console to an already-running gqdc instance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">console</span>
+<span class="n">gqdc</span> <span class="n">attach</span>
+</pre></div>
+</div>
+<p>Attach mode accepts an endpoint in case the gqdc node is running with a non default
+ipc endpoint or you would like to connect over the rpc interface.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">attach</span> <span class="o">/</span><span class="n">some</span><span class="o">/</span><span class="n">custom</span><span class="o">/</span><span class="n">gqdc</span><span class="o">.</span><span class="n">ipc</span>
+<span class="n">gqdc</span> <span class="n">attach</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">191.168</span><span class="o">.</span><span class="mf">1.1</span><span class="p">:</span><span class="mi">8545</span>
+<span class="n">gqdc</span> <span class="n">attach</span> <span class="n">ws</span><span class="p">:</span><span class="o">//</span><span class="mf">191.168</span><span class="o">.</span><span class="mf">1.1</span><span class="p">:</span><span class="mi">8546</span>
+</pre></div>
+</div>
+<p>Note that by default the gqdc node doesn’t start the HTTP and WebSocket servers and not all functionality is provided over these interfaces for security reasons. These defaults can be overridden with the <code class="docutils literal notranslate"><span class="pre">--http.api</span></code> and <code class="docutils literal notranslate"><span class="pre">--ws.api</span></code> arguments when the gqdc node is started, or with <code class="docutils literal notranslate"><span class="pre">admin.startRPC</span></code> and <code class="docutils literal notranslate"><span class="pre">admin.startWS</span></code>.</p>
+<p>If you need log information, start with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">console</span> <span class="o">--</span><span class="n">verbosity</span> <span class="mi">5</span> <span class="mi">2</span><span class="o">&gt;&gt;</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">gqdc</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<p>Otherwise mute your logs, so that it does not pollute your console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">console</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</pre></div>
+</div>
+<p>Gqdc has support to load custom JavaScript files into the console through the <code class="docutils literal notranslate"><span class="pre">--preload</span></code>
+option. This can be used to load often used functions, or to setup web3 contract objects.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">console</span> <span class="o">--</span><span class="n">preload</span> <span class="s2">&quot;/my/scripts/folder/utils.js,/my/scripts/folder/contracts.js&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="non-interactive-use-script-mode">
+<h2>Non-interactive Use: Script Mode<a class="headerlink" href="#non-interactive-use-script-mode" title="Permalink to this headline">¶</a></h2>
+<p>It’s also possible to execute files to the JavaScript interpreter. The <code class="docutils literal notranslate"><span class="pre">console</span></code> and <code class="docutils literal notranslate"><span class="pre">attach</span></code> subcommand accept the <code class="docutils literal notranslate"><span class="pre">--exec</span></code> argument which is a javascript statement.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">attach</span> <span class="o">--</span><span class="n">exec</span> <span class="s2">&quot;eth.blockNumber&quot;</span>
+</pre></div>
+</div>
+<p>This prints the current block number of a running gqdc instance.</p>
+<p>Or execute a local script with more complex statements on a remote node over http:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="n">attach</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">gqdc</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="mi">8545</span> <span class="o">--</span><span class="n">exec</span> <span class="s1">&#39;loadScript(&quot;/tmp/checkbalances.js&quot;)&#39;</span>
+<span class="n">gqdc</span> <span class="n">attach</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">gqdc</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="mi">8545</span> <span class="o">--</span><span class="n">jspath</span> <span class="s2">&quot;/tmp&quot;</span> <span class="o">--</span><span class="n">exec</span> <span class="s1">&#39;loadScript(&quot;checkbalances.js&quot;)&#39;</span>
+</pre></div>
+</div>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">--jspath</span> <span class="pre">&lt;path/to/my/js/root&gt;</span></code> to set a library directory for your js scripts.
+Parameters to <code class="docutils literal notranslate"><span class="pre">loadScript()</span></code> with no absolute path will be understood relative to this directory.</p>
+<p>You can exit the console by typing <code class="docutils literal notranslate"><span class="pre">exit</span></code> or simply with <code class="docutils literal notranslate"><span class="pre">CTRL-C</span></code>.</p>
+</div>
+<div class="section" id="caveats">
+<h2>Caveats<a class="headerlink" href="#caveats" title="Permalink to this headline">¶</a></h2>
+<p>go-quadrans now uses the <a class="reference external" href="https://github.com/dop251/goja">GoJa JS VM</a> which is compatible with ECMAScript 5.1. There are some limitations though:</p>
+<ul class="simple">
+<li><p>Promises and <code class="docutils literal notranslate"><span class="pre">async</span></code> won’t work.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">web3.js</span></code> uses the <a class="reference external" href="https://github.com/MikeMcl/bignumber.js"><code class="docutils literal notranslate"><span class="pre">bignumber.js</span></code></a> library.
+This library is auto-loaded into the console.</p>
+<div class="section" id="timers">
+<h3>Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the full functionality of JS (as per ECMA5), the quadrans JSRE is augmented with various timers. It implements <code class="docutils literal notranslate"><span class="pre">setInterval</span></code>, <code class="docutils literal notranslate"><span class="pre">clearInterval</span></code>, <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code>, <code class="docutils literal notranslate"><span class="pre">clearTimeout</span></code> you may be used to using in browser windows. It also provides implementation for <code class="docutils literal notranslate"><span class="pre">admin.sleep(seconds)</span></code> and a block based timer, <code class="docutils literal notranslate"><span class="pre">admin.sleepBlocks(n)</span></code> which sleeps till the number of new blocks added is equal to or greater than <code class="docutils literal notranslate"><span class="pre">n</span></code>, think “wait for n confirmations”.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2018-2021, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

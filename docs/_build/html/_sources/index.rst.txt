@@ -80,6 +80,20 @@ Quadrans Documentation
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
                 <div class="card card-q text-center intro-card shadow">
+                <img src="_static/images/icons/icn_devel_violet.png" class="card-img-top" alt="icon">
+                <div class="card-body flex-fill">
+                    <h5 class="card-title">Development</h5>
+                    <p class="card-text">Useful information for starting programming your first Quadrans blockchain smart contract.</p>
+                     <div class="text-center mt-auto">
+                        <a href="development/">
+                           <button class="fill disabled">Read More</button>
+                        </a>
+                      </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+                <div class="card card-q text-center intro-card shadow">
                 <img src="_static/images/icons/icn_projects_violet.png" class="card-img-top" alt="icon">
                 <div class="card-body flex-fill">
                     <h5 class="card-title">Projects</h5>
@@ -105,4 +119,5 @@ Quadrans Documentation
    /wallet/index
    /cryptocurrencies/index
    /programming/index
+   /development/index
    /projects/index

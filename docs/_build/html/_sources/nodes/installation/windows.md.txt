@@ -19,6 +19,10 @@ Suggested requirements:
 * 4 GB RAM
 * 100 GB storage
 
+## Manually build go-quadrans from source
+
+Please refer to the guide [build go-quadrans from source](../build/source-code) to compile the binary from the source code.
+
 ## Manual installation for Windows (Intel 64bit or AMD 64bit)
 
 Download the latest [binary for Windows](http://repo.quadrans.io/windows/amd64/binary/).

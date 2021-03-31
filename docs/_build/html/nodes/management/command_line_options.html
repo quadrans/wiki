@@ -41,8 +41,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Checking the status of your Quadrans node" href="node_status.html" />
-    <link rel="prev" title="Update your manually configured Linux Quadrans node" href="gqdc-update.html" />
+    <link rel="next" title="JavaScript Console" href="javascript-console.html" />
+    <link rel="prev" title="Cross Platform compile Go Quadrans from Source" href="../build/cross-compile.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
   </head>
@@ -85,13 +85,13 @@
         </li>
         
         <li class="nav-item ">
+            <a class="nav-link" href="../../development/index.html">Development</a>
+        </li>
+        
+        <li class="nav-item ">
             <a class="nav-link" href="../../projects/index.html">Projects</a>
         </li>
         
-        
-        <li class="nav-item">
-            <a class="nav-link nav-external" href="https://quadrans.io">Quadrans Foundation<i class="fas fa-external-link-alt"></i></a>
-        </li>
         
       </ul>
 
@@ -147,6 +147,8 @@
         
         
         
+        
+        
       </ul>
   
   </nav>
@@ -182,202 +184,180 @@
                 
   <div class="section" id="command-line-options">
 <h1>Command Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc --help
-NAME:
-	gqdc - the go-ethereum <span class="nb">command</span> line interface
-	
-	Copyright <span class="m">2013</span>-2019 The go-ethereum Authors
-	
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>NAME:
+   gqdc - the go-quadrans <span class="nb">command</span> line interface
+
+   Copyright <span class="m">2013</span>-2019 The go-ethereum Authors
+   Copyright <span class="m">2020</span> The go-quadrans Authors
+
 USAGE:
-	gqdc <span class="o">[</span>options<span class="o">]</span> <span class="nb">command</span> <span class="o">[</span><span class="nb">command</span> options<span class="o">]</span> <span class="o">[</span>arguments...<span class="o">]</span>
-	
+   gqdc <span class="o">[</span>options<span class="o">]</span> <span class="nb">command</span> <span class="o">[</span><span class="nb">command</span> options<span class="o">]</span> <span class="o">[</span>arguments...<span class="o">]</span>
+   
 VERSION:
-	<span class="m">1</span>.3.0-stable-1528b791
-	
+   <span class="m">1</span>.5.2-stable-1528b791
+   
 COMMANDS:
-	account           Manage accounts
-	attach            Start an interactive JavaScript environment <span class="o">(</span>connect to node<span class="o">)</span>
-	console           Start an interactive JavaScript environment
-	copydb            Create a <span class="nb">local</span> chain from a target chaindata folder
-	dump              Dump a specific block from storage
-	dumpconfig        Show configuration values
-	<span class="nb">export</span>            Export blockchain into file
-	export-preimages  Export the preimage database into an RLP stream
-	import            Import a blockchain file
-	import-preimages  Import the preimage database from an RLP stream
-	init              Bootstrap and initialize a new genesis block
-	js                Execute the specified JavaScript files
-	license           Display license information
-	makecache         Generate ethash verification cache <span class="o">(</span><span class="k">for</span> testing<span class="o">)</span>
-	makedag           Generate ethash mining DAG <span class="o">(</span><span class="k">for</span> testing<span class="o">)</span>
-	removedb          Remove blockchain and state databases
-	version           Print version numbers
-	wallet            Manage Ethereum presale wallets
-	help, h           Shows a list of commands or <span class="nb">help</span> <span class="k">for</span> one <span class="nb">command</span>
-	
+   account           Manage accounts
+   attach            Start an interactive JavaScript environment <span class="o">(</span>connect to node<span class="o">)</span>
+   console           Start an interactive JavaScript environment
+   copydb            Create a <span class="nb">local</span> chain from a target chaindata folder
+   dump              Dump a specific block from storage
+   dumpconfig        Show configuration values
+   <span class="nb">export</span>            Export blockchain into file
+   export-preimages  Export the preimage database into an RLP stream
+   import            Import a blockchain file
+   import-preimages  Import the preimage database from an RLP stream
+   init              Bootstrap and initialize a new genesis block
+   js                Execute the specified JavaScript files
+   license           Display license information
+   removedb          Remove blockchain and state databases
+   version           Print version numbers
+   wallet            Manage Ethereum presale wallets
+   help, h           Shows a list of commands or <span class="nb">help</span> <span class="k">for</span> one <span class="nb">command</span>
+   
 QUADRANS OPTIONS:
-	--config value                          TOML configuration file
-	--datadir <span class="s2">&quot;/home/user/data_directory&quot;</span>   Data directory <span class="k">for</span> the databases and keystore
-	--keystore                              Directory <span class="k">for</span> the keystore <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> inside the datadir<span class="o">)</span>
-	--nousb                                 Disables monitoring <span class="k">for</span> and managing USB hardware wallets
-	--testnet                               Test network: pre-configured <span class="nb">test</span> network
-	--syncmode <span class="s2">&quot;fast&quot;</span>                       Blockchain sync mode <span class="o">(</span><span class="s2">&quot;fast&quot;</span>, <span class="s2">&quot;full&quot;</span>, or <span class="s2">&quot;light&quot;</span><span class="o">)</span>
-	--exitwhensynced                        Exits after block synchronisation completes
-	--gcmode value                          Blockchain garbage collection mode <span class="o">(</span><span class="s2">&quot;full&quot;</span>, <span class="s2">&quot;archive&quot;</span><span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;full&quot;</span><span class="o">)</span>
-	--ethstats value                        Reporting URL of a ethstats service <span class="o">(</span>nodename:secret@host:port<span class="o">)</span>
-	--identity value                        Custom node name
-	--lightserv value                       Maximum percentage of <span class="nb">time</span> allowed <span class="k">for</span> serving LES requests <span class="o">(</span>multi-threaded processing allows values over <span class="m">100</span><span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--lightbwin value                       Incoming bandwidth limit <span class="k">for</span> light server <span class="o">(</span><span class="m">1000</span> bytes/sec, <span class="nv">0</span> <span class="o">=</span> unlimited<span class="o">)</span> <span class="o">(</span>default: <span class="m">1000</span><span class="o">)</span>
-	--lightbwout value                      Outgoing bandwidth limit <span class="k">for</span> light server <span class="o">(</span><span class="m">1000</span> bytes/sec, <span class="nv">0</span> <span class="o">=</span> unlimited<span class="o">)</span> <span class="o">(</span>default: <span class="m">5000</span><span class="o">)</span>
-	--lightpeers value                      Maximum number of LES client peers <span class="o">(</span>default: <span class="m">100</span><span class="o">)</span>
-	--lightkdf                              Reduce key-derivation RAM <span class="p">&amp;</span> CPU usage at some expense of KDF strength
-	--whitelist value                       Comma separated block number-to-hash mappings to enforce <span class="o">(</span>&lt;number&gt;<span class="o">=</span>&lt;hash&gt;<span class="o">)</span>
-	
+  --config value                          TOML configuration file
+  --datadir <span class="s2">&quot;/home/piersandro/.quadrans&quot;</span>  Data directory <span class="k">for</span> the databases and keystore
+  --keystore                              Directory <span class="k">for</span> the keystore <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> inside the datadir<span class="o">)</span>
+  --nousb                                 Disables monitoring <span class="k">for</span> and managing USB hardware wallets
+  --testnet                               Test network: pre-configured <span class="nb">test</span> network
+  --syncmode <span class="s2">&quot;fast&quot;</span>                       Blockchain sync mode <span class="o">(</span><span class="s2">&quot;fast&quot;</span>, <span class="s2">&quot;full&quot;</span>, or <span class="s2">&quot;light&quot;</span><span class="o">)</span>
+  --exitwhensynced                        Exits after block synchronisation completes
+  --gcmode value                          Blockchain garbage collection mode <span class="o">(</span><span class="s2">&quot;full&quot;</span>, <span class="s2">&quot;archive&quot;</span><span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;full&quot;</span><span class="o">)</span>
+  --ethstats value                        Reporting URL of a ethstats service <span class="o">(</span>nodename:secret@host:port<span class="o">)</span>
+  --identity value                        Custom node name
+  --lightserv value                       Maximum percentage of <span class="nb">time</span> allowed <span class="k">for</span> serving LES requests <span class="o">(</span>multi-threaded processing allows values over <span class="m">100</span><span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
+  --lightbwin value                       Incoming bandwidth limit <span class="k">for</span> light server <span class="o">(</span><span class="m">1000</span> bytes/sec, <span class="nv">0</span> <span class="o">=</span> unlimited<span class="o">)</span> <span class="o">(</span>default: <span class="m">1000</span><span class="o">)</span>
+  --lightbwout value                      Outgoing bandwidth limit <span class="k">for</span> light server <span class="o">(</span><span class="m">1000</span> bytes/sec, <span class="nv">0</span> <span class="o">=</span> unlimited<span class="o">)</span> <span class="o">(</span>default: <span class="m">5000</span><span class="o">)</span>
+  --lightpeers value                      Maximum number of LES client peers <span class="o">(</span>default: <span class="m">100</span><span class="o">)</span>
+  --lightkdf                              Reduce key-derivation RAM <span class="p">&amp;</span> CPU usage at some expense of KDF strength
+  --whitelist value                       Comma separated block number-to-hash mappings to enforce <span class="o">(</span>&lt;number&gt;<span class="o">=</span>&lt;hash&gt;<span class="o">)</span>
+  
 TRANSACTION POOL OPTIONS:
-	--txpool.locals value        Comma separated accounts to treat as locals <span class="o">(</span>no flush, priority inclusion<span class="o">)</span>
-	--txpool.nolocals            Disables price exemptions <span class="k">for</span> locally submitted transactions
-	--txpool.journal value       Disk journal <span class="k">for</span> <span class="nb">local</span> transaction to survive node restarts <span class="o">(</span>default: <span class="s2">&quot;transactions.rlp&quot;</span><span class="o">)</span>
-	--txpool.rejournal value     Time interval to regenerate the <span class="nb">local</span> transaction journal <span class="o">(</span>default: 1h0m0s<span class="o">)</span>
-	--txpool.pricelimit value    Minimum gas price limit to enforce <span class="k">for</span> acceptance into the pool <span class="o">(</span>default: <span class="m">1</span><span class="o">)</span>
-	--txpool.pricebump value     Price bump percentage to replace an already existing transaction <span class="o">(</span>default: <span class="m">10</span><span class="o">)</span>
-	--txpool.accountslots value  Minimum number of executable transaction slots guaranteed per account <span class="o">(</span>default: <span class="m">16</span><span class="o">)</span>
-	--txpool.globalslots value   Maximum number of executable transaction slots <span class="k">for</span> all accounts <span class="o">(</span>default: <span class="m">4096</span><span class="o">)</span>
-	--txpool.accountqueue value  Maximum number of non-executable transaction slots permitted per account <span class="o">(</span>default: <span class="m">64</span><span class="o">)</span>
-	--txpool.globalqueue value   Maximum number of non-executable transaction slots <span class="k">for</span> all accounts <span class="o">(</span>default: <span class="m">1024</span><span class="o">)</span>
-	--txpool.lifetime value      Maximum amount of <span class="nb">time</span> non-executable transaction are queued <span class="o">(</span>default: 3h0m0s<span class="o">)</span>
-	
+  --txpool.locals value        Comma separated accounts to treat as locals <span class="o">(</span>no flush, priority inclusion<span class="o">)</span>
+  --txpool.nolocals            Disables price exemptions <span class="k">for</span> locally submitted transactions
+  --txpool.journal value       Disk journal <span class="k">for</span> <span class="nb">local</span> transaction to survive node restarts <span class="o">(</span>default: <span class="s2">&quot;transactions.rlp&quot;</span><span class="o">)</span>
+  --txpool.rejournal value     Time interval to regenerate the <span class="nb">local</span> transaction journal <span class="o">(</span>default: 1h0m0s<span class="o">)</span>
+  --txpool.pricelimit value    Minimum gas price limit to enforce <span class="k">for</span> acceptance into the pool <span class="o">(</span>default: <span class="m">1</span><span class="o">)</span>
+  --txpool.pricebump value     Price bump percentage to replace an already existing transaction <span class="o">(</span>default: <span class="m">10</span><span class="o">)</span>
+  --txpool.accountslots value  Minimum number of executable transaction slots guaranteed per account <span class="o">(</span>default: <span class="m">16</span><span class="o">)</span>
+  --txpool.globalslots value   Maximum number of executable transaction slots <span class="k">for</span> all accounts <span class="o">(</span>default: <span class="m">4096</span><span class="o">)</span>
+  --txpool.accountqueue value  Maximum number of non-executable transaction slots permitted per account <span class="o">(</span>default: <span class="m">64</span><span class="o">)</span>
+  --txpool.globalqueue value   Maximum number of non-executable transaction slots <span class="k">for</span> all accounts <span class="o">(</span>default: <span class="m">1024</span><span class="o">)</span>
+  --txpool.lifetime value      Maximum amount of <span class="nb">time</span> non-executable transaction are queued <span class="o">(</span>default: 3h0m0s<span class="o">)</span>
+  
 PERFORMANCE TUNING OPTIONS:
-	--cache value           Megabytes of memory allocated to internal caching <span class="o">(</span>default: <span class="m">1024</span><span class="o">)</span>
-	--cache.database value  Percentage of cache memory allowance to use <span class="k">for</span> database io <span class="o">(</span>default: <span class="m">50</span><span class="o">)</span>
-	--cache.trie value      Percentage of cache memory allowance to use <span class="k">for</span> trie caching <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> <span class="m">25</span>% full mode, <span class="m">50</span>% archive mode<span class="o">)</span> <span class="o">(</span>default: <span class="m">25</span><span class="o">)</span>
-	--cache.gc value        Percentage of cache memory allowance to use <span class="k">for</span> trie pruning <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> <span class="m">25</span>% full mode, <span class="m">0</span>% archive mode<span class="o">)</span> <span class="o">(</span>default: <span class="m">25</span><span class="o">)</span>
-	--cache.noprefetch      Disable heuristic state prefetch during block import <span class="o">(</span>less CPU and disk IO, more <span class="nb">time</span> waiting <span class="k">for</span> data<span class="o">)</span>
-	
+  --cache value           Megabytes of memory allocated to internal caching <span class="o">(</span>default: <span class="m">1024</span><span class="o">)</span>
+  --cache.database value  Percentage of cache memory allowance to use <span class="k">for</span> database io <span class="o">(</span>default: <span class="m">50</span><span class="o">)</span>
+  --cache.trie value      Percentage of cache memory allowance to use <span class="k">for</span> trie caching <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> <span class="m">25</span>% full mode, <span class="m">50</span>% archive mode<span class="o">)</span> <span class="o">(</span>default: <span class="m">25</span><span class="o">)</span>
+  --cache.gc value        Percentage of cache memory allowance to use <span class="k">for</span> trie pruning <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> <span class="m">25</span>% full mode, <span class="m">0</span>% archive mode<span class="o">)</span> <span class="o">(</span>default: <span class="m">25</span><span class="o">)</span>
+  --cache.noprefetch      Disable heuristic state prefetch during block import <span class="o">(</span>less CPU and disk IO, more <span class="nb">time</span> waiting <span class="k">for</span> data<span class="o">)</span>
+  
 ACCOUNT OPTIONS:
-	--unlock value           Comma separated list of accounts to unlock
-	--password value         Password file to use <span class="k">for</span> non-interactive password input
-	--signer value           External signer <span class="o">(</span>url or path to ipc file<span class="o">)</span>
-	--allow-insecure-unlock  Allow insecure account unlocking when account-related RPCs are exposed by http
-	
+  --unlock value           Comma separated list of accounts to unlock
+  --password value         Password file to use <span class="k">for</span> non-interactive password input
+  --signer value           External signer <span class="o">(</span>url or path to ipc file<span class="o">)</span>
+  --allow-insecure-unlock  Allow insecure account unlocking when account-related RPCs are exposed by http
+  
 API AND CONSOLE OPTIONS:
-	--rpc                  Enable the HTTP-RPC server
-	--rpcaddr value        HTTP-RPC server listening interface <span class="o">(</span>default: <span class="s2">&quot;localhost&quot;</span><span class="o">)</span>
-	--rpcport value        HTTP-RPC server listening port <span class="o">(</span>default: <span class="m">8545</span><span class="o">)</span>
-	--rpcapi value         API<span class="s1">&#39;s offered over the HTTP-RPC interface</span>
-<span class="s1">	--rpc.gascap value     Sets a cap on gas that can be used in eth_call/estimateGas (default: 0)</span>
-<span class="s1">	--ws                   Enable the WS-RPC server</span>
-<span class="s1">	--wsaddr value         WS-RPC server listening interface (default: &quot;localhost&quot;)</span>
-<span class="s1">	--wsport value         WS-RPC server listening port (default: 8546)</span>
-<span class="s1">	--wsapi value          API&#39;</span>s offered over the WS-RPC interface
-	--wsorigins value      Origins from which to accept websockets requests
-	--ipcdisable           Disable the IPC-RPC server
-	--ipcpath              Filename <span class="k">for</span> IPC socket/pipe within the datadir <span class="o">(</span>explicit paths escape it<span class="o">)</span>
-	--rpccorsdomain value  Comma separated list of domains from which to accept cross origin requests <span class="o">(</span>browser enforced<span class="o">)</span>
-	--rpcvhosts value      Comma separated list of virtual hostnames from which to accept requests <span class="o">(</span>server enforced<span class="o">)</span>. Accepts <span class="s1">&#39;*&#39;</span> wildcard. <span class="o">(</span>default: <span class="s2">&quot;localhost&quot;</span><span class="o">)</span>
-	--jspath loadScript    JavaScript root path <span class="k">for</span> loadScript <span class="o">(</span>default: <span class="s2">&quot;.&quot;</span><span class="o">)</span>
-	--exec value           Execute JavaScript statement
-	--preload value        Comma separated list of JavaScript files to preload into the console
-	
+  --rpc                  Enable the HTTP-RPC server
+  --rpcaddr value        HTTP-RPC server listening interface <span class="o">(</span>default: <span class="s2">&quot;localhost&quot;</span><span class="o">)</span>
+  --rpcport value        HTTP-RPC server listening port <span class="o">(</span>default: <span class="m">8545</span><span class="o">)</span>
+  --rpcapi value         API<span class="s1">&#39;s offered over the HTTP-RPC interface</span>
+<span class="s1">  --rpc.gascap value     Sets a cap on gas that can be used in eth_call/estimateGas (default: 0)</span>
+<span class="s1">  --ws                   Enable the WS-RPC server</span>
+<span class="s1">  --wsaddr value         WS-RPC server listening interface (default: &quot;localhost&quot;)</span>
+<span class="s1">  --wsport value         WS-RPC server listening port (default: 8546)</span>
+<span class="s1">  --wsapi value          API&#39;</span>s offered over the WS-RPC interface
+  --wsorigins value      Origins from which to accept websockets requests
+  --ipcdisable           Disable the IPC-RPC server
+  --ipcpath              Filename <span class="k">for</span> IPC socket/pipe within the datadir <span class="o">(</span>explicit paths escape it<span class="o">)</span>
+  --rpccorsdomain value  Comma separated list of domains from which to accept cross origin requests <span class="o">(</span>browser enforced<span class="o">)</span>
+  --rpcvhosts value      Comma separated list of virtual hostnames from which to accept requests <span class="o">(</span>server enforced<span class="o">)</span>. Accepts <span class="s1">&#39;*&#39;</span> wildcard. <span class="o">(</span>default: <span class="s2">&quot;localhost&quot;</span><span class="o">)</span>
+  --jspath loadScript    JavaScript root path <span class="k">for</span> loadScript <span class="o">(</span>default: <span class="s2">&quot;.&quot;</span><span class="o">)</span>
+  --exec value           Execute JavaScript statement
+  --preload value        Comma separated list of JavaScript files to preload into the console
+  
 NETWORKING OPTIONS:
-	--bootnodes value     Comma separated enode URLs <span class="k">for</span> P2P discovery bootstrap <span class="o">(</span><span class="nb">set</span> v4+v5 instead <span class="k">for</span> light servers<span class="o">)</span>
-	--bootnodesv4 value   Comma separated enode URLs <span class="k">for</span> P2P v4 discovery bootstrap <span class="o">(</span>light server, full nodes<span class="o">)</span>
-	--bootnodesv5 value   Comma separated enode URLs <span class="k">for</span> P2P v5 discovery bootstrap <span class="o">(</span>light server, light nodes<span class="o">)</span>
-	--port value          Network listening port <span class="o">(</span>default: <span class="m">30303</span><span class="o">)</span>
-	--maxpeers value      Maximum number of network peers <span class="o">(</span>network disabled <span class="k">if</span> <span class="nb">set</span> to <span class="m">0</span><span class="o">)</span> <span class="o">(</span>default: <span class="m">25</span><span class="o">)</span>
-	--maxpendpeers value  Maximum number of pending connection attempts <span class="o">(</span>defaults used <span class="k">if</span> <span class="nb">set</span> to <span class="m">0</span><span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--nat value           NAT port mapping mechanism <span class="o">(</span>any<span class="p">|</span>none<span class="p">|</span>upnp<span class="p">|</span>pmp<span class="p">|</span>extip:&lt;IP&gt;<span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;any&quot;</span><span class="o">)</span>
-	--nodiscover          Disables the peer discovery mechanism <span class="o">(</span>manual peer addition<span class="o">)</span>
-	--v5disc              Enables the experimental RLPx V5 <span class="o">(</span>Topic Discovery<span class="o">)</span> mechanism
-	--netrestrict value   Restricts network communication to the given IP networks <span class="o">(</span>CIDR masks<span class="o">)</span>
-	--nodekey value       P2P node key file
-	--nodekeyhex value    P2P node key as hex <span class="o">(</span><span class="k">for</span> testing<span class="o">)</span>
-	
+  --bootnodes value     Comma separated enode URLs <span class="k">for</span> P2P discovery bootstrap <span class="o">(</span><span class="nb">set</span> v4+v5 instead <span class="k">for</span> light servers<span class="o">)</span>
+  --bootnodesv4 value   Comma separated enode URLs <span class="k">for</span> P2P v4 discovery bootstrap <span class="o">(</span>light server, full nodes<span class="o">)</span>
+  --bootnodesv5 value   Comma separated enode URLs <span class="k">for</span> P2P v5 discovery bootstrap <span class="o">(</span>light server, light nodes<span class="o">)</span>
+  --port value          Network listening port <span class="o">(</span>default: <span class="m">30303</span><span class="o">)</span>
+  --maxpeers value      Maximum number of network peers <span class="o">(</span>network disabled <span class="k">if</span> <span class="nb">set</span> to <span class="m">0</span><span class="o">)</span> <span class="o">(</span>default: <span class="m">25</span><span class="o">)</span>
+  --maxpendpeers value  Maximum number of pending connection attempts <span class="o">(</span>defaults used <span class="k">if</span> <span class="nb">set</span> to <span class="m">0</span><span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
+  --nat value           NAT port mapping mechanism <span class="o">(</span>any<span class="p">|</span>none<span class="p">|</span>upnp<span class="p">|</span>pmp<span class="p">|</span>extip:&lt;IP&gt;<span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;any&quot;</span><span class="o">)</span>
+  --nodiscover          Disables the peer discovery mechanism <span class="o">(</span>manual peer addition<span class="o">)</span>
+  --v5disc              Enables the experimental RLPx V5 <span class="o">(</span>Topic Discovery<span class="o">)</span> mechanism
+  --netrestrict value   Restricts network communication to the given IP networks <span class="o">(</span>CIDR masks<span class="o">)</span>
+  --nodekey value       P2P node key file
+  --nodekeyhex value    P2P node key as hex <span class="o">(</span><span class="k">for</span> testing<span class="o">)</span>
+  
 MINER OPTIONS:
-	--mine                   Enable mining
-	--miner.threads value    Number of CPU threads to use <span class="k">for</span> mining <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--miner.notify value     Comma separated HTTP URL list to notify of new work packages
-	--miner.gasprice <span class="s2">&quot;1024&quot;</span>  Minimum gas price <span class="k">for</span> mining a transaction
-	--miner.gastarget value  Target gas floor <span class="k">for</span> mined blocks <span class="o">(</span>default: <span class="m">8000000</span><span class="o">)</span>
-	--miner.gaslimit value   Target gas ceiling <span class="k">for</span> mined blocks <span class="o">(</span>default: <span class="m">8000000</span><span class="o">)</span>
-	--miner.etherbase value  Public address <span class="k">for</span> block mining rewards <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> first account<span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;0&quot;</span><span class="o">)</span>
-	--miner.extradata value  Block extra data <span class="nb">set</span> by the miner <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> client version<span class="o">)</span>
-	--miner.recommit value   Time interval to recreate the block being mined <span class="o">(</span>default: 3s<span class="o">)</span>
-	--miner.noverify         Disable remote sealing verification
-	
+  --mine                    Enable mining
+  --miner.threads value     Number of CPU threads to use <span class="k">for</span> mining <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
+  --miner.notify value      Comma separated HTTP URL list to notify of new work packages
+  --miner.gasprice <span class="s2">&quot;1024&quot;</span>   Minimum gas price <span class="k">for</span> mining a transaction
+  --miner.gastarget value   Target gas floor <span class="k">for</span> mined blocks <span class="o">(</span>default: <span class="m">8000000</span><span class="o">)</span>
+  --miner.gaslimit value    Target gas ceiling <span class="k">for</span> mined blocks <span class="o">(</span>default: <span class="m">8000000</span><span class="o">)</span>
+  --miner.etherbase value   Public address <span class="k">for</span> block mining rewards <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> first account<span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;0&quot;</span><span class="o">)</span>
+  --miner.extradata value   Block extra data <span class="nb">set</span> by the miner <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> client version<span class="o">)</span>
+  --miner.recommit value    Time interval to recreate the block being mined <span class="o">(</span>default: 3s<span class="o">)</span>
+  --miner.noverify          Disable remote sealing verification
+  --miner.ethaddress value  Public address on Ethereum Network <span class="k">for</span> token check. <span class="o">(</span>default: <span class="s2">&quot;0&quot;</span><span class="o">)</span>
+  
 GAS PRICE ORACLE OPTIONS:
-	--gpoblocks value      Number of recent blocks to check <span class="k">for</span> gas prices <span class="o">(</span>default: <span class="m">20</span><span class="o">)</span>
-	--gpopercentile value  Suggested gas price is the given percentile of a <span class="nb">set</span> of recent transaction gas prices <span class="o">(</span>default: <span class="m">60</span><span class="o">)</span>
-	
+  --gpoblocks value      Number of recent blocks to check <span class="k">for</span> gas prices <span class="o">(</span>default: <span class="m">20</span><span class="o">)</span>
+  --gpopercentile value  Suggested gas price is the given percentile of a <span class="nb">set</span> of recent transaction gas prices <span class="o">(</span>default: <span class="m">60</span><span class="o">)</span>
+  
 VIRTUAL MACHINE OPTIONS:
-	--vmdebug         Record information useful <span class="k">for</span> VM and contract debugging
-	--vm.evm value    External EVM configuration <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> built-in interpreter<span class="o">)</span>
-	--vm.ewasm value  External ewasm configuration <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> built-in interpreter<span class="o">)</span>
-	
+  --vmdebug         Record information useful <span class="k">for</span> VM and contract debugging
+  --vm.evm value    External EVM configuration <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> built-in interpreter<span class="o">)</span>
+  --vm.ewasm value  External ewasm configuration <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> built-in interpreter<span class="o">)</span>
+  
 LOGGING AND DEBUGGING OPTIONS:
-	--fakepow                 Disables proof-of-work verification
-	--nocompaction            Disables db compaction after import
-	--verbosity value         Logging verbosity: <span class="nv">0</span><span class="o">=</span>silent, <span class="nv">1</span><span class="o">=</span>error, <span class="nv">2</span><span class="o">=</span>warn, <span class="nv">3</span><span class="o">=</span>info, <span class="nv">4</span><span class="o">=</span>debug, <span class="nv">5</span><span class="o">=</span>detail <span class="o">(</span>default: <span class="m">3</span><span class="o">)</span>
-	--vmodule value           Per-module verbosity: comma-separated list of &lt;pattern&gt;<span class="o">=</span>&lt;level&gt; <span class="o">(</span>e.g. eth/*<span class="o">=</span><span class="m">5</span>,p2p<span class="o">=</span><span class="m">4</span><span class="o">)</span>
-	--backtrace value         Request a stack trace at a specific logging statement <span class="o">(</span>e.g. <span class="s2">&quot;block.go:271&quot;</span><span class="o">)</span>
-	--debug                   Prepends log messages with call-site location <span class="o">(</span>file and line number<span class="o">)</span>
-	--pprof                   Enable the pprof HTTP server
-	--pprofaddr value         pprof HTTP server listening interface <span class="o">(</span>default: <span class="s2">&quot;127.0.0.1&quot;</span><span class="o">)</span>
-	--pprofport value         pprof HTTP server listening port <span class="o">(</span>default: <span class="m">6060</span><span class="o">)</span>
-	--memprofilerate value    Turn on memory profiling with the given rate <span class="o">(</span>default: <span class="m">524288</span><span class="o">)</span>
-	--blockprofilerate value  Turn on block profiling with the given rate <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--cpuprofile value        Write CPU profile to the given file
-	--trace value             Write execution trace to the given file
-	
+  --fakepow                 Disables proof-of-work verification
+  --nocompaction            Disables db compaction after import
+  --verbosity value         Logging verbosity: <span class="nv">0</span><span class="o">=</span>silent, <span class="nv">1</span><span class="o">=</span>error, <span class="nv">2</span><span class="o">=</span>warn, <span class="nv">3</span><span class="o">=</span>info, <span class="nv">4</span><span class="o">=</span>debug, <span class="nv">5</span><span class="o">=</span>detail <span class="o">(</span>default: <span class="m">3</span><span class="o">)</span>
+  --vmodule value           Per-module verbosity: comma-separated list of &lt;pattern&gt;<span class="o">=</span>&lt;level&gt; <span class="o">(</span>e.g. eth/*<span class="o">=</span><span class="m">5</span>,p2p<span class="o">=</span><span class="m">4</span><span class="o">)</span>
+  --backtrace value         Request a stack trace at a specific logging statement <span class="o">(</span>e.g. <span class="s2">&quot;block.go:271&quot;</span><span class="o">)</span>
+  --debug                   Prepends log messages with call-site location <span class="o">(</span>file and line number<span class="o">)</span>
+  --pprof                   Enable the pprof HTTP server
+  --pprofaddr value         pprof HTTP server listening interface <span class="o">(</span>default: <span class="s2">&quot;127.0.0.1&quot;</span><span class="o">)</span>
+  --pprofport value         pprof HTTP server listening port <span class="o">(</span>default: <span class="m">6060</span><span class="o">)</span>
+  --memprofilerate value    Turn on memory profiling with the given rate <span class="o">(</span>default: <span class="m">524288</span><span class="o">)</span>
+  --blockprofilerate value  Turn on block profiling with the given rate <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
+  --cpuprofile value        Write CPU profile to the given file
+  --trace value             Write execution trace to the given file
+  
 METRICS AND STATS OPTIONS:
-	--metrics                          Enable metrics collection and reporting
-	--metrics.expensive                Enable expensive metrics collection and reporting
-	--metrics.influxdb                 Enable metrics export/push to an external InfluxDB database
-	--metrics.influxdb.endpoint value  InfluxDB API endpoint to report metrics to <span class="o">(</span>default: <span class="s2">&quot;http://localhost:8086&quot;</span><span class="o">)</span>
-	--metrics.influxdb.database value  InfluxDB database name to push reported metrics to <span class="o">(</span>default: <span class="s2">&quot;geth&quot;</span><span class="o">)</span>
-	--metrics.influxdb.username value  Username to authorize access to the database <span class="o">(</span>default: <span class="s2">&quot;test&quot;</span><span class="o">)</span>
-	--metrics.influxdb.password value  Password to authorize access to the database <span class="o">(</span>default: <span class="s2">&quot;test&quot;</span><span class="o">)</span>
-	--metrics.influxdb.tags value      Comma-separated InfluxDB tags <span class="o">(</span>key/values<span class="o">)</span> attached to all measurements <span class="o">(</span>default: <span class="s2">&quot;host=localhost&quot;</span><span class="o">)</span>
-	
+  --metrics                          Enable metrics collection and reporting
+  --metrics.expensive                Enable expensive metrics collection and reporting
+  --metrics.influxdb                 Enable metrics export/push to an external InfluxDB database
+  --metrics.influxdb.endpoint value  InfluxDB API endpoint to report metrics to <span class="o">(</span>default: <span class="s2">&quot;http://localhost:8086&quot;</span><span class="o">)</span>
+  --metrics.influxdb.database value  InfluxDB database name to push reported metrics to <span class="o">(</span>default: <span class="s2">&quot;geth&quot;</span><span class="o">)</span>
+  --metrics.influxdb.username value  Username to authorize access to the database <span class="o">(</span>default: <span class="s2">&quot;test&quot;</span><span class="o">)</span>
+  --metrics.influxdb.password value  Password to authorize access to the database <span class="o">(</span>default: <span class="s2">&quot;test&quot;</span><span class="o">)</span>
+  --metrics.influxdb.tags value      Comma-separated InfluxDB tags <span class="o">(</span>key/values<span class="o">)</span> attached to all measurements <span class="o">(</span>default: <span class="s2">&quot;host=localhost&quot;</span><span class="o">)</span>
+  
 WHISPER <span class="o">(</span>EXPERIMENTAL<span class="o">)</span> OPTIONS:
-	--shh                       Enable Whisper
-	--shh.maxmessagesize value  Max message size accepted <span class="o">(</span>default: <span class="m">1048576</span><span class="o">)</span>
-	--shh.pow value             Minimum POW accepted <span class="o">(</span>default: <span class="m">0</span>.2<span class="o">)</span>
-	--shh.restrict-light        Restrict connection between two whisper light clients
-	
+  --shh                       Enable Whisper
+  --shh.maxmessagesize value  Max message size accepted <span class="o">(</span>default: <span class="m">1048576</span><span class="o">)</span>
+  --shh.pow value             Minimum POW accepted <span class="o">(</span>default: <span class="m">0</span>.2<span class="o">)</span>
+  --shh.restrict-light        Restrict connection between two whisper light clients
+  
 DEPRECATED OPTIONS:
-	--minerthreads value    Number of CPU threads to use <span class="k">for</span> mining <span class="o">(</span>deprecated, use --miner.threads<span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--targetgaslimit value  Target gas floor <span class="k">for</span> mined blocks <span class="o">(</span>deprecated, use --miner.gastarget<span class="o">)</span> <span class="o">(</span>default: <span class="m">8000000</span><span class="o">)</span>
-	--gasprice <span class="s2">&quot;1024&quot;</span>       Minimum gas price <span class="k">for</span> mining a transaction <span class="o">(</span>deprecated, use --miner.gasprice<span class="o">)</span>
-	--etherbase value       Public address <span class="k">for</span> block mining rewards <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> first account, deprecated, use --miner.etherbase<span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;0&quot;</span><span class="o">)</span>
-	--extradata value       Block extra data <span class="nb">set</span> by the miner <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> client version, deprecated, use --miner.extradata<span class="o">)</span>
-	
+  --minerthreads value    Number of CPU threads to use <span class="k">for</span> mining <span class="o">(</span>deprecated, use --miner.threads<span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
+  --targetgaslimit value  Target gas floor <span class="k">for</span> mined blocks <span class="o">(</span>deprecated, use --miner.gastarget<span class="o">)</span> <span class="o">(</span>default: <span class="m">8000000</span><span class="o">)</span>
+  --gasprice <span class="s2">&quot;1024&quot;</span>       Minimum gas price <span class="k">for</span> mining a transaction <span class="o">(</span>deprecated, use --miner.gasprice<span class="o">)</span>
+  --etherbase value       Public address <span class="k">for</span> block mining rewards <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> first account, deprecated, use --miner.etherbase<span class="o">)</span> <span class="o">(</span>default: <span class="s2">&quot;0&quot;</span><span class="o">)</span>
+  --extradata value       Block extra data <span class="nb">set</span> by the miner <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> client version, deprecated, use --miner.extradata<span class="o">)</span>
+  
 MISC OPTIONS:
-	--ethash.cachedir                           Directory to store the ethash verification caches <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> inside the datadir<span class="o">)</span>
-	--ethash.cachesinmem value                  Number of recent ethash caches to keep <span class="k">in</span> memory <span class="o">(</span>16MB each<span class="o">)</span> <span class="o">(</span>default: <span class="m">2</span><span class="o">)</span>
-	--ethash.cachesondisk value                 Number of recent ethash caches to keep on disk <span class="o">(</span>16MB each<span class="o">)</span> <span class="o">(</span>default: <span class="m">3</span><span class="o">)</span>
-	--ethash.dagdir <span class="s2">&quot;/home/user/.ethash&quot;</span>        Directory to store the ethash mining DAGs <span class="o">(</span><span class="nv">default</span> <span class="o">=</span> inside home folder<span class="o">)</span>
-	--ethash.dagsinmem value                    Number of recent ethash mining DAGs to keep <span class="k">in</span> memory <span class="o">(</span><span class="m">1</span>+GB each<span class="o">)</span> <span class="o">(</span>default: <span class="m">1</span><span class="o">)</span>
-	--ethash.dagsondisk value                   Number of recent ethash mining DAGs to keep on disk <span class="o">(</span><span class="m">1</span>+GB each<span class="o">)</span> <span class="o">(</span>default: <span class="m">2</span><span class="o">)</span>
-	--ulc.config value                          Config file to use <span class="k">for</span> ultra light client mode
-	--ulc.onlyannounce                          ULC server sends announcements only
-	--ulc.trusted value                         List of trusted ULC servers
-	--ulc.fraction value                        Minimum % of trusted ULC servers required to announce a new head <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--dev                                       Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
-	--dev.period value                          Block period to use <span class="k">in</span> developer mode <span class="o">(</span><span class="nv">0</span> <span class="o">=</span> mine only <span class="k">if</span> transaction pending<span class="o">)</span> <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--rinkeby                                   Rinkeby network: pre-configured proof-of-authority <span class="nb">test</span> network
-	--goerli                                    Görli network: pre-configured proof-of-authority <span class="nb">test</span> network
-	--networkid value                           Network identifier <span class="o">(</span>integer, <span class="nv">1</span><span class="o">=</span>Frontier, <span class="nv">2</span><span class="o">=</span>Morden <span class="o">(</span>disused<span class="o">)</span>, <span class="nv">3</span><span class="o">=</span>Ropsten, <span class="nv">4</span><span class="o">=</span>Rinkeby<span class="o">)</span> <span class="o">(</span>default: <span class="m">1</span><span class="o">)</span>
-	--override.constantinople value             Manually specify constantinople fork-block, overriding the bundled setting <span class="o">(</span>default: <span class="m">0</span><span class="o">)</span>
-	--graphql                                   Enable the GraphQL server
-	--graphql.addr value                        GraphQL server listening interface <span class="o">(</span>default: <span class="s2">&quot;localhost&quot;</span><span class="o">)</span>
-	--graphql.port value                        GraphQL server listening port <span class="o">(</span>default: <span class="m">8547</span><span class="o">)</span>
-	--graphql.rpccorsdomain value               Comma separated list of domains from which to accept cross origin requests <span class="o">(</span>browser enforced<span class="o">)</span>
-	--graphql.rpcvhosts value                   Comma separated list of virtual hostnames from which to accept requests <span class="o">(</span>server enforced<span class="o">)</span>. Accepts <span class="s1">&#39;*&#39;</span> wildcard. <span class="o">(</span>default: <span class="s2">&quot;localhost&quot;</span><span class="o">)</span>
-	--help, -h                                  show <span class="nb">help</span>
-	
-	
+  
+
 COPYRIGHT:
-	Copyright <span class="m">2013</span>-2019 The go-ethereum Authors
+   Copyright <span class="m">2013</span>-2019 The go-ethereum Authors
+   Copyright <span class="m">2020</span>-2021 The go-quadrans Authors
 </pre></div>
 </div>
 </div>
@@ -410,7 +390,7 @@ COPYRIGHT:
   <div class="container">
     <p>
           &copy; Copyright 2018-2021, Quadrans Foundation.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
     </p>
   </div>
 </footer>

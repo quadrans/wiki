@@ -18,8 +18,19 @@ Before to start
    
    quadrans-nodes
 
-How-to
-******
+Go-Quadrans binary Installation
+*******************************
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   installation/linux_x86-64
+   installation/linux_raspberrypi
+   installation/linux_orangepi
+   installation/windows
+   installation/multipass
+   installation/macos
 
 .. raw:: html
 
@@ -112,19 +123,15 @@ How-to
         </div>
     </div>
 
-
-Installation
-************
+Go-Quadrans compile and build
+*****************************
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   installation/linux_x86-64
-   installation/linux_raspberrypi
-   installation/linux_orangepi
-   installation/windows
-   installation/multipass
-   installation/macos
+   build/source-code
+   build/cross-compile
+   
 
 Management
 **********
@@ -132,8 +139,8 @@ Management
 .. toctree::
    :maxdepth: 1
 
-   management/gqdc-update
    management/command_line_options
+   management/javascript-console
    management/node_status
    management/statuspy_tool
    management/paths_and_folders
@@ -148,3 +155,4 @@ Troubleshooting
    :maxdepth: 1
 
    troubleshooting/invalid_merkle_root
+   troubleshooting/chain_is_invalid

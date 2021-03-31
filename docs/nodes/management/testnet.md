@@ -103,12 +103,12 @@ ls -al
 total 16
 drwx------ 4 quadrans quadrans 4096 Oct 13 21:04 .
 drwxr-xr-x 6 quadrans quadrans 4096 Aug 6 12:57 ..
-srw------- 1 quadrans quadrans 0 Oct 13 21:04 geth.ipc
+srw------- 1 quadrans quadrans 0 Oct 13 21:04 gqdc.ipc
 drwx------ 4 quadrans quadrans 4096 Oct 14 15:21 gqdc
 drwx------ 2 quadrans quadrans 4096 Jul 26 14:11 keystore
 ```
 
-Note that you'll find the geth.ipc socket for rpc commands, a keystore folder for available the json accounts and wallets, the gqdc folder with chaindata and nodes info.
+Note that you'll find the gqdc.ipc socket for rpc commands, a keystore folder for available the json accounts and wallets, the gqdc folder with chaindata and nodes info.
 
 ## Check the node
 

@@ -27,8 +27,8 @@ from pyfiglet import Figlet
 ### CONFIG #####################################################################
 	
 ipcMiddleware = {
-	"Mainnet":"/home/quadrans/.quadrans/geth.ipc", 
-	"Testnet":"/home/quadrans/.quadrans/testnet/geth.ipc"
+	"Mainnet":"/home/quadrans/.quadrans/gqdc.ipc", 
+	"Testnet":"/home/quadrans/.quadrans/testnet/gqdc.ipc"
 	}
 custom_fig = Figlet(font='standard')
 	
@@ -126,7 +126,7 @@ cd /home/quadrans
 The expected result should look like:
 
 ``` 
-Provider: IPC (TestNet: /home/quadrans/.quadrans/testnet/geth.ipc)
+Provider: IPC (TestNet: /home/quadrans/.quadrans/testnet/gqdc.ipc)
 Connected: OK !
 Peer Connections: 3
 Syncing: 100%
