@@ -18,7 +18,7 @@ The first pages of this documentation were written by **Piersandro Guerrera** an
 * **Wallets**: How-to create a wallet, check your balance, backup your private key and transfer Quadrans Coins.
 * **Cryptocurrencies**: What is a Quadrans Token and how it works?
 * **Programming**: Useful information for starting programming your first Quadrans blockchain smart contract.
-* **Development***: How to become a go-quadrans contributor.
+* **Development**: How to become a go-quadrans contributor.
 * **Projects**: Projects related to Quadrans Foundation and its partners.
 
 ## Contributing
