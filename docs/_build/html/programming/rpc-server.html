@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON-RPC Server &#8212; Quadrans Wiki  documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/quadrans_style.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Test Contract: Echo" href="test-echo.html" />
+    <link rel="prev" title="Accessing Blockchain via CURL" href="web3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../index.html">
+    
+      <img src="../_static/logo-quadrans-black.svg" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../get-started.html">Get Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../nodes/index.html">Nodes</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../wallet/index.html">Wallets</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../cryptocurrencies/index.html">Cryptocurrencies</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Programming</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../development/index.html">Development</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../projects/index.html">Projects</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/quadrans/wiki" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/quadransf" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+    <div class="bd-toc-item active">
+    
+  
+    <ul class="nav bd-sidenav">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+      </ul>
+  
+  </nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#http-server" class="nav-link">HTTP Server</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#websocket-server" class="nav-link">WebSocket Server</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#ipc-server" class="nav-link">IPC Server</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/programming/rpc-server.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="json-rpc-server">
+<h1>JSON-RPC Server<a class="headerlink" href="#json-rpc-server" title="Permalink to this headline">¶</a></h1>
+<p>Geth supports all standard web3 JSON-RPC APIs. You can find documentation for these APIs on the <a class="reference external" href="https://eth.wiki/json-rpc/API">Ethereum Wiki JSON-RPC page</a>.</p>
+<p>JSON-RPC is provided on multiple transports. Geth supports JSON-RPC over HTTP, WebSocket and Unix Domain Sockets. Transports must be enabled through command-line flags.</p>
+<p>Quadrans/Ethereum JSON-RPC APIs use a name-space system. RPC methods are grouped into several categories depending on their purpose. All method names are composed of the namespace, an underscore, and the actual method name within the namespace.
+For example, the <code class="docutils literal notranslate"><span class="pre">eth_call</span></code> method resides in the <code class="docutils literal notranslate"><span class="pre">eth</span></code> namespace.</p>
+<p>Access to RPC methods can be enabled on a per-namespace basis. Find documentation for individual namespaces in the sidebar.</p>
+<div class="section" id="http-server">
+<h2>HTTP Server<a class="headerlink" href="#http-server" title="Permalink to this headline">¶</a></h2>
+<p>To enable the HTTP server, use the <code class="docutils literal notranslate"><span class="pre">--http</span></code> flag.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="o">--</span><span class="n">http</span>
+</pre></div>
+</div>
+<p>By default, geth accepts connections from the loopback interface (127.0.0.1).
+The default listening port is 8545. You can customize address and port using the <code class="docutils literal notranslate"><span class="pre">--http.port</span></code> and <code class="docutils literal notranslate"><span class="pre">--http.addr</span></code> flags.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="o">--</span><span class="n">http</span> <span class="o">--</span><span class="n">http</span><span class="o">.</span><span class="n">port</span> <span class="mi">3334</span>
+</pre></div>
+</div>
+<p>JSON-RPC method namespaces must be whitelisted in order to be available through the HTTP server. An RPC error with error code <code class="docutils literal notranslate"><span class="pre">-32602</span></code> is generated if you call a
+namespace that isn’t whitelisted. The default whitelist allows access to the “eth” and “shh” namespaces. To enable access to other APIs like account management (“personal”) and debugging (“debug”), they must be configured via the <code class="docutils literal notranslate"><span class="pre">--http.api</span></code> flag. We do not recommend enabling such APIs over HTTP, however, since access to these methods increases the attack surface.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="o">--</span><span class="n">http</span> <span class="o">--</span><span class="n">http</span><span class="o">.</span><span class="n">api</span> <span class="n">personal</span><span class="p">,</span><span class="n">eth</span><span class="p">,</span><span class="n">net</span><span class="p">,</span><span class="n">web3</span>
+</pre></div>
+</div>
+<p>Since the HTTP server is reachable from any local application, additional protection is built into the server to prevent misuse of the API from web pages.
+If you want enable access to the API from a web page, you must configure the server to accept Cross-Origin requests with the <code class="docutils literal notranslate"><span class="pre">--http.corsdomain</span></code> flag.</p>
+<p>Example: if you want to use <a class="reference external" href="https://remix.ethereum.org">Remix</a> with gqdc, allow requests from the remix domain and change the Web3 Provider in Remix settings (<code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8545</span></code> is correct if the Quadrans node runs locally).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="o">--</span><span class="n">http</span> <span class="o">--</span><span class="n">http</span><span class="o">.</span><span class="n">corsdomain</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">remix</span><span class="o">.</span><span class="n">ethereum</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">--http.corsdomain</span> <span class="pre">'*'</span></code> to enable access from any origin.</p>
+</div>
+<div class="section" id="websocket-server">
+<h2>WebSocket Server<a class="headerlink" href="#websocket-server" title="Permalink to this headline">¶</a></h2>
+<p>Configuration of the WebSocket endpoint is similar to the HTTP transport. To enable WebSocket access, use <code class="docutils literal notranslate"><span class="pre">--ws</span></code> flag. The default WebSocket port is 8546.
+The <code class="docutils literal notranslate"><span class="pre">--ws.addr</span></code>, <code class="docutils literal notranslate"><span class="pre">--ws.port</span></code> and <code class="docutils literal notranslate"><span class="pre">--ws.api</span></code> flags can be used to customize settings for the WebSocket server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="o">--</span><span class="n">ws</span> <span class="o">--</span><span class="n">ws</span><span class="o">.</span><span class="n">port</span> <span class="mi">3334</span> <span class="o">--</span><span class="n">ws</span><span class="o">.</span><span class="n">api</span> <span class="n">eth</span><span class="p">,</span><span class="n">net</span><span class="p">,</span><span class="n">web3</span>
+</pre></div>
+</div>
+<p>Cross-Origin request protection also applies to the WebSocket server. Use the <code class="docutils literal notranslate"><span class="pre">--ws.origins</span></code> flag to allow access to the server from web pages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gqdc</span> <span class="o">--</span><span class="n">ws</span> <span class="o">--</span><span class="n">ws</span><span class="o">.</span><span class="n">origins</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">myapp</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<p>As with <code class="docutils literal notranslate"><span class="pre">--http.corsdomain</span></code>, using <code class="docutils literal notranslate"><span class="pre">--ws.origins</span> <span class="pre">'*'</span></code> allows access from any origin.</p>
+</div>
+<div class="section" id="ipc-server">
+<h2>IPC Server<a class="headerlink" href="#ipc-server" title="Permalink to this headline">¶</a></h2>
+<p>JSON-RPC APIs are also provided on a UNIX domain socket. This server is enabled
+by default and has access to all JSON-RPC namespaces.</p>
+<p>The listening socket is placed into the data directory by default. On Linux and macOS,
+the default location of the geth socket is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/.</span><span class="n">quadrans</span><span class="o">/</span><span class="n">gqdc</span><span class="o">.</span><span class="n">ipc</span>
+</pre></div>
+</div>
+<p>On Windows, IPC is provided via named pipes. The default location of the geth pipe is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\\<span class="o">.</span>\<span class="n">pipe</span>\<span class="n">gqdc</span><span class="o">.</span><span class="n">ipc</span>
+</pre></div>
+</div>
+<p>You can configure the location of the socket using the <code class="docutils literal notranslate"><span class="pre">--ipcpath</span></code> flag. IPC can be disabled using the <code class="docutils literal notranslate"><span class="pre">--ipcdisable</span></code> flag.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-132858178-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2018-2021, Quadrans Foundation.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

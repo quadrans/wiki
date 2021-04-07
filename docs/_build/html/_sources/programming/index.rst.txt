@@ -22,6 +22,7 @@ Quadrans is fully interoperable with any data flows and ensures compatibility an
    /programming/native-bindings
    /programming/solidity_101
    /programming/web3
+   /programming/rpc-server
 
 Tests
 *****
