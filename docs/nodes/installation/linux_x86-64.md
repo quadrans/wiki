@@ -30,19 +30,6 @@ The installation process will ask for a node name and a password if you want to 
 
 This tool allow you to update your node if needed, move from Mainnet to Testnet, uninstall and recover a previous installation.
 
-## Self-installing gp-quadrans binary from Quadrans repository (only for Debian/Ubuntu)
-
-Quadrans team recommends to use a supported **Ubuntu LTS** (18.04 or 20.04) or an updated **Debian** installation. 
-
-``` bash
-sudo wget -O /etc/apt/sources.list.d/quadrans.list http://repo.quadrans.io/apt/conf/quadrans.list
-sudo wget -O - http://repo.quadrans.io/apt/conf/quadrans.gpg.key|sudo apt-key add -
-sudo apt update
-sudo apt install -y python quadrans-node
-``` 
-
-Follow the on screen instructions to install the node, enable miner options and create a Quadrans wallet address.
-
 ## Enable your node for mining
 
 Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
