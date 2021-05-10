@@ -13,7 +13,7 @@ Thank you for considering to help out with the source code! We welcome contribut
 
 GitHub is used to track issues and contribute code, suggestions, feature requests or documentation.
 
-If you'd like to contribute to go-quadrans, please fork, fix, commit and send a pull request (PR) for the maintainers to review and merge into the main code base. If you wish to submit more complex changes though, please check up with the core devs in the [Quadrans Discord Server](https://discord.gg/2bMpuU9Z) to ensure those changes are in line with the general philosophy of the project and/or get some early feedback. 
+If you'd like to contribute to go-quadrans, please fork, fix, commit and send a pull request (PR) for the maintainers to review and merge into the main code base. If you wish to submit more complex changes though, please check up with the core devs in the [Quadrans Discord Server](https://discord.gg/KTp8J2X2q6) to ensure those changes are in line with the general philosophy of the project and/or get some early feedback. 
 
 This can reduce your effort as well as speeding up our review and merge procedures.
 
