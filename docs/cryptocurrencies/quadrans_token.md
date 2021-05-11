@@ -17,7 +17,7 @@ Token Holders may join or leave Quadrans network as they wish and with no restri
 
 The majority of QDT will be distributed through Airdrops across the community to drive technology adoption and help onboard users. No action such as ICO, token sales or similar is planned - Airdrop QDT are distributed for free by Quadrans Foundation and subject to KYC (Know Your Customer) procedure as per internal due diligence and in line with the principle of transparency.
 
-The Airdrop will issue a total of 420 million QDT (70%) in multiple phases.
+The Airdrop and the Staking will issue a total of 420 million QDT (70%) in multiple phases.
 
 90 million QDT (15%) will be used by the Foundation to serve general interests and pursue public utility goals to benefit the worldwide community (see section 3.3.4 Quadrans for the Community).
 
@@ -27,11 +27,7 @@ The technology transfer included 60 million QDT (10%) to be left with technical 
 
 ## The Airdrop
 
- **Quadrans Token Holders** with enough QDT may compete to become a Masternodes or a Miner node.
-
-To obtain for free the 1,000 QDT required to transform a Lightnode in a Miner node it is available the first [Quadrans Airdrop](https://quadrans.io/airdrop/).
-
-Partecipate to the Airdrop requires a registration and a Know Your Customers (KYC) procedure to allow the withdraw of 1.000 QDT.
+*Quadrans Airdrop ended on May 2021*
 
 ## How to show QDT in Ethereum wallets
 

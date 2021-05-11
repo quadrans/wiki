@@ -64,11 +64,8 @@ How can I obtain Quadrans Tokens or Quadrans Coins?
 
 The Quadrans Foundation performed a promotional activity to help users to be self-sufficient in production of the Quadrans Coin cryptocurrency.
 
-Through the `Quadrans Airdrop <https://quadrans.io/airdrop/>`_  the Quadrans Foundation will distribute to all the new registered users that completed the KYC process 1.000 Quadrans Tokens that allows to transform a Quadrans node into a Miner.
-
 To learn more:
 
-* `Quadrans Airdrop <https://quadrans.io/airdrop/>`_
 * `Mining and Reward </cryptocurrencies/mining_and_reward.html>`_
 * `Projects </projects/index.html>`_
 
@@ -78,15 +75,15 @@ What is the KYC
 
 **Know your Customer** (KYC) is the process of a business verifying the identity of its clients.
 
-Quadrans Foundation requires KYC identification to the recipients of the Airdrop for internal due diligence, in line with the principle of transparency.
+Quadrans Foundation requires KYC identification to the users that want to transform their nodes in a Miner or Masternode for internal due diligence, in line with the principle of transparency.
 
-To participate in the Airdrop it's required to successfully complete a KYC process.
+To become a Miner or a Masternode it's required to successfully complete a KYC process.
 
-All airdrop recipients are required to be compliant with KYC before they can receive Quadrans Tokens. KYC is necessary for us to assess the potential risks of illegal intentions towards the relationship with the user.
+KYC is necessary for us to assess the potential risks of illegal intentions towards the relationship with the user.
 
 To learn more:
 
-* `Quadrans Airdrop <https://quadrans.io/airdrop/>`_
+* `QDT Staking <https://quadrans.io/staking.php>`_
 
 Compatibility
 *************

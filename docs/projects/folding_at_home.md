@@ -6,7 +6,7 @@ Use Folding\@home with Quadrans team
 [Folding\@home](https://foldingathome.org) is a distributed computing project, that very simply stated, studies protein folding and misfolding. Due to the coronavirus pandemic the project has focused priority on research specific to the coronavirus. Everyone with a
 computer can be a part of the research by downloading the **FAHclient** and contribute to research.
 
-[Quadrans KYC](https://quadrans.io/airdrop/) approved users that will join the **Quadrans team** (team number **245335**) on Folding\@home can earn additional Quadrans Tokens. [The announcement is here](https://quadrans.io/news-foldingathome-covid-19.php).
+[Quadrans Community](https://quadrans.io/staking.php) approved users that will join the **Quadrans team** (team number **245335**) on Folding\@home can earn additional Quadrans Tokens. [The announcement is here](https://quadrans.io/news-foldingathome-covid-19.php).
 
 This guide will explain how to partecipate as a member of the Quadrans team and how to receive your Tokens as a reward.
 
@@ -80,7 +80,7 @@ This is mandatory, Anonymous users will receive less units to work from Folding\
 
 Before proceding, [register your name and e-mail](https://apps.foldingathome.org/getpasskey) to receive a **Passkey** from Folding\@home.
 
-For Quadrans team is mandatory that the Name is the **Ethereum wallet address registered in the Quadrans KYC** for the Airdrop. You can verify what is this address in the **Quadrans Token Portal** on the *Settings* page in the *Account* dropdown menu.
+For Quadrans team is mandatory that the Name is the **Ethereum wallet address registered in the Quadrans KYC**. You can verify what is this address in the **Quadrans Token Portal** on the *Settings* page in the *Account* dropdown menu.
 
 ![image](../_static/images/folding_at_home/folding-how-to-2-obtain-a-passkey.png)
 
@@ -127,4 +127,4 @@ And two running options:
 
 As a thank you for your work Quadrans will recognize you 1.000 Quadrans Tokens every 1.400.000 credits on Folding\@home work up to a maximum of 10.000 Quadrans Tokens (14.000.000 credits).
 
-The reward will only be distributed to the wallets of Quadrans Airdrop [registered users](https://quadrans.io/airdrop/) with approved KYC.
+The reward will only be distributed to the wallets of Quadrans Community [registered users](https://quadrans.io/staking.php) with approved KYC.

@@ -55,7 +55,7 @@ Quadrans Documentation
                 <img src="_static/images/icons/icn_crypto_violet.png" class="card-img-top" alt="icon">
                 <div class="card-body flex-fill">
                     <h5 class="card-title">Cryptocurrencies</h5>
-                    <p class="card-text">Discover Quadrans Tokens and Quadrans Coins, the Quadrans Airdrop and the Mining and Reward process.</p>
+                    <p class="card-text">Discover Quadrans Tokens and Quadrans Coins, the QDT Staking and the Mining and Reward process.</p>
                      <div class="text-center mt-auto">
                         <a href="cryptocurrencies/">
                            <button class="fill disabled">Read More</button>

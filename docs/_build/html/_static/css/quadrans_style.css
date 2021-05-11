@@ -201,6 +201,9 @@ a.copybtn > img {
   #airdrop {
     display: none;
   }
+  #staking {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -212,6 +215,9 @@ a.copybtn > img {
      display: none !important;
   }
   #airdrop {
+    text-align: center;
+  }
+  #staking {
     text-align: center;
   }
   .navbar-collapse a, .navbar-collapse a:hover, .navbar-dark .navbar-collapse a:hover {
