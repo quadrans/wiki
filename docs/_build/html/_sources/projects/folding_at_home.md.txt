@@ -6,7 +6,7 @@ Use Folding\@home with Quadrans team
 [Folding\@home](https://foldingathome.org) is a distributed computing project, that very simply stated, studies protein folding and misfolding. Due to the coronavirus pandemic the project has focused priority on research specific to the coronavirus. Everyone with a
 computer can be a part of the research by downloading the **FAHclient** and contribute to research.
 
-[Quadrans Community](https://quadrans.io/staking.php) approved users that will join the **Quadrans team** (team number **245335**) on Folding\@home can earn additional Quadrans Tokens. [The announcement is here](https://quadrans.io/news-foldingathome-covid-19.php).
+[Quadrans Community](https://quadrans.io/mining.php) approved users that will join the **Quadrans team** (team number **245335**) on Folding\@home can earn additional Quadrans Tokens. [The announcement is here](https://quadrans.io/news-foldingathome-covid-19.php).
 
 This guide will explain how to partecipate as a member of the Quadrans team and how to receive your Tokens as a reward.
 
@@ -127,4 +127,4 @@ And two running options:
 
 As a thank you for your work Quadrans will recognize you 1.000 Quadrans Tokens every 1.400.000 credits on Folding\@home work up to a maximum of 10.000 Quadrans Tokens (14.000.000 credits).
 
-The reward will only be distributed to the wallets of Quadrans Community [registered users](https://quadrans.io/staking.php) with approved KYC.
+The reward will only be distributed to the wallets of Quadrans Community [registered users](https://quadrans.io/mining.php) with approved KYC.

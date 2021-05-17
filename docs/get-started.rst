@@ -83,7 +83,7 @@ KYC is necessary for us to assess the potential risks of illegal intentions towa
 
 To learn more:
 
-* `QDT Staking <https://quadrans.io/staking.php>`_
+* `QDC Mining <https://quadrans.io/mining.php>`_
 
 Compatibility
 *************

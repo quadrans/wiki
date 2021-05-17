@@ -90,7 +90,7 @@ Setting up a wallet is not mandatory, however you can use Quadrans wallet to col
 
 ![img400](../../_static/images/nodes/go-quadrans-windows-installer-6.png)
 
-You can choose the type of Node you want to install. To enable the mining functions of a Miner and a Masternode you need to pair your Node with a wallet that contains a certain number of Quadrans Tokens ([please refer to the Quadrans Community registration](https://quadrans.io/staking.php)).
+You can choose the type of Node you want to install. To enable the mining functions of a Miner and a Masternode you need to pair your Node with a wallet that contains a certain number of Quadrans Tokens ([please refer to the Quadrans Community registration](https://quadrans.io/mining.php)).
 
 * **Node**: it is a computer in the blockchain network that contains a copy of the database, structured in blocks. By joining the Quadrans blockchain, you help ensure and certify that the complete history of transactions stored in the blocks are part of the distributed database. By installing a node you contribute to the expansion of the network and can start entering data into the Quadrans blockchain.
 * **Miner**: it is a node of the network that actively contributes to the safety of the infrastructure. *To enable a node to the basic mining functions it is necessary to have a minimum of 1000 Quadrans Tokens*.

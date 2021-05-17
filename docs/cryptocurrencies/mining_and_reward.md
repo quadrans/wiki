@@ -19,7 +19,7 @@ QDC intended for reward are sent to wallet addresses registered on an active nod
 
 ### Requirements
 
-* Registration to the [Quadrans Community](https://quadrans.io/staking.php);
+* Registration to the [Quadrans Community](https://quadrans.io/mining.php);
 * Registration to the **Quadrans Token Holder Portal** (it is part of the Community registration);
 * KYC completed and verified;
 * Quadrans Node configured as a Miner;
@@ -32,7 +32,7 @@ QDC intended for reward are sent to wallet addresses registered on an active nod
 
 Through the **Token Portal**, Quadrans Token owners have the possibility to enable mining on their nodes.
 
-To proceed, after registering in the [Quadrans Community](https://quadrans.io/staking.php) simply select the *Add Miner* or *Add Masternode* items from the Nodes menu of the Token Portal, depending on the number of Tokens in your possession.
+To proceed, after registering in the [Quadrans Community](https://quadrans.io/mining.php) simply select the *Add Miner* or *Add Masternode* items from the Nodes menu of the Token Portal, depending on the number of Tokens in your possession.
 
 
 ### Quadrans Token wallet verification
