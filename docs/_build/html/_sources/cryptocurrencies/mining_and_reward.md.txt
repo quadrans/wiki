@@ -113,7 +113,7 @@ This software, by Red Hat, is open source and it is the lightest app for your sm
 
 ### Authy
 
-Supported platforms: [Android](https://play.google.com/store/apps/details?id=com.authy.authy) | [iOS](https://itunes.apple.com/app/authy/id494168017) | [Windows](https://authy.com/download/) | [macOS](https://authy.com/download/) | [Chrome](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb)
+Supported platforms: [Android](https://play.google.com/store/apps/details?id=com.authy.authy) | [iOS](https://itunes.apple.com/app/authy/id494168017) | [Windows](https://authy.com/download/) | [macOS](https://authy.com/download/)
 
 Authy  main advantage being that all tokens are stored in the cloud. This makes it possible to access tokens from any of your devices (computers or smartphone).
 
