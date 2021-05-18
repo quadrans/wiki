@@ -28,7 +28,9 @@ from pyfiglet import Figlet
 	
 ipcMiddleware = {
 	"Mainnet":"/home/quadrans/.quadrans/gqdc.ipc", 
-	"Testnet":"/home/quadrans/.quadrans/testnet/gqdc.ipc"
+	"Mainnet (< 1.4 binary)":"/home/quadrans/.quadrans/geth.ipc", 
+	"Testnet":"/home/quadrans/.quadrans/testnet/gqdc.ipc",
+	"Testnet (< 1.4 binary)":"/home/quadrans/.quadrans/testnet/geth.ipc"
 	}
 custom_fig = Figlet(font='standard')
 	
