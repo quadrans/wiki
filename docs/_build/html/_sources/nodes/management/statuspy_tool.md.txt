@@ -118,10 +118,10 @@ if __name__ == "__main__":
 
 ## Please note:
 
-This tool can be used by users root and quadrans (for the [Quadrans node self-installer](../installation/linux_x86-64) for Linux) due to permissions on the ipc socket
+This tool can be used by users root and quadrans (on Linux) due to permissions on the ipc socket
 
 ``` bash
-cd /home/quadrans
+chmod +x status.py
 ./status.py
 ``` 
 
