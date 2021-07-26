@@ -24,4 +24,5 @@ The combined use of QDT and QDC is a game-changing feature that has been designe
 
    /cryptocurrencies/quadrans_token
    /cryptocurrencies/quadrans_coin
+   /cryptocurrencies/staking
    /cryptocurrencies/mining_and_reward

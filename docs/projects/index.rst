@@ -18,3 +18,11 @@ Affiliate Projects
    :maxdepth: 1
 
    /projects/folding_at_home
+
+Quadrans Projects
+*****************
+
+.. toctree::
+   :maxdepth: 1
+
+   /cryptocurrencies/staking
