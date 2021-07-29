@@ -18,6 +18,8 @@ The **minimum amount of QDT you can stake is 10.000 Quadrans Token**.  You can s
 
 Quadrans Token holders can stake their QDT directly from their *MetaMask* application in the [Quadrans Foundation Staking Platform](https://staking.quadrans.io/). You’ll need some ETH (Ether) to pay the transactions required to confirm this tool usage and Stake/Unstake your Tokens.
 
+If you don't use MetaMask as your Quadrans Token wallet please refer to this guide: [How to Convert a BIP39 Mnemonic Passphrase in a Private Key](../wallet/management/qdt_private_key.md)
+
 ## How to stake: 
 
 1. Connect to the [Quadrans Foundation Staking Platform](https://staking.quadrans.io/)

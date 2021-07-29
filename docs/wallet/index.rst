@@ -29,3 +29,11 @@ Wallet Management
 
    /wallet/management/metamask
    /wallet/management/importjson
+
+Ethereum Address
+****************
+
+.. toctree::
+   :maxdepth: 2
+
+   /wallet/management/qdt_private_key

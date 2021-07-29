@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Importing a json wallet file to your node &#8212; Quadrans Wiki  documentation</title>
+    <title>How to Convert a BIP39 Mnemonic Passphrase in a Private Key &#8212; Quadrans Wiki  documentation</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -41,8 +41,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How to Convert a BIP39 Mnemonic Passphrase in a Private Key" href="qdt_private_key.html" />
-    <link rel="prev" title="Using MetaMask wallet with Quadrans Coins" href="metamask.html" />
+    <link rel="next" title="Cryptocurrencies" href="../../cryptocurrencies/index.html" />
+    <link rel="prev" title="Importing a json wallet file to your node" href="importjson.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
   </head>
@@ -166,11 +166,39 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#import-json-file" class="nav-link">Import json file</a>
+            <a href="#what-is-this" class="nav-link">What is this</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#verify-wallet-import" class="nav-link">Verify wallet import</a>
+            <a href="#how-to-use-mnemonic-code-converter" class="nav-link">How to use Mnemonic Code Converter</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#identify-your-software-wallet" class="nav-link">Identify your software wallet</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#coinomi" class="nav-link">Coinomi</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#eidoo" class="nav-link">Eidoo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#other" class="nav-link">Other</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#extract-the-private-key" class="nav-link">Extract the private key</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#import-to-metamask" class="nav-link">Import to Metamask</a>
         </li>
     
     </ul>
@@ -179,7 +207,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/quadrans/wiki/edit/master/docs/wallet/management/importjson.md">
+    <a href="https://github.com/quadrans/wiki/edit/master/docs/wallet/management/qdt_private_key.md">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -193,36 +221,49 @@
               
               <div>
                 
-  <div class="section" id="importing-a-json-wallet-file-to-your-node">
-<h1>Importing a json wallet file to your node<a class="headerlink" href="#importing-a-json-wallet-file-to-your-node" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="import-json-file">
-<h2>Import json file<a class="headerlink" href="#import-json-file" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Copy the UTC json file to the destination keystore folder (/home/quadrans/.quadrans/keystore)</p></li>
-<li><p>Restart the node</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp UTC* /home/quadrans/.quadrans/keystore
-systemctl restart quadrans-node.service
-</pre></div>
+  <div class="section" id="how-to-convert-a-bip39-mnemonic-passphrase-in-a-private-key">
+<h1>How to Convert a BIP39 Mnemonic Passphrase in a Private Key<a class="headerlink" href="#how-to-convert-a-bip39-mnemonic-passphrase-in-a-private-key" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-this">
+<h2>What is this<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h2>
+<p>This guide is dedicated to users who use software wallets such as <strong>Coinomi</strong> or <strong>Eidoo</strong> who intend to participate in the <a class="reference internal" href="../../cryptocurrencies/staking.html"><span class="doc">Quadrans Staking Program</span></a> or who want to use the <strong>MetaMask</strong> as wallet instead of their previous software. In no other case is it necessary to follow the instructions below. If you don’t need it, don’t do it.</p>
+<p><strong>Warning:</strong> Never share your recovery phrase or private keys with anyone. Anyone who has access to that information can steal your funds without your permission.</p>
+<p>Software wallets such as <strong>Coinomi</strong> or <strong>Eidoo</strong> do not natively allow the export the Private Key of your wallet. To ensure ease of use, these software generally require the user to keep only a <strong>BIP39 Mnemonic Passphrase</strong> (or “seed phrase”) to restore their wallets with extreme ease.</p>
+</div>
+<div class="section" id="how-to-use-mnemonic-code-converter">
+<h2>How to use Mnemonic Code Converter<a class="headerlink" href="#how-to-use-mnemonic-code-converter" title="Permalink to this headline">¶</a></h2>
+<p>The tool we offer is a <strong>Mnemonic Code converter</strong> developed by <a class="reference external" href="https://github.com/iancoleman/bip39">Ian Coleman</a> that allows you to export your Private Key easely. It can be used in offline mode, after loading the page you can disconnect your computer from the Internet or if you prefer to save the page and run it locally.</p>
+<p>First open the following web address: <a class="reference external" href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a></p>
+<p>Select the language of the seed phrases you have in the <em>Mnemonic Language</em>.</p>
+<p>Enter your “seed phrase” in the <em>BIP39 mnemonic</em> field. Make sure that all the words are correct, a list of those not recognized will appear at the top.</p>
+<p>In the <em>Coin</em> field select “ETH - Ethereum” (the network in which Quadrans Token are present).</p>
+<p>Now in the <strong>Deviation Path</strong> section select the <em>BIP32</em> tab and set the Client as follows according to your software wallet.</p>
+</div>
+<div class="section" id="identify-your-software-wallet">
+<h2>Identify your software wallet<a class="headerlink" href="#identify-your-software-wallet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coinomi">
+<h3>Coinomi<a class="headerlink" href="#coinomi" title="Permalink to this headline">¶</a></h3>
+<p>Select “Coinomi, Ledger” in the <em>Client</em> field.</p>
+<div class="section" id="eidoo">
+<h4>Eidoo<a class="headerlink" href="#eidoo" title="Permalink to this headline">¶</a></h4>
+<p>Select “Custom deviation path” in the <em>Client</em> field and fill in <em>BIP32 Deviation Path</em> with <strong>m/44’/60’/0</strong></p>
+</div>
+<div class="section" id="other">
+<h4>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h4>
+<p>Please inform the <a class="reference external" href="https://quadrans.io/contacts.php">Quadrans Foundation</a> or ask on our <a class="reference external" href="https://t.me/quadrans">Telegram support channel</a> to identify the BIP32 Deviation Path of your software wallet to help you and update this guide.</p>
 </div>
 </div>
-<div class="section" id="verify-wallet-import">
-<h2>Verify wallet import<a class="headerlink" href="#verify-wallet-import" title="Permalink to this headline">¶</a></h2>
-<p>For mainnet nodes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/.quadrans
-</pre></div>
 </div>
-<p>For testnet nodes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/quadrans/.quadrans/testnet
-</pre></div>
+<div class="section" id="extract-the-private-key">
+<h2>Extract the private key<a class="headerlink" href="#extract-the-private-key" title="Permalink to this headline">¶</a></h2>
+<p>Once this step is done at the bottom of the <strong>Derived Addresses</strong> paragraph, you will be presented with a list of wallet addresses derived from your Mnemonic Passphrase. The first should match the one you are using. Find your address and copy the private key that corresponds to it.</p>
+<p>If you are on a mobile device, you will need to scroll all the way to the right to see the corresponding private key.</p>
 </div>
-<p>Common:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gqdc attach gegqdcth.ipc
-</pre></div>
-</div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span>
-</pre></div>
-</div>
+<div class="section" id="import-to-metamask">
+<h2>Import to Metamask<a class="headerlink" href="#import-to-metamask" title="Permalink to this headline">¶</a></h2>
+<p>Click the circle icon at the top right corner of your MetaMask pop-up next to the network indicator.</p>
+<p>Select <em>Import Account</em> on the dropdown menu. You will be directed to the <em>Import page</em>.</p>
+<p>Paste your Private Key and click “Import”.</p>
+<p>You should be able to see the newly added account in the dropdown menu with an “Imported” tag next to the account.</p>
 </div>
 </div>
 
