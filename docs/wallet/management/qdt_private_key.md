@@ -31,7 +31,7 @@ Select "Coinomi, Ledger" in the *Client* field.
 
 #### Eidoo
 
-Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviation Path* with **m/44'/60'/0**
+Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviation Path* with `m/44'/60'/0`
 
 #### Other
 
