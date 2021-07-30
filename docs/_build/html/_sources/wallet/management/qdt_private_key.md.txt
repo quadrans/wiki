@@ -29,11 +29,19 @@ Now in the **Deviation Path** section select the *BIP32* tab and set the Client 
 
 Select "Coinomi, Ledger" in the *Client* field.
 
-#### Eidoo
+### Eidoo
 
 Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviation Path* with `m/44'/60'/0`
 
-#### Other
+### Exodus
+
+Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviation Path* with `m/44'/0'/0'` or `m/84'/0'/0'`
+
+### Trust Wallet
+
+Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviation Path* with `m/84'/0'/0'/0/0`
+
+### Other
 
 Please inform the [Quadrans Foundation](https://quadrans.io/contacts.php) or ask on our [Telegram support channel](https://t.me/quadrans) to identify the BIP32 Deviation Path of your software wallet to help you and update this guide.
 
