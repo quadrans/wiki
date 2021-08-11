@@ -45,7 +45,7 @@ personal.newAccount("passphrase")
 
 Change *passphrase* with the password you will use later to unlock the wallet. Afther a few seconds the cli will output the new account address.
 
-## Create and anddress manually starting from the private key
+## Create and address manually starting from the private key
 
 This a rather unorthodox method but might be useful in some cases. Please remember that the private key of an address is the most important piece of information and must be kept safe and secret at all time or you might lose your cryptoassets or the access to your deployed smart contracts.
 
