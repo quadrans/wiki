@@ -7,7 +7,7 @@ The status.py tool is a simple python script that connects to the node and gives
 
 ``` bash
 sudo apt install python3-pip python3-dev
-sudo pip3 install wheel setuptools termcolor rlp web3 pyfiglet
+sudo pip3 install wheel setuptools termcolor datetime rlp web3 pyfiglet
 ``` 
 
 ## Code
