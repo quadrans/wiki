@@ -20,8 +20,8 @@ What is Quadrans
 
 To learn more:
 
-* `Quadrans White Paper <https://www.quadrans.io/f/white-paper>`_
-* `Quadrans Yellow Paper <https://www.quadrans.io/f/yellow-paper>`_
+* `Quadrans White Paper <https://quadrans.io/f/white-paper>`_
+* `Quadrans Yellow Paper <https://quadrans.io/f/yellow-paper_rev1>`_
 * `Quadrans Members <https://quadrans.io/members.php>`_
 
 The Quadrans Network
