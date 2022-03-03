@@ -25,6 +25,38 @@ The first pages of this documentation were written by **Piersandro Guerrera** an
 
 Contributing to the documentation benefits everyone who uses *Quadrans blockchain*. We encourage you to help us improve the documentation, and you don’t have to be an expert to do so! If something in the docs doesn’t make sense to you, updating the relevant section after you figure it out is a great way to ensure it will help the next person.
 
+## Building the source
+For deploying the **Quadrans Wiki** clone this repository and install the `python3-sphinx` with the complete `requirements.txt`
+
+```
+cd docs
+pip3 install -r requirements.txt
+make html
+```
+
+### Dependancies
+
+Software dependancies:
+
+```
+python3
+python3-pip
+python3-sphinx v4+
+```
+
+Module dependancies:
+
+``` requirements.txt
+pyfiglet==0.8.post1
+recommonmark==0.7.1
+termcolor==1.1.0
+web3==5.12.0
+```
+
+### Configuring global parameters
+Before deploying the application, you need to edit `template.yml.example` file with your own specific parameters. Once completed all the step, you can copy or rename the file as `template.yml`
+
+
 ## License
 [GNU GPL 3](LICENSE)
 
