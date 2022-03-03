@@ -6,8 +6,9 @@ The status.py tool is a simple python script that connects to the node and gives
 ## Dependecies
 
 ``` bash
+sudo apt update
 sudo apt install python3-pip python3-dev
-sudo pip3 install wheel setuptools termcolor datetime rlp web3 pyfiglet
+sudo pip3 install wheel setuptools termcolor datetime rlp web3>=5.25.0 pyfiglet
 ``` 
 
 ## Code
