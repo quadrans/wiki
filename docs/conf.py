@@ -63,8 +63,8 @@ html_theme_options = {
 #  "external_links": [
 #    {"url": "https://quadrans.io", "name": "Quadrans Foundation"}
 #  ],
-  "github_url": "https://github.com/quadrans/wiki",
-  "twitter_url": "https://twitter.com/quadransf",
+  "github_url": "https://github.com/quadrans",
+  "twitter_url": "https://twitter.com/quadrans",
   "google_analytics_id": "UA-132858178-7",
   "use_edit_page_button": True,
   "show_prev_next": False,
