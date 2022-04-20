@@ -25,6 +25,9 @@ Now in the **Deviation Path** section select the *BIP32* tab and set the Client 
 
 ## Identify your software wallet
 
+### BRD Wallet (Bread Wallet)
+Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviation Path* with `m/0'` or `m/0'/0/0`
+
 ### Coinomi
 
 Select "Coinomi, Ledger" in the *Client* field.
