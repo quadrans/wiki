@@ -92,7 +92,7 @@ Quadrans Token Holders can stake QDTs directly from their MetaMask application. 
 
 To learn nore:
 
-* `QDT Staking <https://quadrans.io/get-started#staking>`
+* `QDT Staking <https://quadrans.io/get-started#staking>`_
 
 Compatibility
 *************
