@@ -13,7 +13,15 @@ MetaMask extension for your browser:
 * [Get MetaMask for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/)
 * [Get MetaMask for Opera browser](https://addons.opera.com/en/extensions/details/metamask/)
 
-## Connect to Quadrans Mainnet
+## Automatically connecto to Quadrans
+
+Quadrans team developed a simple tool that allows you to configure your MetaMask wallet to work in the Quadrans Blockchain with one simple click.
+
+Go to [https://connect.quadrans.io](https://connect.quadrans.io) and select *Connect to Mainnet* or *Connect to Testnet* to setup your MetaMask.
+## Manually connect to Quadrans
+
+Otherwise it is possibile to manually configure your Network configuration in MetaMask following this simple steps.
+### Settings for Quadrans Mainnet
 
 To manage Quadrans Coins users must create a new Network configuration in MetaMask.
 
@@ -27,7 +35,7 @@ Go to Account menu, click on Settings and on Networks, select **Add Network** an
 
 Click **Save** to confirm.
 
-## Connect to Quadrans Testnet
+### Settings for Quadrans Testnet
 
 To manage a Quadrans Wallet in testnet users must add a secondary Network configuration in MetaMask.
 
@@ -36,7 +44,7 @@ Go to Account menu, click on Settings and on Networks, select **Add Network** an
 * Network Name: **Quadrans Test**
 * New RPC URL: **https://rpctest.quadrans.io**
 * ChainID: **10947**
-* Symbol: **QDC**
+* Symbol: **tQDC**
 * Block Explorer URL: **https://explorer.testnet.quadrans.io**
 
 Click **Save** to confirm.
