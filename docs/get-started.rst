@@ -67,10 +67,10 @@ The Quadrans Foundation performed a promotional activity to help users to be sel
 To learn more:
 
 * `Mining and Reward </cryptocurrencies/mining_and_reward.html>`_
-* `Projects </projects/index.html>`_
+* `Grant Program <https://quadrans.foundation/grant>`_
 
 
-What is the KYC
+Mining
 ***************
 
 **Know your Customer** (KYC) is the process of a business verifying the identity of its clients.
@@ -83,7 +83,16 @@ KYC is necessary for us to assess the potential risks of illegal intentions towa
 
 To learn more:
 
-* `QDC Mining <https://quadrans.io/mining.php>`_
+* `QDC Mining <https://quadrans.io/get-started>`_
+
+Staking
+***************
+
+Quadrans Token Holders can stake QDTs directly from their MetaMask application. Please note that users will need ETH (Ether) to cover transactions and pay fees to the Ethereum network to stake/unstake their QDTs.
+
+To learn nore:
+
+* `QDT Staking <https://quadrans.io/get-started#staking>`
 
 Compatibility
 *************
