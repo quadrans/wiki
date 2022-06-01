@@ -13,7 +13,7 @@ The distribution of  [**newly minted QDC**](quadrans_coin.html#minting-quadrans-
 |Miner|⩾ 1.000|Active node|40%|
 |Masternode|⩾ 100.000|Active node|55%|
 
-QDC intended for reward are sent to wallet addresses registered on an active node to simplify the distribution of the reward.
+QDC intended for reward are sent to wallet addresses registered on an active node (with a minimum uptime of 80% on a weekly basis) to simplify the distribution of the reward.
 
 ## Enable your node for mining
 
