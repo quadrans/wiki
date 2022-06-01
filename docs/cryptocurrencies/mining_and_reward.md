@@ -29,7 +29,7 @@ QDC intended for reward are sent to wallet addresses registered on an active nod
   * Check that in your node the mining options are enabled in the [configuration file](../nodes/index.html#installation);
 * Keep your node active with a minimum uptime of 80% on a weekly basis.
 
-### Stake your Quadrans Tokens
+### Link your Quadrans Tokens to your node
 
 Through the **Token Portal**, Quadrans Token owners have the possibility to enable mining on their nodes.
 
