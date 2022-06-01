@@ -23,10 +23,11 @@ QDC intended for reward are sent to wallet addresses registered on an active nod
 * Registration to the **Quadrans Token Holder Portal** (it is part of the Community registration);
 * KYC completed and verified;
 * Quadrans Node configured as a Miner;
-* Stake your Quadrans Tokens with your Quadrans Node in the Token Holder Portal:
+* Link your Quadrans Tokens with your Quadrans Node in the Token Holder Portal:
   * To be recognised as a **Masternode**, a Token Holder needs to own at least **100.000 Quadrans Tokens (QDT)** and join Quadrans network by installing a node;
   * To be recognised as a **Miner**, a Token Holder needs to own at least **1.000 Quadrans Tokens (QDT)** and join Quadrans network by installing a node;
-  * Check that in your node the mining options are enabled in the [configuration file](../nodes/index.html#installation).
+  * Check that in your node the mining options are enabled in the [configuration file](../nodes/index.html#installation);
+* Keep your node active with a minimum uptime of 80% on a weekly basis.
 
 ### Stake your Quadrans Tokens
 
