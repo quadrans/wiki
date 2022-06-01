@@ -71,10 +71,6 @@ pre {
   border-radius: 10px !important;
 }
 
-span.pre {
-  white-space: break-spaces !important;
-}
-
 .highlight {
   background: none !important;
 }
