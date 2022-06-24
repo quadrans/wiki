@@ -30,8 +30,6 @@ Go-Quadrans binary Installation
    :maxdepth: 1
 
    installation/linux_x86-64
-   installation/linux_raspberrypi
-   installation/linux_orangepi
    installation/windows
    installation/multipass
    installation/macos
