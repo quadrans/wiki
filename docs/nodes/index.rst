@@ -14,6 +14,10 @@ Nodes
 Before to start
 ***************
 
+The Quadrans blockchain infrastructure is composed by a network of nodes. Each node stores a copy of the blockchain database structured in blocks of data and is responsible for distributing the blocks across the network.
+
+Quadrans node binary is called *go-quadrans*, simply knows as *gqdc*.
+
 .. toctree::
    
    quadrans-nodes
@@ -41,37 +45,9 @@ Go-Quadrans binary Installation
                 <img src="../_static/images/icons/icn_linux.png" class="card-img-top" alt="icon">
                 <div class="card-body flex-fill">
                     <h2 class="card-title">Linux</h2>
-                    <h4 class="card-title" style="margin-top: 0; margin-bottom: 1em;">(x86 and x86-64)</h4>
+                    <h4 class="card-title" style="margin-top: 0; margin-bottom: 1em;">(x86, x86-64, arm7, arm64)</h4>
                      <div class="text-center">
                         <a href="installation/linux_x86-64.html">
-                           <button class="fill disabled">How-to</button>
-                        </a>
-                      </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card card-q text-center intro-card shadow w-100">
-                <img src="../_static/images/icons/icn_rasp.png" class="card-img-top" alt="icon">
-                <div class="card-body flex-fill">
-                    <h2 class="card-title">Linux</h2>
-                     <h4 class="card-title" style="margin-top: 0; margin-bottom: 1em;">(Raspberry Pi)</h4>
-                     <div class="text-center">
-                        <a href="installation/linux_raspberrypi.html">
-                           <button class="fill disabled">How-to</button>
-                        </a>
-                      </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
-                <div class="card card-q text-center intro-card shadow w-100">
-                <img src="../_static/images/icons/icn_orange.png" class="card-img-top" alt="icon">
-                <div class="card-body flex-fill">
-                    <h2 class="card-title">Linux</h2>
-                     <h4 class="card-title" style="margin-top: 0; margin-bottom: 1em;">(Orange Pi)</h4>
-                     <div class="text-center">
-                        <a href="installation/linux_orangepi.html">
                            <button class="fill disabled">How-to</button>
                         </a>
                       </div>

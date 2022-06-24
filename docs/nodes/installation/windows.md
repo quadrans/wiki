@@ -1,60 +1,52 @@
 Install Quadrans on Windows
-===========================
+========================
+
+**gqdc.exe** executable is available for Windows on [Quadrans Repository](https://repo.quadrans.io/windows/) for i386 and amd64 architecture.
+
+You can make a [manual installation](#useful-options-for-manual-installations) using the *gqdc binary* or by [compiling the source code](#manually-build-go-quadrans-from-source).
 
 ## Hardware & Software requirements
 
-Minimum system requirements:
+**Minimum system requirements:**
 
-* Computer Desktop, Server or Virtual Machine
-* Windows 7/8/10
-* 1 Core 64bit CPU
+* Computer Desktop
+* Windows 7/8/10/11
+* 2 Core 32bit CPU
 * 2 GB RAM
 * 50 GB storage
 
-Suggested requirements:
+**Suggested requirements:**
 
 * Computer Desktop, Server or Virtual Machine
-* Windows 7/8/10 or Windows Server 2012/2016/2019
+* Windows 7/8/10/11 or Windows Server 2012/2016/2019
 * 2 Core 64bit CPU
 * 4 GB RAM
 * 100 GB storage
+
+## Self-installing go-quadrans binary via Quadrans Batch Installer
+
+This batch script allows you to download the Quadrans node on Windows and easily configure a Launcher to execute.
+
+Simply digit this command on your Command Prompt or PowerShell:
+
+``` batch
+curl -s https://repo.quadrans.io/installer/gqdc-winstaller.bat -o gqdc-winstaller.bat
+gqdc-winstaller.bat
+``` 
+
+The installation process will ask for a *node name* and a *password* to create a wallet to became a Quadrans Miner or Masternode.
+
+## Enable your node for mining
+
+Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
 
 ## Manually build go-quadrans from source
 
 Please refer to the guide [build go-quadrans from source](../build/source-code) to compile the binary from the source code.
 
-## Manual installation for Windows (Intel 64bit or AMD 64bit)
+## Go Quadrans self installer for Windows (**discontinued**)
 
-Download the latest [binary for Windows](http://repo.quadrans.io/windows/amd64/binary/).
-
-After downloading, run *gqdc.exe* from your **Command Prompt** or **PowerShell** to connect your node to the Quadrans Network.
-
-Make sure to check the different options and commands with `gqdc --help`
-
-### Useful options
-
-To change your data directory.
-
-`--datadir datadir_path`
-
-To show your node in the Quadrans Network Status page.
-
-`--ethstats "Your Node Name":QuadransStatsNetwork@status.quadrans.io:3000`
-
-To create a new Quadrans wallet create a password inside a text file and
-execute the following command.
-
-`account new --password Your_Password_File.txt`
-
-To execute the node as a **Miner**
-
-`--mine --unlock 0xYour_Wallet_Address --password Your_Password_File.txt`
-
-To connect to Quadrans Testnet (download the [last test Quadrans node binary](http://repo.quadrans.io/windows/amd64/binary/).
-
-`--testnet`
-
-## Step-by-step Go Quadrans installation (Intel 64bit or AMD 64bit)
+*Go Quadrans self installer for Windows is actually not supported. A new version will be relased in the second half of 2022.*
 
 Quadrans Node installer is available for Windows 7, Windows 8 and Windows 10 desktop operating system, and Windows Server 2008, Windows Server 2012 and Windows Server 2016.
 
