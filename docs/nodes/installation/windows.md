@@ -23,7 +23,7 @@ You can make a [manual installation](#useful-options-for-manual-installations) u
 * 4 GB RAM
 * 100 GB storage
 
-## Self-installing go-quadrans binary via Quadrans Batch Installer
+## Self-installing go-quadrans binary via Quadrans Batch Installer [Beta]
 
 This batch script allows you to download the Quadrans node on Windows and easily configure a Launcher to execute.
 
