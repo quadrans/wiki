@@ -6,7 +6,7 @@
 
 ## What is it?
 
-**Quadrans Wiki** is the official documentation for the [Quadrans Foundation](https://quadrans.io) blockchain. 
+**Quadrans Wiki** is the official documentation for the [Quadrans Blockchain](https://quadrans.io). 
 This wiki is created on [Sphinx](http://www.sphinx-doc.org/) written with [Markdown](https://daringfireball.net/projects/markdown/) and [reStructuredText](http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html). 
 
 The first pages of this documentation were written by **Piersandro Guerrera** and **Marco Crotta**, members of the Quadrans Foundation.
@@ -52,10 +52,6 @@ recommonmark==0.7.1
 termcolor==1.1.0
 web3==5.12.0
 ```
-
-### Configuring global parameters
-Before deploying the application, you need to edit `template.yml.example` file with your own specific parameters. Once completed all the step, you can copy or rename the file as `template.yml`
-
 
 ## License
 [GNU GPL 3](LICENSE)
