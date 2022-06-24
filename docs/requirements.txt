@@ -100,7 +100,7 @@ Pygments==2.7.4
 pygobject==3.26.1
 PyICU==1.9.8
 pyinotify==0.9.6
-PyJWT==1.5.3
+PyJWT==2.4.0
 pyOpenSSL==17.5.0
 pyparsing==2.4.7
 pyRFC3339==1.0
