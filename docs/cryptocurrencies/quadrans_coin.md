@@ -5,7 +5,7 @@ Quadrans Coin
 
 The non-volatile nature of the **Quadrans Coin** allows users to perform transactions at nearly neglectable operational cost all the time. Among others, this feature discourages hoarding and financial speculation.
 
-QDC can be obtained from actively participating to Quadrans ecosystem through the activity of Miner nodes and Masternodes and as a reward for contributions like bounty programs or beta testing. Since QDC is native to Quadrans blockchain, they can be transferred by performing transactions from one address to another.
+QDC can be obtained from actively participating to Quadrans ecosystem through the activity of Miner nodes and Masternodes. Since QDC is native to Quadrans blockchain, they can be transferred by performing transactions from one address to another.
 
 ## Minting Quadrans Coin 
 
