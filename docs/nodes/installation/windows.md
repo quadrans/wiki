@@ -27,11 +27,18 @@ You can make a [manual installation](#useful-options-for-manual-installations) u
 
 This batch script allows you to download the Quadrans node on Windows and easily configure a Launcher to execute.
 
-Simply digit this command on your Command Prompt:
+Simply digit this command on your **Command Prompt**:
 
 ``` batch
 curl -s https://repo.quadrans.io/installer/gqdc-winstaller.bat -o gqdc-winstaller.bat
 gqdc-winstaller.bat
+``` 
+
+Or digit this command on your **PowerShell**:
+
+``` batch
+Invoke-WebRequest -Uri https://repo.quadrans.io/installer/gqdc-winstaller.bat -OutFile gqdc-installer.bat 
+.\gqdc-winstaller.bat
 ``` 
 
 The installation process will ask for a *node name* and a *password* to create a wallet to became a Quadrans Miner or Masternode.
