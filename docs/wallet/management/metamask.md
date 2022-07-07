@@ -75,7 +75,7 @@ Click on the menu button below the MetaMask fox icon and click on Details.
 
 In the new window click on Export Private Key, when asked insert your MetaMask password and copy the private key in a safe place.
 
-## Import your Quadrans node wallet
+## Import your Quadrans node QDC wallet
 
 After you added Quadrans Mainnet or Testnet network select one and click on the icon on the top right of MetaMask interface, in the new menu press **Import Account**.
 
@@ -86,3 +86,7 @@ The **Import Account** window will appear. Select JSON File as Type ad choose yo
  **Quadrans wallets for Mainnet or Testnet are usable in both networks**. Simply change the network to see the two balances.
 
 ![image](../../_static/images/metamask/quadrans-import-wallet-2.png)
+
+### Important note for Windows user
+
+If you encounter a *Wrong Password* error in MetaMask when importing the wallet via JSON File with password.txt (only files created with the Go Quadrans Windows Installer or the gqdc-winstaller.bat) please add a "whitespace" character (simply press the *spacebar* on your keyboard) to your password as last digit.
