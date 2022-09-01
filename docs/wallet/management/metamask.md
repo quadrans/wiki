@@ -11,7 +11,7 @@ MetaMask extension for your browser:
 
 * [Get MetaMask for Google Chrome](https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn)
 * [Get MetaMask for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/)
-* [Get MetaMask for Opera browser](https://addons.opera.com/en/extensions/details/metamask/)
+* [Get MetaMask for Opera browser](https://addons.opera.com/it/extensions/details/metamask-10/)
 
 ## Automatically connecto to Quadrans
 
