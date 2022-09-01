@@ -57,7 +57,7 @@ The [Orange Pi](https://www.orangepi.org/) is an open-source single-board comput
 
 #### Orange Pi with Rockchip RK3399
 
-**Quadrans Technical Team** tested the [arm64 binary (64 bit)](http://repo.quadrans.io/arm/arm64/) in combination with [official Ubuntu Image](http://www.orangepi.org/downloadresources/) operating system with these devboards:
+**Quadrans Technical Team** tested the [arm64 binary (64 bit)](http://repo.quadrans.io/arm/arm64/) in combination with [official Ubuntu Image](http://www.orangepi.org/html/serviceAndSupport/index.html) operating system with these devboards:
 
 * Orange Pi 4
 
