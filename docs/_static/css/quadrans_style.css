@@ -575,3 +575,7 @@ a.dropdown-item:hover {
 }
 
 /* NAVBAR END */
+
+span.pre {
+  white-space: break-spaces !important;
+}
