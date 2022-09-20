@@ -13,7 +13,7 @@ MetaMask extension for your browser:
 * [Get MetaMask for Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/)
 * [Get MetaMask for Opera browser](https://addons.opera.com/it/extensions/details/metamask-10/)
 
-## Automatically connecto to Quadrans
+## Automatically connect to Quadrans
 
 Quadrans team developed a simple tool that allows you to configure your MetaMask wallet to work in the Quadrans Blockchain with one simple click.
 
