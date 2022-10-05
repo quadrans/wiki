@@ -24,7 +24,7 @@ github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 # -- Project information -----------------------------------------------------
 
 project = 'Quadrans Wiki'
-copyright = '2018-2022, Quadrans Foundation'
+copyright = '2018-2022, Quadrans Blockchain'
 author = 'Piersandro Guerrera, Marco Crotta'
 
 
@@ -57,7 +57,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'pydata_sphinx_theme'
-html_logo = "_static/images/logo-quadrans-black.svg"
+html_logo = "_static/images/logo_quadrans_color.svg"
 
 html_theme_options = {
 #  "external_links": [

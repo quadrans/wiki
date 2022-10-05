@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://www.quadrans.io/assets/brand/logo_quadrans_color.svg"><br>
+  <img src="https://www.quadrans.io/assets/brand/blockchain/logo_quadrans_color.svg"><br>
 </div>
 
 -----------------
