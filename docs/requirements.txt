@@ -138,7 +138,7 @@ ssh-import-id==5.7
 systemd-python==234
 termcolor==1.1.0
 toolz==0.11.2
-Twisted==17.9.0
+Twisted==22.10.0
 typing-extensions==4.1.1
 ubuntu-advantage-tools==27.7
 ufw==0.36
