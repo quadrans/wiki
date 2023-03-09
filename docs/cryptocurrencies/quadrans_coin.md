@@ -11,7 +11,7 @@ QDC can be obtained from actively participating to Quadrans ecosystem through th
 
 QDC are generated according to Quadrans minting protocol in order to maintain a balanced ecosystem for operations.
 
-At the time of the publishing of the [White Paper](https://quadrans.io/documentation.php), Quadrans blockchain is minting an average of 1 QDC per day. QDC are minted every time a block is closed (Epoch) with an average time of 5 seconds to close a block.
+At the time of the publishing of the [White Paper](https://quadrans.io/documentation), Quadrans blockchain is minting an average of 1 QDC per day. QDC are minted every time a block is closed (Epoch) with an average time of 5 seconds to close a block.
 
 ## Mining Quadrans Coin
 

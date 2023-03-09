@@ -46,7 +46,7 @@ Select "Custom deviation path" in the *Client* field and fill in *BIP32 Deviatio
 
 ### Other
 
-Please inform the [Quadrans Foundation](https://quadrans.io/contacts.php) or ask on our [Telegram support channel](https://t.me/quadrans) to identify the BIP32 Deviation Path of your software wallet to help you and update this guide.
+Please inform the [Quadrans Foundation](https://quadrans.foundation/contacts) or ask on our [Telegram support channel](https://t.me/quadrans) to identify the BIP32 Deviation Path of your software wallet to help you and update this guide.
 
 ## Extract the private key
 
