@@ -20,7 +20,7 @@ QDC intended for reward are sent to wallet addresses registered on an active nod
 ### Requirements
 
 * Registration to the [Quadrans Community](https://quadrans.io/get-started);
-* Quadrans Node configured as a Miner;
+* [Quadrans Node](../nodes/index.html) configured as a Miner;
 * Link your Quadrans Tokens with your Quadrans Node in the Community Hub:
   * Complete the KYC to access to the Nodes section;
   * To be recognised as a **Masternode**, a Token Holder needs to own at least **100.000 Quadrans Tokens (QDT)** and join Quadrans network by installing a node;
