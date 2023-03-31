@@ -45,6 +45,8 @@ The installation process will ask for a *node name* and a *password* to create a
 
 Follow the simple instruction.
 
+At the end of the installation open Windows Explorer, go on your User Profile Folder and look for **QuadransNode** folder and double click on **gqdc-launcher.bat** file to execute your Quadrans Node.
+
 ## Enable your node for mining
 
 Go to [Mining and Reward](../../cryptocurrencies/mining_and_reward) chapter of this Wiki.
