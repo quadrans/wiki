@@ -57,7 +57,7 @@ Please refer to the guide [build go-quadrans from source](../build/source-code) 
 
 ## Go Quadrans self installer for Windows (**discontinued**)
 
-*Go Quadrans self installer for Windows is actually not supported. A new version will be relased in the second half of 2022.*
+*Go Quadrans self installer for Windows is actually not supported. A new version is not planned. Please refer to **Quadrans Batch Installer**.*
 
 Quadrans Node installer is available for Windows 7, Windows 8 and Windows 10 desktop operating system, and Windows Server 2008, Windows Server 2012 and Windows Server 2016.
 
